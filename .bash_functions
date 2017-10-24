@@ -1,3 +1,4 @@
+# Run PHP built-in webserver
 phps() {
     if [ $# -eq 1 ]; then
         php -S 0.0.0.0:8080 -t "$1"
