@@ -1,0 +1,59 @@
+# Default hostname
+127.0.0.1       localhost
+127.0.0.1       zackad-pc
+# The following lines are desirable for IPv6 capable hosts
+::1             ip6-localhost ip6-loopback
+fe00::0         ip6-localnet
+ff00::0         ip6-mcastprefix
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+# BLock ads host for spotify
+# host list taken from https://www.reddit.com/r/Piracy/comments/4kn6rq/comprehensive_guide_to_blocking_ads_on_spotify/
+127.0.0.1       adclick.g.doublecklick.net
+127.0.0.1       adeventtracker.spotify.com
+127.0.0.1       ads-fa.spotify.com
+127.0.0.1       analytics.spotify.com
+127.0.0.1       audio2.spotify.com
+127.0.0.1       b.scorecardresearch.com
+127.0.0.1       bounceexchange.com
+127.0.0.1       bs.serving-sys.com
+127.0.0.1       content.bitsontherun.com
+127.0.0.1       core.insightexpressai.com
+127.0.0.1       crashdump.spotify.com
+127.0.0.1       d2gi7ultltnc2u.cloudfront.net
+127.0.0.1       d3rt1990lpmkn.cloudfront.net
+127.0.0.1       desktop.spotify.com
+127.0.0.1       doubleclick.net
+127.0.0.1       ds.serving-sys.com
+127.0.0.1       googleadservices.com
+127.0.0.1       googleads.g.doubleclick.net
+127.0.0.1       gtssl2-ocsp.geotrust.com
+127.0.0.1       js.moatads.com
+127.0.0.1       log.spotify.com
+127.0.0.1       media-match.com
+127.0.0.1       omaze.com
+127.0.0.1       open.spotify.com
+127.0.0.1       pagead46.l.doubleclick.net
+127.0.0.1       pagead2.googlesyndication.com
+127.0.0.1       partner.googleadservices.com
+127.0.0.1       pubads.g.doubleclick.net
+127.0.0.1       redirector.gvt1.com
+127.0.0.1       s0.2mdn.net
+127.0.0.1       securepubads.g.doubleclick.net
+127.0.0.1       spclient.wg.spotify.com
+127.0.0.1       tpc.googlesyndication.com
+127.0.0.1       v.jwpcdn.com
+127.0.0.1       video-ad-stats.googlesyndication.com
+127.0.0.1       weblb-wg.gslb.spotify.com
+127.0.0.1       www.googleadservices.com
+127.0.0.1       www.googletagservices.com
+127.0.0.1       www.omaze.com
+# Bypass dns resolver
+176.53.21.90    mangafox.me
+185.4.227.115   mangafox.me
+178.18.205.254  forums.mangafox.me
+151.101.65.140  reddit.com
+151.101.129.140 reddit.com
+151.101.1.140   reddit.com
+151.101.193.140 reddit.com
+151.101.85.140  www.reddit.com
