@@ -1,0 +1,21 @@
+language: ruby
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - secure: "icD8yRhTBg5GW+At8eOBW13MytJg8nA0ephnjALo0D7oee7H/okjCL25Ml2yXf3qjJ+dnJysNSQsha5HkbtxZbZSx4PFMeE0lnp22FuRTHIt3dHLwRropNBB0vEDXE4ksbHLUgb0bb/Dc7cAZ64KIzCWaTrCKFBzh+mKz/M/EcPIGYfz/gzVyQIY9+S3Fd6V2D52t8cUiyZcInHOtkKWGy4p/I1ZbFxKaFEsYiEDGNzHXB34AU9wXfpCGrvhbEFHZvf+4tJGbfQ2ej3lXs7vq41cB6vBhUR4spysWGp66W3sMwAoTEXdm1qPq/PAA5aJLyoF7Q/k4PbI6lAbNpVwcThH2OJkHnlMD8yC6Fq5igeFzMqK+rJx9vh5Z6slQ7455vemsujAQXl02exOLAiKa9fQTUUDYOuVQQYkh2m56NnqwA0sKXfXdYwLjDp9xQqyeunlg2JI7jQ4/EVkgqbULFWClZE8wCs2qgUuASppUkGaErQ+tBU5PXcu5K45ongU/qyTp2d2K3ZlLIcdWDCCjKf2eVLGTW0eye5g2kwTGYwoO6og6B3Pajm/AbHEQ/Xs0PEN+JfDQFpuSqbkiNWcqxX5VQRlFf3zYnnbimvP3qrdg9KFRQhk+Vaa7+X9wbKllw3fZXKuDyzX94093BfwE2UnSYRGplqF6nr/x5Qw/yM="
+
+install: true
+
+before_script:
+  - git config --global user.email "travis@travis-ci.org"
+  - git config --global user.name "TravisCI"
+  - git config --global push.default "matching"
+
+script:
+  - git clone -b gh-pages "https://$GITHUB_TOKEN@github.com/zackad/dotfiles" output
+  - cat hosts.d/*.conf > output/hosts
+  - cd output && git add --all . && git commit -m "Publishing revision $(git --git-dir ../.git rev-parse --short HEAD)" && git push --force origin gh-pages
