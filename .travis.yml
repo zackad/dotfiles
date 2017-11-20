@@ -18,4 +18,8 @@ before_script:
 script:
   - git clone -b gh-pages "https://$GITHUB_TOKEN@github.com/zackad/dotfiles" output
   - cat hosts.d/*.conf > output/hosts
-  - cd output && git add --all . && git commit -m "Publishing revision $(git --git-dir ../.git rev-parse --short HEAD)" && git push --force origin gh-pages
+  - cd output
+    && git add --all .
+    && if ! [ "$(git diff --porcelain)" ]; then exit 0; fi
+    && git commit -m "Publishing revision $(git --git-dir ../.git rev-parse --short HEAD)"
+    && git push --force origin gh-pages
