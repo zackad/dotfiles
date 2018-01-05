@@ -17,3 +17,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Monitoring tool
 alias top='htop'
+
+# Git related alias
+# alias for managing dotfiles in home directory using 'dot' as alias for git
+alias dot='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
