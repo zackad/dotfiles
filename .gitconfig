@@ -1,0 +1,21 @@
+[user]
+	name = zackad
+	email = zackad.dev@gmail.com
+	signingkey = B2D87DBE
+[core]
+	autocrlf = input
+	pager = less -S
+[push]
+	default = matching
+[color]
+	ui = true
+[format]
+	pretty = format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s
+[log]
+	date = format:%Y-%m-%d %H:%M:%S
+[alias]
+	l = log --date=short
+	lr = log --date=relative
+	q = log --all --decorate --oneline --graph
+[commit]
+	gpgsign = false
