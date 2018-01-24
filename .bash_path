@@ -1,0 +1,5 @@
+# Android SDK and related PATH
+ANDROID_HOME=~/Android
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+export PATH=${PATH}:${ANDROID_HOME}/genymotion
