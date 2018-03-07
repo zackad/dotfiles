@@ -15,6 +15,11 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'nginx.vim'
+Plugin 'nerdtree'
 
 call vundle#end()
 " ----------PLUGINS END----------------
+
+" ----------AUTO COMMAND---------------
+autocmd VimEnter * NERDTree
+
