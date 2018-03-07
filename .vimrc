@@ -28,3 +28,9 @@ autocmd VimEnter * NERDTree
 
 " ----------CONFIGURATION--------------
 colorscheme monokai
+
+" ----------REMAP KEY------------------
+nnoremap <C-Up> <C-w>k
+nnoremap <C-Down> <C-w>j
+nnoremap <C-Left> <C-w>h
+nnoremap <C-Right> <C-w>l
