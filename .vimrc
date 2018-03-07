@@ -6,6 +6,7 @@ set shiftwidth=4
 set expandtab ts=4 ai
 set smartindent
 set showcmd
+set t_Co=256
 
 set encoding=utf-8 nobomb
 
@@ -16,10 +17,14 @@ call vundle#begin()
 
 Plugin 'nginx.vim'
 Plugin 'nerdtree'
+Plugin 'crusoexia/vim-monokai'
 
 call vundle#end()
 " ----------PLUGINS END----------------
 
 " ----------AUTO COMMAND---------------
 autocmd VimEnter * NERDTree
+
+" ----------CONFIGURATION--------------
+colorscheme monokai
 
