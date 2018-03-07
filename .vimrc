@@ -15,6 +15,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 "-----------PLUGINS START--------------
 call vundle#begin()
 
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'nginx.vim'
 Plugin 'nerdtree'
 Plugin 'crusoexia/vim-monokai'
@@ -27,4 +28,3 @@ autocmd VimEnter * NERDTree
 
 " ----------CONFIGURATION--------------
 colorscheme monokai
-
