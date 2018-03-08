@@ -32,13 +32,6 @@ autocmd VimEnter * NERDTree
 
 " ----------CONFIGURATION--------------
 colorscheme monokai
-" set guifont=Roboto\ Mono\ Nerd\ Font\ Complete\ 8
-set guifont=Dejavu\ Sans\ Mono\ Nerd\ Font\ Complete\ 8
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-" Highlight fullname (not only icons)
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
 
 " ----------REMAP KEY------------------
 nnoremap <C-Up> <C-w>k
@@ -48,3 +41,10 @@ nnoremap <C-Right> <C-w>l
 
 " NERDTree Related Configuration
 nnoremap <F6> :NERDTreeToggle<CR>
+" set guifont=Roboto\ Mono\ Nerd\ Font\ Complete\ 8
+set guifont=Dejavu\ Sans\ Mono\ Nerd\ Font\ Complete\ 8
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+" Highlight fullname (not only icons)
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
