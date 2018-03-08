@@ -17,12 +17,16 @@ call vundle#begin()
 
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'nginx.vim'
-Plugin 'nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Syntax and color scheme
+Plugin 'morhetz/gruvbox'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 " ----------PLUGINS END----------------
