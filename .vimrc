@@ -18,6 +18,7 @@ call vundle#begin()
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'nginx.vim'
 Plugin 'nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'crusoexia/vim-monokai'
 
 call vundle#end()
@@ -34,3 +35,5 @@ nnoremap <C-Up> <C-w>k
 nnoremap <C-Down> <C-w>j
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Right> <C-w>l
+" Toggle NERDTree
+nnoremap <F6> :NERDTreeToggle<CR>
