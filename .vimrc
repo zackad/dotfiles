@@ -23,6 +23,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'crusoexia/vim-monokai'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plugin 'Yggdroot/indentLine'
 " Syntax and color scheme
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
@@ -37,6 +38,8 @@ autocmd VimEnter * NERDTree
 " ----------CONFIGURATION--------------
 colorscheme gruvbox
 set background=dark
+let g:indentLine_char = '┊'
+let g:indentLine_leadingSpaceEnabled = 1
 
 " ----------REMAP KEY------------------
 nnoremap <C-Up> <C-w>k
