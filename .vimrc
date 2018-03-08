@@ -35,7 +35,8 @@ call vundle#end()
 autocmd VimEnter * NERDTree
 
 " ----------CONFIGURATION--------------
-colorscheme monokai
+colorscheme gruvbox
+set background=dark
 
 " ----------REMAP KEY------------------
 nnoremap <C-Up> <C-w>k
