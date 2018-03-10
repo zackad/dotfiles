@@ -2,6 +2,7 @@ syntax on
 
 set nocompatible
 set number
+set smartindent
 set showcmd
 set termguicolors
 
@@ -21,10 +22,12 @@ Plugin 'crusoexia/vim-monokai'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'Yggdroot/indentLine'
+
 " Syntax and color scheme
 Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 " ----------PLUGINS END----------------
