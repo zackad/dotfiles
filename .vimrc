@@ -2,11 +2,8 @@ syntax on
 
 set nocompatible
 set number
-set shiftwidth=4
-set expandtab ts=4 ai
-set smartindent
 set showcmd
-set t_Co=256
+set termguicolors
 
 set encoding=utf-8 nobomb
 
@@ -39,7 +36,7 @@ autocmd VimEnter * NERDTree
 colorscheme gruvbox
 set background=dark
 let g:indentLine_char = '┊'
-let g:indentLine_leadingSpaceEnabled = 1
+" let g:indentLine_leadingSpaceEnabled = 1
 
 " ----------REMAP KEY------------------
 nnoremap <C-Up> <C-w>k
@@ -47,9 +44,8 @@ nnoremap <C-Down> <C-w>j
 nnoremap <C-Left> <C-w>h
 nnoremap <C-Right> <C-w>l
 
-" NERDTree Related Configuration
+" ----------------NERDTree Related Configuration------------------------
 nnoremap <F6> :NERDTreeToggle<CR>
-" set guifont=Roboto\ Mono\ Nerd\ Font\ Complete\ 8
 set guifont=Dejavu\ Sans\ Mono\ Nerd\ Font\ Complete\ 8
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 " Highlight fullname (not only icons)
