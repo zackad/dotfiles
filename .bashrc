@@ -142,7 +142,9 @@ dim() {
 
 # Extended PS1 "[hh:mm:ss] user@host (git_brach) : [working_directory]
 # $ "
-export PS1="$(cyan)[\t] $(green)\u$(reset)@$(blue)\h$(gray)\$(parse_git_branch): $(cyan)\e[95m\e[2m[\w]$(reset)\n\\$ "
+PS1="$(cyan)[\t] $(green)\u$(reset)@$(blue)\h$(gray)"'`__git_ps1`'
+PS1="$PS1: $(cyan)\e[95m\e[2m[\w]$(reset)\n\\$ "
+export PS1="$PS1"
 
 render_title() {
     echo ${PWD} | sed -e "s#${HOME}#~#g"
