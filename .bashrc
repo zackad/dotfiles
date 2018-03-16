@@ -111,10 +111,6 @@ if ! shopt -oq posix; then
     fi
 fi
 
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
 # Color
 blue() {
     echo "\[\033[01;34m\]"
