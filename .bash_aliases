@@ -27,3 +27,7 @@ alias jek-dev='jekyll s --livereload --incremental'
 
 # Youtube-dl related alias
 alias youtube-dl='youtube-dl --external-downloader aria2c'
+
+# PHP project related alias
+# Symfony console alias
+alias console='bin/console'
