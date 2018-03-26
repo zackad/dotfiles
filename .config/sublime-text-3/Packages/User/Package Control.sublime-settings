@@ -1,0 +1,34 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"All Autocomplete",
+		"Babel",
+		"Boxy Theme",
+		"Color Highlighter",
+		"DocBlockr",
+		"EditorConfig",
+		"Emmet",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"JSON Key-Value",
+		"JSX",
+		"MapfileSyntax",
+		"MarkdownHighlighting",
+		"Package Control",
+		"PackageDev",
+		"PHP Getters and Setters",
+		"Phpcs",
+		"Sass",
+		"SerializedDataConverter",
+		"SideBarEnhancements",
+		"Siteleaf Liquid Syntax",
+		"Skins",
+		"Status Bar File Size",
+		"Twig"
+	]
+}
