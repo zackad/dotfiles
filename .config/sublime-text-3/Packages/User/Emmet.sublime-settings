@@ -1,0 +1,12 @@
+{
+    "snippets": {
+        "html": {
+            "snippets": {
+                "!": "<!DOCTYPE html>\n<html lang=\"${lang}\">\n<head>\n\t<meta charset=\"${charset}\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title>${1:Document}</title>\n</head>\n<body>\n\t${child}$0\n</body>\n</html>",
+                "rsp": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+                "transchoise": "{% transchoise %}\n\t${text}\n{% endtranschoise %}",
+                "trans": "{% trans %}${text}{% endtrans %}"
+            }
+        }
+    },
+}
