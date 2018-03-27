@@ -80,21 +80,6 @@ if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 fi
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# Function definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_functions, instead of adding them here directly.
-if [ -f ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
-
 # Additional PATH
 if [ -f ~/.bash_path ]; then
     . ~/.bash_path
@@ -109,6 +94,21 @@ if ! shopt -oq posix; then
     elif [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
     fi
+fi
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# Function definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_functions, instead of adding them here directly.
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
 fi
 
 # Color
