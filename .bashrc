@@ -111,40 +111,11 @@ if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
 fi
 
-# Color
-blue() {
-    echo "\[\033[01;34m\]"
-}
-cyan() {
-    echo "\[\033[01;36m\]"
-}
-gray() {
-    echo "\[\033[01;30m\]"
-}
-green() {
-    echo "\[\033[01;32m\]"
-}
-reset() {
-    echo "\[\033[00m\]"
-}
-
-# Formatting
-bold() {
-    echo "\e[1m"
-}
-dim() {
-    echo "\e[2m"
-}
-
 # Extended PS1 "[hh:mm:ss] user@host (git_brach) : [working_directory]
 # $ "
 PS1="$(cyan)[\t] $(green)\u$(reset)@$(blue)\h$(gray)"'`__git_ps1`'
 PS1="$PS1: $(cyan)\e[95m\e[2m[\w]$(reset)\n\\$ "
 export PS1="$PS1"
-
-render_title() {
-    echo ${PWD} | sed -e "s#${HOME}#~#g"
-}
 
 PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$(render_title)\007"'
 
