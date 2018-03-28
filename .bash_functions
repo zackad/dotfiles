@@ -20,3 +20,35 @@ mktouch() {
 		touch -- "$f"
 	done
 }
+
+# Color and Formatting to used for PS1
+#
+# Color
+blue() {
+    echo "\[\033[01;34m\]"
+}
+cyan() {
+    echo "\[\033[01;36m\]"
+}
+gray() {
+    echo "\[\033[01;30m\]"
+}
+green() {
+    echo "\[\033[01;32m\]"
+}
+reset() {
+    echo "\[\033[00m\]"
+}
+
+# Formatting
+bold() {
+    echo "\e[1m"
+}
+dim() {
+    echo "\e[2m"
+}
+
+# Replace $HOME into '~' character
+__pwd_prompt() {
+    echo ${PWD} | sed -e "s#${HOME}#~#g"
+}
