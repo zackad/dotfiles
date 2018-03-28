@@ -117,7 +117,7 @@ PS1="$(cyan)[\t] $(green)\u$(reset)@$(blue)\h$(gray)"'`__git_ps1`'
 PS1="$PS1: $(cyan)\e[95m\e[2m[\w]$(reset)\n\\$ "
 export PS1="$PS1"
 
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$(render_title)\007"'
+PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$(__pwd_prompt)\007"'
 
 # Symfony autocomplete
 eval "$(symfony-autocomplete)"

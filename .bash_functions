@@ -49,6 +49,6 @@ dim() {
 }
 
 # Replace $HOME into '~' character
-render_title() {
+__pwd_prompt() {
     echo ${PWD} | sed -e "s#${HOME}#~#g"
 }
