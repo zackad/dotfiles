@@ -22,13 +22,13 @@
 		"Package Control",
 		"PackageDev",
 		"PHP Getters and Setters",
+		"PHP-Twig",
 		"Phpcs",
 		"Sass",
 		"SerializedDataConverter",
 		"SideBarEnhancements",
 		"Siteleaf Liquid Syntax",
 		"Skins",
-		"Status Bar File Size",
-		"Twig"
+		"Status Bar File Size"
 	]
 }
