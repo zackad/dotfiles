@@ -1,0 +1,32 @@
+{
+	// When saving converted data to a file, or when opening
+    // conversion in new buffer use these extension maps for file name.
+    // Extensions will be evaluated in the order listed below.
+    // If the file does not match any of the extensions, the current
+    // extension will be replaced with either "plist", "json", or "yaml" accordingly.
+    "plist_json_conversion_ext": [
+        {"plist": "tmLanguage", "json": "JSON-tmLanguage"},
+        {"plist": "tmPreferences", "json": "JSON-tmPreferences"},
+        {"plist": "tmTheme", "json": "JSON-tmTheme"}
+    ],
+
+    "plist_yaml_conversion_ext": [
+        {"plist": "tmLanguage", "yaml": "YAML-tmLanguage"},
+        {"plist": "tmPreferences", "yaml": "YAML-tmPreferences"},
+        {"plist": "tmSnippet", "yaml": "YAML-tmSnippet"},
+        {"plist": "tmTheme", "yaml": "YAML-tmTheme"}
+    ],
+
+    "convert_on_save": [
+        // Enable or add what you would like
+        {"ext": "JSON-tmLanguage", "command": "json_to_plist"},
+        {"ext": "JSON-tmPreferences", "command": "json_to_plist"},
+        {"ext": "JSON-tmTheme", "command": "json_to_plist"},
+        {"ext": "YAML-tmLanguage", "command": "yaml_to_plist"},
+        {"ext": "YAML-tmPreferences", "command": "yaml_to_plist"},
+        {"ext": "YAML-tmSnippet", "command": "yaml_to_plist"},
+        {"ext": "YAML-tmTheme", "command": "yaml_to_plist"}
+    ],
+
+    "yaml_indent": 2
+}
