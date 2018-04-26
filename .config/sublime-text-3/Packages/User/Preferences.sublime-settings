@@ -1,5 +1,5 @@
 {
-	"color_scheme": "Packages/sublime-package/ZackTheme - Monokai.tmTheme",
+	"color_scheme": "Packages/sublime-package/Themes/ZackTheme - Monokai.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
