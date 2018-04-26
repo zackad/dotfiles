@@ -1,5 +1,14 @@
 {
 	"bootstrapped": true,
+	"downloader_precedence":
+	{
+		"linux":
+		[
+			"curl",
+			"urllib",
+			"wget"
+		]
+	},
 	"in_process_packages":
 	[
 	],
@@ -29,6 +38,11 @@
 		"SideBarEnhancements",
 		"Siteleaf Liquid Syntax",
 		"Skins",
-		"Status Bar File Size"
+		"Status Bar File Size",
+		"sublime-package"
+	],
+	"repositories":
+	[
+		"https://github.com/zackad/sublime-package"
 	]
 }
