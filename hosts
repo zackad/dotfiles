@@ -48,7 +48,7 @@ ff02::2         ip6-allrouters
 127.0.0.1       weblb-wg.gslb.spotify.com
 127.0.0.1       www.googleadservices.com
 127.0.0.1       www.googletagservices.com
-127.0.0.0       www.omaze.com
+127.0.0.1       www.omaze.com
 127.0.0.1       audio-sp-tyo.spotify.com
 127.0.0.1       audio-sp-ash.spotify.com
 127.0.0.1       audio-fa.spotify.com
