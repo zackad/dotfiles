@@ -1,0 +1,15 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.activityBar.visible": true,
+    "telemetry.enableTelemetry": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
+    "files.trimTrailingWhitespace": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.preferences.quoteStyle": "single",
+    "emmet.syntaxProfiles": {
+      "jsx": {
+        "attr_quotes": "single"
+      }
+    }
+  }
