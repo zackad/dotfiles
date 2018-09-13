@@ -1,6 +1,6 @@
 {
     "workbench.iconTheme": "vscode-icons",
-    "workbench.activityBar.visible": true,
+    "workbench.activityBar.visible": false,
     "telemetry.enableTelemetry": false,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -11,5 +11,7 @@
       "jsx": {
         "attr_quotes": "single"
       }
-    }
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.rulers": [80, 120]
   }
