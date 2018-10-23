@@ -18,5 +18,6 @@
       120
     ],
     "eslint.alwaysShowStatus": true,
-    "eslint.packageManager": "yarn"
+    "eslint.packageManager": "yarn",
+    "files.insertFinalNewline": true
   }
