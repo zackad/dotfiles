@@ -19,5 +19,12 @@
     ],
     "eslint.alwaysShowStatus": true,
     "eslint.packageManager": "yarn",
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "files.watcherExclude": {
+      "**/var/**": true
+    },
+    "search.exclude": {
+      "**/var": true
+    }
   }
