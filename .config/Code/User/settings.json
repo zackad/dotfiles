@@ -26,5 +26,6 @@
     },
     "search.exclude": {
       "**/var": true
-    }
+    },
+    "window.restoreWindows": "none"
   }
