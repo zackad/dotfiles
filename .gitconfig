@@ -1,0 +1,5 @@
+[user]
+	name = zackad
+	email = zackad.dev@gmail.com
+[alias]
+	q = log --all --decorate --oneline --graph
