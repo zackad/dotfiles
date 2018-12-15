@@ -3,6 +3,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
 
+# Bash aliases
+if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+
 # bash PS1
 if [ -f ~/.bash_function ]; then
 . ~/.bash_function
