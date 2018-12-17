@@ -30,3 +30,7 @@ export NVM_DIR="$HOME/.nvm"
 # Homebrew PHP
 export PATH="/usr/local/opt/php@7.2/bin:$PATH"
 export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+
+# Symfony console autocomplete
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+eval "$(symfony-autocomplete)"
