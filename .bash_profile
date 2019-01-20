@@ -19,6 +19,9 @@ export PS1="$PS1"
 # git from Homebrew
 PATH=/usr/local/git/bin:$PATH
 
+# GDAL path
+PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH
+
 # ls color
 export CLICOLOR=1
 
