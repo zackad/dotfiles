@@ -34,6 +34,9 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/local/opt/php@7.2/bin:$PATH"
 export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
 
+# Flutter SDK
+export PATH="$PATH:/Users/zackad/SDK/flutter/bin"
+
 # Symfony console autocomplete
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 eval "$(symfony-autocomplete)"
