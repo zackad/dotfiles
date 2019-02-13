@@ -1,0 +1,18 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+
+[*.{js,css,sass,scss}]
+indent_size = 2
+
+[*.user.js]
+indent_size = 4
+
+[Makefile]
+indent_size = 4
+indent_style = tab
