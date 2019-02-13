@@ -27,7 +27,7 @@ _xfunc git __git_complete dot _git
 alias jek-dev='jekyll s --livereload --incremental'
 
 # Youtube-dl related alias
-alias youtube-dl='youtube-dl --external-downloader aria2c'
+alias youtube-dl='youtube-dl --external-downloader aria2c --external-downloader-args "-j 16 -s 16 -x 16 -k 2M"'
 
 # PHP project related alias
 # Symfony console alias
