@@ -3,3 +3,8 @@
 	email = zackad.dev@gmail.com
 [alias]
 	q = log --all --decorate --oneline --graph
+    l = log --date=short
+[format]
+    pretty = format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s
+[log]
+    date = format:%Y-%m-%d %H:%M:%S
