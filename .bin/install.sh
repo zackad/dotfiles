@@ -20,6 +20,7 @@ source $HOME/.bash_profile
 brew install php@7.2 composer
 
 # Install nodejs related tools
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 # Install other tools
 brew install aria2 bash-completion youtube-dl
