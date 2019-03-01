@@ -8,6 +8,16 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # Install git
+brew install git
+
 # Clone Repository with "macos-branch"
+git clone --bare https://github.com/zackad/dotfiles $HOME/.dot
+git --git-dir=$HOME/.dot/ --work-tree=$HOME checkout macos-home
+
 # Install php related tools
+brew install php@7.2 composer
+
 # Install nodejs related tools
+
+# Install other tools
+brew install aria2 bash-completion youtube-dl
