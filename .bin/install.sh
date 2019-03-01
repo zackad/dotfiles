@@ -14,6 +14,7 @@ brew install git
 git clone --bare https://github.com/zackad/dotfiles $HOME/.dot
 git --git-dir=$HOME/.dot/ --work-tree=$HOME checkout macos-home
 git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local status.showUntrackedFiles no
+source $HOME/.bash_profile
 
 # Install php related tools
 brew install php@7.2 composer
