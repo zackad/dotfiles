@@ -18,6 +18,7 @@ source $HOME/.bash_profile
 
 # Install php related tools
 brew install composer
+composer global require bamarni/symfony-console-autocomplete
 
 # Install nodejs related tools
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
