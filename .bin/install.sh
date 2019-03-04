@@ -17,7 +17,7 @@ git --git-dir=$HOME/.dot/ --work-tree=$HOME config --local status.showUntrackedF
 source $HOME/.bash_profile
 
 # Install php related tools
-brew install php@7.2 composer
+brew install composer
 
 # Install nodejs related tools
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
