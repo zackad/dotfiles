@@ -5,6 +5,7 @@
 [core]
 	autocrlf = input
 	pager = less -S
+	editor = vim
 [push]
 	default = matching
 [color]
