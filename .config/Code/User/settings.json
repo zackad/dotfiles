@@ -27,5 +27,6 @@
     "search.exclude": {
       "**/var": true
     },
-    "window.restoreWindows": "none"
+    "window.restoreWindows": "none",
+    "extensions.ignoreRecommendations": true
   }
