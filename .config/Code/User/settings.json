@@ -28,5 +28,6 @@
       "**/var": true
     },
     "window.restoreWindows": "none",
-    "extensions.ignoreRecommendations": true
+    "extensions.ignoreRecommendations": true,
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono"
   }
