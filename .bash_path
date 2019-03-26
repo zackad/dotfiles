@@ -2,12 +2,6 @@
 export PATH=${PATH}:/home/linuxbrew/.linuxbrew/bin
 export PATH=${PATH}:/home/linuxbrew/.linuxbrew/opt/php@7.2/bin
 
-# Android SDK and related PATH
-ANDROID_HOME=~/Android/Sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export PATH=${PATH}:${ANDROID_HOME}/genymotion
-
 # Composer global bin directory
 COMPOSER_BIN=~/.composer/vendor/bin
 export PATH=${PATH}:${COMPOSER_BIN}
