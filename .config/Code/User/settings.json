@@ -1,5 +1,4 @@
 {
-    "workbench.iconTheme": "vscode-icons",
     "workbench.activityBar.visible": false,
     "telemetry.enableTelemetry": false,
     "editor.minimap.enabled": false,
@@ -12,7 +11,6 @@
         "attr_quotes": "single"
       }
     },
-    "vsicons.dontShowNewVersionMessage": true,
     "editor.rulers": [
       80,
       120
@@ -29,5 +27,9 @@
     },
     "window.restoreWindows": "none",
     "extensions.ignoreRecommendations": true,
-    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono"
+    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+    "workbench.iconTheme": "material-icon-theme",
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    }
   }
