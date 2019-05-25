@@ -9,7 +9,7 @@ insert_final_newline = true
 [*.php]
 indent_size = 4
 
-[*.{html,js,json,css,scss,twig,yml,yaml}]
+[*.{html,js,json,jsx,css,scss,twig,yml,yaml}]
 indent_size = 2
 
 [Makefile]
