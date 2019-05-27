@@ -31,8 +31,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Homebrew PHP
-export PATH="/usr/local/opt/php@7.2/bin:$PATH"
-export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
 
 # Flutter SDK
 export PATH="$PATH:/Users/zackad/.SDK/flutter/bin"
@@ -40,6 +40,11 @@ export PATH="$PATH:/Users/zackad/.SDK/flutter/bin"
 # Symfony console autocomplete
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 eval "$(symfony-autocomplete)"
+
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+export PATH
 
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
