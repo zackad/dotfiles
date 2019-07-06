@@ -1,10 +1,13 @@
 # Homebrew PATH
-export PATH=${PATH}:/home/linuxbrew/.linuxbrew/bin
-export PATH=${PATH}:/home/linuxbrew/.linuxbrew/opt/php@7.2/bin
+export PATH=/home/linuxbrew/.linuxbrew/bin:${PATH}
+export PATH=/home/linuxbrew/.linuxbrew/opt/php@7.2/bin:${PATH}
 
 # Composer global bin directory
 COMPOSER_BIN=~/.composer/vendor/bin
-export PATH=${PATH}:${COMPOSER_BIN}
+export PATH=${COMPOSER_BIN}:${PATH}
+
+# Symfony binary path
+export PATH="$HOME/.symfony/bin:$PATH"
 
 # Node Version Manager
 export NVM_DIR="$HOME/.nvm"
