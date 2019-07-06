@@ -31,5 +31,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
-    }
+    },
+    "vsicons.dontShowNewVersionMessage": true
   }
