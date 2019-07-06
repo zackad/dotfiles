@@ -40,5 +40,6 @@
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "prettier.semi": false,
-    "prettier.trailingComma": "all"
+    "prettier.trailingComma": "all",
+    "editor.formatOnSave": true
   }
