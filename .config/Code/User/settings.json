@@ -1,45 +1,40 @@
 {
-    "workbench.activityBar.visible": false,
-    "telemetry.enableTelemetry": false,
-    "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
-    "files.trimTrailingWhitespace": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "javascript.preferences.quoteStyle": "single",
-    "emmet.syntaxProfiles": {
-      "jsx": {
-        "attr_quotes": "single"
-      }
-    },
-    "editor.rulers": [
-      80,
-      120
-    ],
-    "eslint.alwaysShowStatus": true,
-    "eslint.packageManager": "yarn",
-    "files.insertFinalNewline": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "files.watcherExclude": {
-      "**/var/**": true
-    },
-    "search.exclude": {
-      "**/var": true
-    },
-    "window.restoreWindows": "none",
-    "extensions.ignoreRecommendations": true,
-    "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
-    "workbench.iconTheme": "material-icon-theme",
-    "[html]": {
-      "editor.defaultFormatter": "vscode.html-language-features"
-    },
-    "vsicons.dontShowNewVersionMessage": true,
-    "typescript.preferences.quoteStyle": "single",
-    "prettier.jsxSingleQuote": true,
-    "prettier.singleQuote": true,
-    "[javascriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "prettier.semi": false,
-    "prettier.trailingComma": "es5",
-    "editor.formatOnSave": true
-  }
+  "workbench.activityBar.visible": false,
+  "telemetry.enableTelemetry": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.quoteStyle": "single",
+  "emmet.syntaxProfiles": {
+    "jsx": {
+      "attr_quotes": "single"
+    }
+  },
+  "editor.rulers": [80, 120],
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "files.insertFinalNewline": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.watcherExclude": {
+    "**/var/**": true
+  },
+  "search.exclude": {
+    "**/var": true
+  },
+  "window.restoreWindows": "none",
+  "extensions.ignoreRecommendations": true,
+  "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+  "workbench.iconTheme": "material-icon-theme",
+  "vsicons.dontShowNewVersionMessage": true,
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 120,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
+}
