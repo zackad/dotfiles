@@ -37,7 +37,9 @@ export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
 # Homebrew Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 # Ruby gem user directory
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
+export GEM_HOME="$HOME/.gems"
+export PATH="$HOME/.gems/bin:$PATH"
+# export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
 # Flutter SDK
 export PATH="$HOME/.SDK/flutter/bin:$PATH"
