@@ -59,7 +59,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 363 620 392 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 245 918 452 0 0 1440 900 </string>
+	<string>269 261 958 470 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 0 570 877 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
@@ -716,7 +716,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-07-08T11:32:43Z</date>
+	<date>2019-07-30T02:25:43Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
