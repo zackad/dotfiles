@@ -1,7 +1,3 @@
-# Homebrew PATH
-export PATH=/home/linuxbrew/.linuxbrew/bin:${PATH}
-export PATH=/home/linuxbrew/.linuxbrew/opt/php@7.2/bin:${PATH}
-
 # Composer global bin directory
 COMPOSER_BIN=~/.composer/vendor/bin
 export PATH=${COMPOSER_BIN}:${PATH}
