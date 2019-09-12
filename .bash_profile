@@ -52,3 +52,6 @@ eval "$(symfony-autocomplete)"
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+# Setting locale
+export LC_ALL="en_US.UTF-8"
