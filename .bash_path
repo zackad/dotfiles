@@ -1,6 +1,6 @@
 # Composer global bin directory
 COMPOSER_BIN=~/.composer/vendor/bin
-export PATH=${COMPOSER_BIN}:${PATH}
+export PATH=${COMPOSER_BIN}:~/.config/composer/vendor/bin:${PATH}
 
 # Symfony binary path
 export PATH="$HOME/.symfony/bin:$PATH"
