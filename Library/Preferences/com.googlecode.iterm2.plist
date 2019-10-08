@@ -833,6 +833,7 @@
 		<string>3.3.2</string>
 		<string>3.2.9</string>
 		<string>3.3.1</string>
+		<string>3.3.4</string>
 		<string>3.3.0</string>
 		<string>3.3.3</string>
 	</array>
@@ -850,7 +851,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>0D5A0AE8-9818-4ECF-9FF2-79B04EFE3B98</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>45</integer>
+	<integer>69</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>586503851.86914897</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -1591,7 +1592,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-11T08:44:03Z</date>
+	<date>2019-10-08T02:20:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -1607,6 +1608,6 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.4</string>
 </dict>
 </plist>
