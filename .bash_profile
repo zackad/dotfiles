@@ -1,3 +1,6 @@
+# Suppress deprecation warning from MacOS Catalina
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Bash autocomplete
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
