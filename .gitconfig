@@ -8,3 +8,5 @@
     pretty = format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s
 [log]
     date = format:%Y-%m-%d %H:%M:%S
+[core]
+	pager = less -FRX
