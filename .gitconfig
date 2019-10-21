@@ -4,7 +4,7 @@
 	signingkey = B2D87DBE
 [core]
 	autocrlf = input
-	pager = less -S
+	pager = less -FRX
 	editor = vim
 [push]
 	default = matching
