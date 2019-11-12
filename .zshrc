@@ -68,7 +68,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-flow-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,9 @@ eval "$(symfony-autocomplete)"
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+# zsh completion
+for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
 
 # ==============================================================================
 #                               Aliases
