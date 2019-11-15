@@ -119,6 +119,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
 
 # zsh completion
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
 for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
 
 # ==============================================================================
