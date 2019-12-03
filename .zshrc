@@ -99,7 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Setting locale
-# export LC_ALL="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 # ==============================================================================
 #                           Additional PATH
