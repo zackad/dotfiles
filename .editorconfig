@@ -6,11 +6,14 @@ end_of_line = lf
 indent_style = space
 insert_final_newline = true
 
-[*.php]
+[*.{php,yml,yaml}]
 indent_size = 4
 
-[*.{html,js,json,jsx,css,scss,twig,yml,yaml}]
+[*.{html,js,json,jsx,css,scss,twig}]
 indent_size = 2
 
 [Makefile]
 indent_style = tab
+
+[composer.*]
+indent_size = 4
