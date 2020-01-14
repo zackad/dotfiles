@@ -20,3 +20,5 @@
 	q = log --all --decorate --oneline --graph
 [commit]
 	gpgsign = false
+[merge]
+	ff = no
