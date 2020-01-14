@@ -68,7 +68,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git git-flow-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +125,6 @@ alias dot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Symfony console app
 alias console='bin/console'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -127,3 +127,6 @@ PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$(__pwd_prompt)\007"'
 
 # Symfony autocomplete
 eval "$(symfony-autocomplete)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
