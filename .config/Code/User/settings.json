@@ -11,7 +11,10 @@
       "attr_quotes": "single"
     }
   },
-  "editor.rulers": [80, 120],
+  "editor.rulers": [
+    80,
+    120
+  ],
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "yarn",
   "files.insertFinalNewline": true,
@@ -24,7 +27,7 @@
   },
   "window.restoreWindows": "none",
   "extensions.ignoreRecommendations": true,
-  "terminal.integrated.fontFamily": "UbuntuMono Nerd Font Mono",
+  "terminal.integrated.fontFamily": "monospace",
   "workbench.iconTheme": "material-icon-theme",
   "vsicons.dontShowNewVersionMessage": true,
   "typescript.preferences.quoteStyle": "single",
