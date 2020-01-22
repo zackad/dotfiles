@@ -1,7 +1,6 @@
 [user]
 	name = zackad
 	email = zackad.dev@gmail.com
-	signingkey = B2D87DBE
 [core]
 	autocrlf = input
 	pager = less -FRX
