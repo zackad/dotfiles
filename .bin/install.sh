@@ -22,7 +22,7 @@ composer global require bamarni/symfony-console-autocomplete
 
 # Install nodejs related tools
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-nvm install 8
+nvm install 10
 npm -g install yarn
 
 # Install other tools
