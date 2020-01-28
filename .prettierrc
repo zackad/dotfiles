@@ -4,5 +4,21 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
   "jsxBracketSameLine": false,
-  "trailingComma": "es5"
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": ["*.yaml", "*.yml", "composer.*", "Makefile"],
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ["Makefie"],
+      "options": {
+        "useTabs": true
+      }
+    }
+  ]
 }
