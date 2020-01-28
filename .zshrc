@@ -109,14 +109,17 @@ export LC_ALL="en_US.UTF-8"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-# Symfony console autocomplete
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-eval "$(symfony-autocomplete)"
-
 # Setting PATH for Python 3.6
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+PATH="$PATH:$HOME/.rvm/bin"
+
+# Symfony console autocomplete
+PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH
+eval "$(symfony-autocomplete)"
 
 # zsh completion
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
@@ -134,6 +137,3 @@ alias console='bin/console'
 
 # Use exa as listing tool instead of ls
 alias ls='exa'
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
