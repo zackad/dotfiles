@@ -1,6 +1,7 @@
 [user]
 	name = zackad
 	email = zackad.dev@gmail.com
+	signingkey = D9944489
 [alias]
 	q = log --all --decorate --oneline --graph
     l = log --date=short
