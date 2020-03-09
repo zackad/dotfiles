@@ -39,5 +39,7 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "window.menuBarVisibility": "toggle",
+  "workbench.statusBar.visible": true
 }
