@@ -101,6 +101,9 @@ source $ZSH/oh-my-zsh.sh
 # Setting locale
 export LC_ALL="en_US.UTF-8"
 
+# Prompt gpg passphrase on cli
+export GPG_TTY=$(tty)
+
 # ==============================================================================
 #                           Additional PATH
 # ==============================================================================
