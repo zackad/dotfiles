@@ -18,6 +18,7 @@
 	l = log --date=short
 	lr = log --date=relative
 	q = log --all --decorate --oneline --graph
+	cm = checkout master
 [commit]
 	gpgsign = false
 [merge]
