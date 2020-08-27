@@ -22,5 +22,6 @@
   "window.restoreWindows": "none",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
-  "workbench.activityBar.visible": false
+  "workbench.activityBar.visible": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF"
 }
