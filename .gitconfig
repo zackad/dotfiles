@@ -12,3 +12,5 @@
 	date = format:%Y-%m-%d %H:%M:%S
 [core]
 	pager = less -FRX
+[merge]
+	ff = no
