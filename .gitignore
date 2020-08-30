@@ -1,0 +1,9 @@
+# ignore directory
+.idea
+.netlify
+.vscode
+
+# ignore file
+.DS_Store
+.php_cs.cache
+*.cache

@@ -12,5 +12,6 @@
 	date = format:%Y-%m-%d %H:%M:%S
 [core]
 	pager = less -FRX
+	excludesFile = ~/.gitignore
 [merge]
 	ff = no
