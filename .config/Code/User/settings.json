@@ -27,7 +27,7 @@
   },
   "window.restoreWindows": "none",
   "extensions.ignoreRecommendations": true,
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "workbench.iconTheme": "material-icon-theme",
   "vsicons.dontShowNewVersionMessage": true,
   "typescript.preferences.quoteStyle": "single",
@@ -41,5 +41,7 @@
   },
   "editor.formatOnSave": true,
   "window.menuBarVisibility": "toggle",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
+  "editor.fontFamily": "Inconsolata, 'Fira Code', 'Source Code Pro', 'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 16
 }
