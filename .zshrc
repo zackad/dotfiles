@@ -111,6 +111,9 @@ export LC_ALL="en_US.UTF-8"
 # Prompt gpg passphrase on cli
 export GPG_TTY=$(tty)
 
+# exit pager directly if enough space
+export PAGER='less -FRX'
+
 # ==============================================================================
 #                           Additional PATH
 # ==============================================================================
