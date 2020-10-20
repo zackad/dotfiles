@@ -129,6 +129,9 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 PATH="$PATH:$HOME/.rvm/bin"
 
+# GDAL library from qgis
+PATH="$PATH:/Applications/QGIS3.10.app/Contents/MacOS/bin"
+
 # Symfony console autocomplete
 PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH
