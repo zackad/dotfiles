@@ -11,7 +11,7 @@
 [log]
 	date = format:%Y-%m-%d %H:%M:%S
 [core]
-	pager = less -FRX
+	pager = delta
 	excludesFile = ~/.gitignore
 [merge]
 	ff = no
