@@ -130,7 +130,7 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 PATH="$PATH:$HOME/.rvm/bin"
 
 # GDAL library from qgis
-PATH="$PATH:/Applications/QGIS3.10.app/Contents/MacOS/bin"
+PATH="$PATH:/Applications/QGIS.app/Contents/MacOS/bin"
 
 # Symfony console autocomplete
 PATH="$HOME/.composer/vendor/bin:$PATH"
