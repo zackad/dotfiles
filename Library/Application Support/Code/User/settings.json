@@ -23,5 +23,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.activityBar.visible": false,
-  "terminal.integrated.fontFamily": "MesloLGS NF"
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "extensions.ignoreRecommendations": true
 }
