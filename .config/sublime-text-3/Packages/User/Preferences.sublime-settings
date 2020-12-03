@@ -1,5 +1,4 @@
 {
-	"color_scheme": "Packages/sublime-package/Themes/ZackTheme - Monokai.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"folder_exclude_patterns":
 	[
@@ -21,8 +20,7 @@
 	[
 		72
 	],
-	"skin": "User/boxy-monokai-zackad",
-	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme": "Adaptive.sublime-theme",
 	"theme_accent_numix": true,
 	"theme_autocomplete_item_selected_colored": true,
 	"theme_dropdown_atomized": true,
