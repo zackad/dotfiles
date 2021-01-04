@@ -109,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL="en_US.UTF-8"
 
 # Prompt gpg passphrase on cli
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 # ==============================================================================
 #                           Additional PATH
