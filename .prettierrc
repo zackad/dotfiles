@@ -8,6 +8,7 @@
   "trailingComma": "es5",
   "useTabs": false,
   "twigPrintWidth": 120,
+  "twigAlwaysBreakObjects": false,
   "overrides": [
     {
       "files": ["*.yaml", "*.yml", "composer.*", "Makefile"],
