@@ -1,47 +1,52 @@
 {
-  "workbench.activityBar.visible": false,
-  "telemetry.enableTelemetry": false,
-  "editor.minimap.enabled": false,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
   "breadcrumbs.enabled": false,
-  "files.trimTrailingWhitespace": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferences.quoteStyle": "single",
+  "editor.fontFamily": "Inconsolata, 'Fira Code', 'Source Code Pro', 'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    80,
+    120
+  ],
   "emmet.syntaxProfiles": {
     "jsx": {
       "attr_quotes": "single"
     }
   },
-  "editor.rulers": [
-    80,
-    120
-  ],
   "eslint.alwaysShowStatus": true,
   "eslint.packageManager": "yarn",
+  "extensions.ignoreRecommendations": true,
   "files.insertFinalNewline": true,
-  "workbench.startupEditor": "newUntitledFile",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
   "files.watcherExclude": {
     "**/var/**": true
   },
-  "search.exclude": {
-    "**/var": true
-  },
-  "window.restoreWindows": "none",
-  "extensions.ignoreRecommendations": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.quoteStyle": "single",
+  "telemetry.enableTelemetry": false,
   "terminal.integrated.fontFamily": "MesloLGS NF",
-  "workbench.iconTheme": "material-icon-theme",
-  "vsicons.dontShowNewVersionMessage": true,
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
   "prettier.semi": false,
   "prettier.trailingComma": "es5",
   "prettier.printWidth": 120,
+  "search.exclude": {
+    "**/var": true
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.menuBarVisibility": "toggle",
+  "window.restoreWindows": "none",
+  "workbench.activityBar.visible": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": true,
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.formatOnSave": true,
-  "window.menuBarVisibility": "toggle",
-  "workbench.statusBar.visible": true,
-  "editor.fontFamily": "Inconsolata, 'Fira Code', 'Source Code Pro', 'Droid Sans Mono', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 16
+  }
 }
