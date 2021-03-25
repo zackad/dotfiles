@@ -154,6 +154,9 @@ alias console='bin/console'
 # Use exa as listing tool instead of ls
 alias ls='exa'
 
+# Initializing script and setup
+ulimit -S -n 8192
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
