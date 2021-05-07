@@ -132,8 +132,12 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 # GDAL library from qgis
 PATH="$PATH:/Applications/QGIS.app/Contents/MacOS/bin"
 
+#PHPBrew
+[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
 # Symfony console autocomplete
 PATH="$HOME/.composer/vendor/bin:$PATH"
+
 export PATH
 eval "$(symfony-autocomplete)"
 
@@ -159,6 +163,3 @@ ulimit -S -n 8192
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-#PHPBrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
