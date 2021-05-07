@@ -139,11 +139,6 @@ PATH="$PATH:/Applications/QGIS.app/Contents/MacOS/bin"
 PATH="$HOME/.composer/vendor/bin:$PATH"
 
 export PATH
-eval "$(symfony-autocomplete)"
-
-# zsh completion
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
-for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
 
 # ==============================================================================
 #                               Aliases
@@ -158,8 +153,22 @@ alias console='bin/console'
 # Use exa as listing tool instead of ls
 alias ls='exa'
 
+# Use symfony binary to automatically select php version
+alias php='symfony php'
+
+# ==============================================================================
+# Misc
+# ==============================================================================
+
+# zsh completion
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
+for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
+
 # Initializing script and setup
 ulimit -S -n 8192
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Load symfony-autocomplete
+eval "$(symfony-autocomplete)"
