@@ -6,4 +6,5 @@
 # ignore file
 .DS_Store
 .php_cs.cache
+.php-version
 *.cache
