@@ -119,6 +119,7 @@ export PAGER='less -FRX'
 # ==============================================================================
 
 # Local PATH on home directory
+PATH="/usr/local/sbin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 
 # Node Version Manager
@@ -152,9 +153,6 @@ alias console='bin/console'
 
 # Use exa as listing tool instead of ls
 alias ls='exa'
-
-# Use symfony binary to automatically select php version
-alias php='symfony php'
 
 # ==============================================================================
 # Misc
