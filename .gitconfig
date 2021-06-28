@@ -6,6 +6,7 @@
 	autocrlf = input
 	pager = delta
 	editor = vim
+	excludesfile = ~/.gitignore
 [push]
 	default = matching
 [color]
@@ -26,3 +27,5 @@
 [delta]
 	line-numbers = true
 	hunk-header-style = omit
+[tag]
+	gpgSign = true
