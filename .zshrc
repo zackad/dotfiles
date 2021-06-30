@@ -72,7 +72,6 @@ PATH="$PATH:/Applications/QGIS.app/Contents/MacOS/bin"
 PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Golang binary
-GOPATH="$HOME/.go"
 PATH="$HOME/.go/bin:$PATH"
 
 export PATH
