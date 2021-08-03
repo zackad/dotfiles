@@ -58,6 +58,9 @@ eval "$(symfony-autocomplete)"
 # Symfony cli
 export PATH="${HOME}/.symfony/bin:${PATH}"
 
+# Go binary
+export PATH="${HOME}/.go/bin:${PATH}"
+
 # PHPBrew
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
