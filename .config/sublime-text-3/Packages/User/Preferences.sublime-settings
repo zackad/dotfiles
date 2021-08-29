@@ -8,9 +8,10 @@
 		"CVS",
 		".sass-cache"
 	],
-	"font_face": "Incosolata Mono",
+	"font_face": "MesloLGS NF Regular",
 	"font_size": 11,
 	"hot_exit": false,
+	"line_padding_bottom": 4,
 	"ignored_packages":
 	[
 		"Vintage"
