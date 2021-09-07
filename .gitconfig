@@ -27,7 +27,7 @@
 [delta]
 	line-numbers = true
 	hunk-header-style = omit
-	line-numbers-left-format = "{nm:>4}│"
+	line-numbers-left-format = "{nm:>4}¦"
 [tag]
 	gpgSign = true
 [init]
