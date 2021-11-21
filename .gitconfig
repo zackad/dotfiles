@@ -1,7 +1,7 @@
 [user]
 	name = zackad
 	email = zackad.dev@gmail.com
-	signingkey = D9944489
+	signingkey = 5E11F0B6C1EF4843
 [core]
 	autocrlf = input
 	pager = delta
