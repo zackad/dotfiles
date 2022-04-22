@@ -8,3 +8,6 @@
 .php_cs.cache
 .php-version
 *.cache
+
+# phive installed tools
+/tools
