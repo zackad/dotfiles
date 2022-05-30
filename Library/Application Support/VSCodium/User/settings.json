@@ -1,0 +1,12 @@
+{
+  "workbench.colorTheme": "Default Dark+",
+  "files.trimTrailingWhitespace": true,
+  "workbench.activityBar.visible": false,
+  "files.insertFinalNewline": true,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'MesloLGS NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.semi": false,
+  "json.schemas": []
+}
