@@ -51,6 +51,10 @@ export GPG_TTY=$TTY
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
 # Composer bin
 export PATH="${HOME}/.config/composer/vendor/bin:${PATH}"
 eval "$(symfony-autocomplete)"
@@ -60,9 +64,6 @@ export PATH="${HOME}/.symfony/bin:${PATH}"
 
 # Go binary
 export PATH="${HOME}/.go/bin:${PATH}"
-
-# PHPBrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$HOME/.rvm/bin:$PATH"
