@@ -11,3 +11,6 @@
 
 # phive installed tools
 /tools
+
+# rectorphp configuration
+/rector.php
