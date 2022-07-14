@@ -8,5 +8,6 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.semi": false,
-  "json.schemas": []
+  "json.schemas": [],
+  "redhat.telemetry.enabled": false
 }
