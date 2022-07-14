@@ -87,7 +87,7 @@ export PATH
 # ==============================================================================
 
 # git alias to manage dotfiles
-alias dot='/usr/local/bin/git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 # Symfony console app
 alias console='bin/console'
