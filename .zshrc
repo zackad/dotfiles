@@ -65,6 +65,9 @@ export PATH="${HOME}/.symfony/bin:${PATH}"
 # Go binary
 export PATH="${HOME}/.go/bin:${PATH}"
 
+# Bun (All In One javascript runtime)
+export PATH="${HOME}/.bun/bin:${PATH}"
+
 # ==============================================================================
 #                               Aliases
 # ==============================================================================
@@ -84,3 +87,7 @@ alias ssh='kitty +kitten ssh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# bun completions
+[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+
