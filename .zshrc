@@ -35,67 +35,6 @@ plugins=(git docker docker-compose python-autoload-venv)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# Setting locale
-export LC_ALL="en_US.UTF-8"
-
-# Prompt gpg passphrase on cli
-export GPG_TTY=$TTY
-
-# exit pager directly if enough space
-export PAGER='less -FRX'
-
-# ==============================================================================
-#                           Additional PATH
-# ==============================================================================
-
-# Local PATH on home directory
-PATH="/usr/local/sbin:$PATH"
-PATH="$HOME/.local/bin:$PATH"
-
-# Node Version Manager
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Setting PATH for Python 3.6
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
-
-# GDAL library from qgis
-PATH="$PATH:/Applications/QGIS.app/Contents/MacOS/bin"
-
-#PHPBrew
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
-
-# Symfony console autocomplete
-PATH="$HOME/.composer/vendor/bin:$PATH"
-
-# Golang binary
-PATH="$HOME/.go/bin:$PATH"
-
-# Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
-# End Nix
-
-export PATH
-
-# ==============================================================================
-#                               Aliases
-# ==============================================================================
-
-# git alias to manage dotfiles
-alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
-
-# Symfony console app
-alias console='bin/console'
-
-# Use exa as listing tool instead of ls
-alias ls='exa'
-
-alias cat='bat'
 # ==============================================================================
 # Misc
 # ==============================================================================
@@ -103,6 +42,7 @@ alias cat='bat'
 # zsh completion
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
 for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
+for f ($HOME/.local/share/zsh/site-functions/*(N.)) . $f
 
 # Initializing script and setup
 ulimit -S -n 8192
@@ -110,5 +50,4 @@ ulimit -S -n 8192
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Load symfony-autocomplete
-eval "$(symfony-autocomplete)"
+[[ ! -f ~/.profile ]] || source ~/.profile
