@@ -9,5 +9,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.semi": false,
   "json.schemas": [],
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false
 }
