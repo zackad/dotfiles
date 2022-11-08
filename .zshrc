@@ -91,3 +91,5 @@ alias ssh='kitty +kitten ssh'
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
 
+# Load .profile
+[[ ! -f ~/.profile ]] || source ~/.profile
