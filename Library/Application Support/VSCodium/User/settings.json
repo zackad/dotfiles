@@ -12,5 +12,7 @@
   "redhat.telemetry.enabled": false,
   "explorer.confirmDragAndDrop": false,
   "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 5
 }
