@@ -1,7 +1,7 @@
 syntax on
 
 set nocompatible
-set relativenumber
+set number relativenumber
 set smartindent
 set showcmd
 set termguicolors
