@@ -42,3 +42,6 @@ eval "$(symfony-autocomplete)"
 
 # bun completions
 [ -s "/Users/zackad/.bun/_bun" ] && source "/Users/zackad/.bun/_bun"
+
+# Ignore php-cs-fixer environment error
+export PHP_CS_FIXER_IGNORE_ENV=1
