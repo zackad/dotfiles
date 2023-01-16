@@ -41,6 +41,8 @@ export GPG_TTY=$TTY
 # exit pager directly if enough space
 export PAGER='less -FRX'
 
+export EDITOR='vim'
+
 # Load symfony-autocomplete
 eval "$(symfony-autocomplete)"
 
