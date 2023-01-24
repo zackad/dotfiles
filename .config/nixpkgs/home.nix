@@ -19,6 +19,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = [
+    pkgs.ansible
+    pkgs.ansible-lint
     pkgs.aria2
     pkgs.bat
     pkgs.caddy
