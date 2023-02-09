@@ -34,6 +34,7 @@
     pkgs.jq
     pkgs.postgresql_15
     pkgs.rar
+    pkgs.rustup
     pkgs.wireguard-go
     pkgs.wireguard-tools
   ];
