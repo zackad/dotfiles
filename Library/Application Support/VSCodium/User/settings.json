@@ -14,5 +14,6 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 5
+  "workbench.editor.limit.value": 5,
+  "workbench.iconTheme": "material-icon-theme"
 }
