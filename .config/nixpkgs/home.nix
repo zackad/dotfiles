@@ -23,7 +23,6 @@
     pkgs.ansible-lint
     pkgs.aria2
     pkgs.bat
-    pkgs.caddy
     pkgs.delta
     pkgs.exa
     pkgs.ffmpeg
