@@ -35,14 +35,6 @@ plugins=(git python-autoload-venv)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-# Setting locale
-export LC_ALL="en_US.UTF-8"
-
-# Prompt gpg passphrase on cli
-export GPG_TTY=$TTY
-
 # ==============================================================================
 #                           Additional PATH
 # ==============================================================================
@@ -52,21 +44,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
-# Composer bin
-export PATH="${HOME}/.config/composer/vendor/bin:${PATH}"
+# Symfony console command autocomplete
 eval "$(symfony-autocomplete)"
-
-# Symfony cli
-export PATH="${HOME}/.symfony/bin:${PATH}"
-
-# Go binary
-export PATH="${HOME}/.go/bin:${PATH}"
-
-# Bun (All In One javascript runtime)
-export PATH="${HOME}/.bun/bin:${PATH}"
 
 # ==============================================================================
 #                               Aliases
@@ -90,6 +71,3 @@ alias ssh='kitty +kitten ssh'
 
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
-# Load .profile
-[[ ! -f ~/.profile ]] || source ~/.profile
