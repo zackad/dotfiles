@@ -22,7 +22,6 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.bat
-    pkgs.postgresql_13
     pkgs.direnv
   ];
 }
