@@ -1,6 +1,0 @@
-{
-    "phpcs_executable_path": "/usr/bin/phpcs",
-    "phpmd_executable_path": "/usr/bin/phpmd",
-    "phpcbf_executable_path": "/usr/bin/phpcbf",
-    "php_cs_fixer_executable_path": "/usr/local/bin/php-cs-fixer"
-}
