@@ -71,3 +71,6 @@ alias ssh='kitty +kitten ssh'
 
 # bun completions
 [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
+
+# Hook for direnv
+eval "$(direnv hook zsh)"
