@@ -24,6 +24,7 @@
     pkgs.aria2
     pkgs.bat
     pkgs.delta
+    pkgs.direnv
     pkgs.exa
     pkgs.ffmpeg
     pkgs.git
