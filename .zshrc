@@ -34,10 +34,10 @@ CASE_SENSITIVE="true"
 plugins=(git docker docker-compose python-autoload-venv)
 
 source $ZSH/oh-my-zsh.sh
-
-# ==============================================================================
-# Misc
-# ==============================================================================
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load .profile
+[[ ! -f ~/.profile ]] || source ~/.profile
 
 # zsh completion
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
@@ -47,7 +47,5 @@ for f ($HOME/.local/share/zsh/site-functions/*(N.)) . $f
 # Initializing script and setup
 ulimit -S -n 8192
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-[[ ! -f ~/.profile ]] || source ~/.profile
+# Load symfony-autocomplete
+eval "$(symfony-autocomplete)"
