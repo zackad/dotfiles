@@ -28,6 +28,7 @@
     pkgs.exa
     pkgs.ffmpeg
     pkgs.git
+    pkgs.ghostscript
     pkgs.htop
     pkgs.hugo
     pkgs.imagemagick
