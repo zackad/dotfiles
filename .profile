@@ -20,9 +20,6 @@ PATH="${PATH}:${HOME}/.phpenv/bin"
 
 export PATH="${PATH}"
 
-# Ignore php-cs-fixer incompatibility error
-export PHP_CS_FIXER_IGNORE_ENV=1
-
 # Default editor
 export EDITOR=vim
 
