@@ -20,5 +20,6 @@
     hunk-header-style = omit
 [tag]
 	gpgSign = true
+	sort = version:refname
 [init]
 	defaultBranch = master
