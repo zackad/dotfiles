@@ -21,7 +21,7 @@
   home.packages = [
     pkgs.ansible
     pkgs.ansible-lint
-    pkgs.aria2
+    pkgs.aria
     pkgs.bat
     pkgs.direnv
     pkgs.exa
