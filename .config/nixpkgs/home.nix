@@ -23,11 +23,9 @@
     pkgs.ansible-lint
     pkgs.aria2
     pkgs.bat
-    pkgs.delta
     pkgs.direnv
     pkgs.exa
     pkgs.ffmpeg
-    pkgs.git
     pkgs.ghostscript
     pkgs.htop
     pkgs.hugo
@@ -37,4 +35,31 @@
     pkgs.wireguard-go
     pkgs.wireguard-tools
   ];
+  programs.git = {
+    enable = true;
+    userName = "zackad";
+    userEmail = "zackad.dev@gmail.com";
+    signing.key = "5E11F0B6C1EF4843";
+    aliases = {
+      cm = "checkout master";
+      l = "log --date=short";
+      q = "log --all --decorate --oneline --graph";
+    };
+    extraConfig = {
+      core.excludesFile = "~/.gitignore";
+      format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
+      init.defaultbranch = "master";
+      log.date = "format:%Y-%m-%d %H:%M:%S";
+      merge.ff = "no";
+      tag.gpgSign = true;
+      tag.sort = "version:refname";
+    };
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+        hunk-header-style = "omit";
+      };
+    };
+  };
 }
