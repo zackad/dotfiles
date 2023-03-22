@@ -12,8 +12,6 @@ PATH="${PATH}:${HOME}/Applications/JetBrains/Toolbox/scripts"
 PATH="${PATH}:${HOME}/.local/share/JetBrains/Toolbox/scripts"
 # Composer binary
 PATH="${PATH}:${HOME}/.config/composer/vendor/bin"
-# phpenv
-PATH="${PATH}:${HOME}/.phpenv/bin"
 
 export PATH="${PATH}"
 
