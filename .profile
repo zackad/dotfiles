@@ -10,8 +10,6 @@ export GPG_TTY="$TTY"
 # Jetbrains Toolbox App
 PATH="${PATH}:${HOME}/Applications/JetBrains/Toolbox/scripts"
 PATH="${PATH}:${HOME}/.local/share/JetBrains/Toolbox/scripts"
-# Bun (All In One javascript runtime)
-PATH="${PATH}:${HOME}/.bun/bin"
 # Composer binary
 PATH="${PATH}:${HOME}/.config/composer/vendor/bin"
 # phpenv
