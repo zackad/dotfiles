@@ -36,17 +36,6 @@ plugins=(git python-autoload-venv)
 source $ZSH/oh-my-zsh.sh
 
 # ==============================================================================
-#                           Additional PATH
-# ==============================================================================
-
-# Node Version Manager
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# Symfony console command autocomplete
-eval "$(symfony-autocomplete)"
-
-# ==============================================================================
 #                               Aliases
 # ==============================================================================
 
@@ -65,6 +54,9 @@ alias ssh='kitty +kitten ssh'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Symfony console command autocomplete
+eval "$(symfony-autocomplete)"
 
 # Hook for direnv
 eval "$(direnv hook zsh)"
