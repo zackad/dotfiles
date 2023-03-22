@@ -23,5 +23,6 @@
     pkgs.ansible-lint
     pkgs.bat
     pkgs.direnv
+    pkgs.php82
   ];
 }
