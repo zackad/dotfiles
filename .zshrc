@@ -66,8 +66,5 @@ alias ssh='kitty +kitten ssh'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# bun completions
-[ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
 # Hook for direnv
 eval "$(direnv hook zsh)"
