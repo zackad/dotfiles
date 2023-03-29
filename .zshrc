@@ -40,7 +40,6 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.profile ]] || source ~/.profile
 
 # zsh completion
-fpath=($(brew --prefix)/share/zsh-completions $fpath)
 for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
 for f ($HOME/.local/share/zsh/site-functions/*(N.)) . $f
 
