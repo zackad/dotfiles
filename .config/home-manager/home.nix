@@ -31,6 +31,7 @@
     pkgs.hugo
     pkgs.imagemagick
     pkgs.jq
+    pkgs.php82
     pkgs.rar
     pkgs.wireguard-go
     pkgs.wireguard-tools
