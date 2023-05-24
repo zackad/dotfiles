@@ -45,9 +45,6 @@ alias dot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # Symfony console app
 alias console='bin/console'
 
-# Kitty ssh workaround
-alias ssh='kitty +kitten ssh'
-
 alias less='less -S'
 
 # ==============================================================================
