@@ -33,6 +33,8 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.php82
+    pkgs.openssh
+    pkgs.sshpass
     pkgs.rar
     pkgs.wireguard-go
     pkgs.wireguard-tools
