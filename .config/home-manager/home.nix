@@ -32,6 +32,7 @@
     pkgs.hugo
     pkgs.imagemagick
     pkgs.jq
+    pkgs.pass
     pkgs.php82
     pkgs.openssh
     pkgs.sshpass
