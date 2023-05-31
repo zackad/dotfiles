@@ -40,8 +40,9 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.profile ]] || source ~/.profile
 
 # zsh completion
-for f (/usr/local/share/zsh/site-functions/*(N.)) . $f
-for f ($HOME/.local/share/zsh/site-functions/*(N.)) . $f
+fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+autoload -Uz compinit
+compinit
 
 # Initializing script and setup
 ulimit -S -n 8192
