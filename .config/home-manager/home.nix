@@ -26,7 +26,6 @@
     pkgs.direnv
     pkgs.exa
     pkgs.ffmpeg
-    pkgs.gnupg
     pkgs.htop
     pkgs.hugo
     pkgs.imagemagick
@@ -38,6 +37,7 @@
     pkgs.wireguard-go
     pkgs.wireguard-tools
   ];
+
   programs.git = {
     enable = true;
     userName = "zackad";
@@ -63,6 +63,13 @@
         line-numbers = true;
         hunk-header-style = "omit";
       };
+    };
+  };
+
+  programs.gpg = {
+    enable = true;
+    settings = {
+      keyid-format = "long";
     };
   };
 }
