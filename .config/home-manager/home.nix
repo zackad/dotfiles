@@ -26,7 +26,6 @@
     pkgs.direnv
     pkgs.exa
     pkgs.ffmpeg
-    pkgs.ghostscript
     pkgs.gnupg
     pkgs.htop
     pkgs.hugo
@@ -36,7 +35,6 @@
     pkgs.php82
     pkgs.openssh
     pkgs.sshpass
-    pkgs.rar
     pkgs.wireguard-go
     pkgs.wireguard-tools
   ];
