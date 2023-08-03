@@ -4,7 +4,7 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
 # Prompt gpg passphrase on cli
-export GPG_TTY="$TTY"
+export GPG_TTY="$(tty)"
 
 # Add directories into PATH
 # Jetbrains Toolbox App
