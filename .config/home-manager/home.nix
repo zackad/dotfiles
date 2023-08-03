@@ -21,8 +21,11 @@
   home.packages = [
     pkgs.ansible
     pkgs.ansible-lint
+    pkgs.barrier
+    pkgs.sshpass
     pkgs.bat
     pkgs.direnv
+    pkgs.pass
     pkgs.php82
   ];
 }
