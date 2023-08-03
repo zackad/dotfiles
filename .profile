@@ -22,3 +22,6 @@ export EDITOR=vim
 if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
     . ~/.nix-profile/etc/profile.d/nix.sh; 
 fi
+
+# Prepend nix profile into xdg-data
+export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
