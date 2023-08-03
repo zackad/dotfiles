@@ -54,6 +54,11 @@ alias less='less -S'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# zsh completion
+fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+autoload -Uz compinit
+compinit
+
 # Symfony console command autocomplete
 eval "$(symfony-autocomplete)"
 
