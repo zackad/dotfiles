@@ -30,5 +30,6 @@
 	line-numbers-left-format = "{nm:>4}¦"
 [tag]
 	gpgSign = true
+	sort = -taggerdate
 [init]
 	defaultBranch = master
