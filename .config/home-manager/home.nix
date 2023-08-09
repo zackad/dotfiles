@@ -30,6 +30,11 @@
     pkgs.php82
   ];
 
+  programs.vscode ={
+    enable = true;
+    package = pkgs.vscodium;
+  };
+
   programs.yt-dlp = {
     enable = true;
     settings = {
