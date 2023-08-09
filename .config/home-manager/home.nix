@@ -22,10 +22,23 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.barrier
+    pkgs.aria
     pkgs.sshpass
     pkgs.bat
     pkgs.direnv
     pkgs.pass
     pkgs.php82
   ];
+
+  programs.yt-dlp = {
+    enable = true;
+    settings = {
+      restrict-filenames = true;
+      downloader = "aria2c";
+      downloader-args = "aria2c:'-j 16 -s 16 -x 16 -k 20M'";
+      format = "bestvideo[height<=1080]+bestaudio/best[height<=1080]";
+    };
+    extraConfig = ''
+    '';
+  };
 }
