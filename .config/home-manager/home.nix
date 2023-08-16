@@ -21,13 +21,13 @@
   home.packages = [
     pkgs.ansible
     pkgs.ansible-lint
-    pkgs.barrier
     pkgs.aria
-    pkgs.sshpass
+    pkgs.barrier
     pkgs.bat
     pkgs.direnv
     pkgs.pass
     pkgs.php82
+    pkgs.sshpass
   ];
 
   programs.vscode ={
