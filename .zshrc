@@ -41,6 +41,8 @@ export GPG_TTY=$TTY
 #                               Aliases
 # ==============================================================================
 
+alias ls='lsd'
+
 # git alias to manage dotfiles
 alias dot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 

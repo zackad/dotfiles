@@ -26,6 +26,7 @@
     pkgs.bat
     pkgs.direnv
     pkgs.git-machete
+    pkgs.lsd
     pkgs.pass
     pkgs.php82
     pkgs.sshpass
