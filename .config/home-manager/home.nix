@@ -32,6 +32,40 @@
     pkgs.sshpass
   ];
 
+
+  programs.git = {
+    enable = true;
+    userName = "zackad";
+    userEmail = "zackad.dev@gmail.com";
+    signing.key = "5E11F0B6C1EF4843";
+    aliases = {
+      cm = "checkout master";
+      ma = "machete add";
+      me = "machete edit";
+      md = "machete go down";
+      ms = "machete status";
+      mu = "machete update";
+      l = "log --date=short";
+      q = "log --all --decorate --oneline --graph";
+    };
+    extraConfig = {
+      core.excludesFile = "~/.gitignore";
+      format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
+      init.defaultbranch = "master";
+      log.date = "format:%Y-%m-%d %H:%M:%S";
+      merge.ff = "no";
+      tag.gpgSign = true;
+      tag.sort = "version:refname";
+    };
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+        hunk-header-style = "omit";
+      };
+    };
+  };
+
   programs.vscode ={
     enable = true;
     package = pkgs.vscodium;
