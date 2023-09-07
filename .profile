@@ -21,4 +21,4 @@ if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 
 # Prepend nix profile into xdg-data
-export XDG_DATA_DIRS="$HOME/.nix-profile/share:$XDG_DATA_DIRS"
+export XDG_DATA_DIRS="$HOME/.nix-profile/share$XDG_DATA_DIRS"
