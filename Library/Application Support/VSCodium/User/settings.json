@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Default Dark+",
   "files.trimTrailingWhitespace": true,
   "workbench.activityBar.visible": false,
   "files.insertFinalNewline": true,
@@ -15,5 +14,6 @@
   "breadcrumbs.enabled": false,
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 5,
-  "workbench.iconTheme": "material-icon-theme"
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none"
 }
