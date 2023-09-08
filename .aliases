@@ -5,7 +5,7 @@ alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 alias console='bin/console'
 
 # Use exa as listing tool instead of ls
-alias ls='exa'
+alias ls='lsd'
 
 alias cat='bat'
 alias now='date -Iseconds'

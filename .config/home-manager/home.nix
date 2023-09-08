@@ -24,7 +24,6 @@
     pkgs.aria
     pkgs.bat
     pkgs.direnv
-    pkgs.exa
     pkgs.ffmpeg
     pkgs.git-machete
     pkgs.htop
@@ -74,6 +73,14 @@
     enable = true;
     settings = {
       keyid-format = "long";
+    };
+  };
+
+  programs.lsd = {
+    enable = true;
+    settings = {
+      layout = "grid";
+      sorting.dir-grouping = "first";
     };
   };
 }
