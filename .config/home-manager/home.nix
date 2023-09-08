@@ -35,8 +35,6 @@
     pkgs.pinentry-curses
     pkgs.openssh
     pkgs.sshpass
-    pkgs.wireguard-go
-    pkgs.wireguard-tools
   ];
 
   programs.git = {
