@@ -26,6 +26,7 @@
     pkgs.direnv
     pkgs.exa
     pkgs.ffmpeg
+    pkgs.git-machete
     pkgs.htop
     pkgs.hugo
     pkgs.imagemagick
@@ -45,6 +46,10 @@
     aliases = {
       cm = "checkout master";
       l = "log --date=short";
+      ma = "machete add";
+      md = "machete go down";
+      mu = "machete update";
+      ms = "machete status";
       q = "log --all --decorate --oneline --graph";
     };
     extraConfig = {
