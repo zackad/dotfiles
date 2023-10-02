@@ -18,18 +18,30 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  home.packages = [
-    pkgs.ansible
-    pkgs.ansible-lint
-    pkgs.aria
-    pkgs.barrier
-    pkgs.bat
-    pkgs.direnv
-    pkgs.git-machete
-    pkgs.lsd
-    pkgs.pass
-    pkgs.php82
-    pkgs.sshpass
+  home.packages = with pkgs; [
+    alacritty
+    ansible
+    ansible-lint
+    aria
+    barrier
+    bat
+    chromium
+    direnv
+    firefox
+    git-machete
+    htop
+    jetbrains.phpstorm
+    keepass
+    lsd
+    nixpkgs-fmt
+    pass
+    php82
+    sayonara
+    screenfetch
+    sshpass
+    tmux
+    vim
+    wine64
   ];
 
 
