@@ -66,6 +66,14 @@
     };
   };
 
+  programs.gpg = {
+    enable = true;
+    settings= {
+      keyid-format = "long";
+      with-fingerprint = true;
+    };
+  };
+
   programs.vscode ={
     enable = true;
     package = pkgs.vscodium;
