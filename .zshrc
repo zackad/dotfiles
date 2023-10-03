@@ -37,6 +37,9 @@ source $ZSH/oh-my-zsh.sh
 
 export GPG_TTY=$TTY
 
+PATH="${PATH}:${HOME}/.config/composer/vendor/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
+
 # ==============================================================================
 #                               Aliases
 # ==============================================================================
