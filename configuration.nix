@@ -113,7 +113,7 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing.enable = false;
 
   # Hardware configuration
   hardware.bluetooth.enable = true;
