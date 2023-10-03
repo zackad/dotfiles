@@ -53,6 +53,7 @@
     sayonara
     screenfetch
     sshpass
+    telegram-desktop
     tmux
     vim
     wine64
