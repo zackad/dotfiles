@@ -48,6 +48,7 @@ alias ls='lsd'
 
 # git alias to manage dotfiles
 alias dot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias nit='git --git-dir=$HOME/.nixos/ --work-tree=/etc/nixos'
 
 # Symfony console app
 alias console='bin/console'
