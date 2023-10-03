@@ -142,6 +142,8 @@
   # services.xserver.libinput.enable = true;
 
   programs.zsh.enable = true;
+  programs.steam.enable = true;
+  programs.steam.remotePlay.openFirewall = true;
 
   # services.gnome.gnome-keyring.enable = true;
 
