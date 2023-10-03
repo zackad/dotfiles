@@ -162,13 +162,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    xarchiver
     cifs-utils
     tailscale
-    xfce.xfce4-whiskermenu-plugin
+    xarchiver
+    xfce.thunar-archive-plugin
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-volumed-pulse
-    xfce.thunar-archive-plugin
+    xfce.xfce4-whiskermenu-plugin
     zip
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
