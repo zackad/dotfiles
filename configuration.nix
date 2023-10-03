@@ -119,7 +119,7 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
-  # Enable sound with pipewire.
+  # Enable sound with pulseaudio.
   sound.enable = true;
   sound.mediaKeys.enable = true;
   sound.mediaKeys.volumeStep = "5%";
