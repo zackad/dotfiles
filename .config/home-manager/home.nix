@@ -42,6 +42,7 @@
     tmux
     vim
     wine64
+    (callPackage ./phpstorm-url-handler/default.nix {})
   ];
 
 
