@@ -102,6 +102,9 @@
     };
   };
 
+  services.gpg-agent.enable = true;
+  services.gpg-agent.pinentryFlavor = "curses";
+
   programs.vscode ={
     enable = true;
     package = pkgs.vscodium;
