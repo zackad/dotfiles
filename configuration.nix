@@ -182,6 +182,12 @@
     options = ["credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
   };
 
+  fileSystems."/Volumes/data" = {
+    device = "/dev/disk/by-uuid/14AE1D30AE1D0C3C";
+    fsType = "ntfs";
+    options = [ "rw" "uid=1000" "gid=100" ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
