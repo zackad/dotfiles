@@ -33,6 +33,7 @@
     pkgs.pass
     pkgs.php82
     pkgs.pinentry-curses
+    pkgs.pigz
     pkgs.openssh
     pkgs.sshpass
   ];

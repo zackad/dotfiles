@@ -9,3 +9,4 @@ alias ls='lsd'
 
 alias cat='bat'
 alias now='date -Iseconds'
+alias gzip='pigz'
