@@ -50,6 +50,7 @@
     nixpkgs-fmt
     pass
     php82
+    pigz
     sayonara
     screenfetch
     sshpass
