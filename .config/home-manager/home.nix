@@ -39,7 +39,7 @@
     aria
     barrier
     bat
-    chromium
+    brave
     direnv
     firefox
     git-machete
