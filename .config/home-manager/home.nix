@@ -58,7 +58,7 @@
     tmux
     vim
     wine64
-    (callPackage ./phpstorm-url-handler/default.nix {})
+    (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
 
@@ -97,7 +97,7 @@
 
   programs.gpg = {
     enable = true;
-    settings= {
+    settings = {
       keyid-format = "long";
       with-fingerprint = true;
     };
@@ -106,7 +106,21 @@
   services.gpg-agent.enable = true;
   services.gpg-agent.pinentryFlavor = "curses";
 
-  programs.vscode ={
+  programs.neomutt = {
+    enable = true;
+    sidebar.enable = true;
+  };
+
+  programs.rofi = {
+    enable = true;
+    plugins = [ pkgs.rofi-calc ];
+    extraConfig = {
+      modi = "combi";
+      combi-modi = "window,drun";
+    };
+  };
+
+  programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
   };
