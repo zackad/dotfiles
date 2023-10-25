@@ -45,6 +45,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 # ==============================================================================
 
 alias ls='lsd'
+alias gzip='pigz'
 
 # git alias to manage dotfiles
 alias dot='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
