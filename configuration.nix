@@ -153,8 +153,10 @@
   # services.xserver.libinput.enable = true;
 
   programs.zsh.enable = true;
-  programs.steam.enable = true;
-  programs.steam.remotePlay.openFirewall = true;
+
+  # Uncomment following line to enable steam
+  # programs.steam.enable = true;
+  # programs.steam.remotePlay.openFirewall = true;
 
   # services.gnome.gnome-keyring.enable = true;
 
