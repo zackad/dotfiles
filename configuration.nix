@@ -24,6 +24,9 @@
     magicOrExtension = ''\x7fELF....AI\x02'';
   };
 
+  # Enable ntfs support at boot
+  # boot.supportedFilesystems = [ "ntfs" ];
+
   networking.hostName = "NixOS"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
