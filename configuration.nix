@@ -173,6 +173,11 @@
     packages = with pkgs; [ ];
   };
 
+  virtualisation.docker = {
+    rootless.enable = true;
+    rootless.setSocketVariable = true;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -180,6 +185,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     cifs-utils
+    docker-compose
     tailscale
     xarchiver
     xfce.thunar-archive-plugin
