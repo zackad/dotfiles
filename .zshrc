@@ -55,6 +55,7 @@ alias nit='git --git-dir=$HOME/.nixos/ --work-tree=/etc/nixos'
 alias console='bin/console'
 
 alias less='less -S'
+alias cat='bat'
 
 # ==============================================================================
 #                               Misc
