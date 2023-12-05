@@ -47,7 +47,6 @@
     ansible
     ansible-lint
     aria
-    bat
     direnv
     git-machete
     htop
@@ -65,6 +64,12 @@
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
+  programs.bat = {
+    enable = true;
+    config = {
+      style = "plain";
+    };
+  };
 
   programs.git = {
     enable = true;
