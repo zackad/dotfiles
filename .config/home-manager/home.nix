@@ -33,27 +33,32 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
+    # Desktop Applications
+    barrier
+    brave
+    firefox
+    gnumeric
+    jetbrains.phpstorm
+    plexamp
+    sayonara
+    telegram-desktop
+
+    # CLI Applications
     ansible
     ansible-lint
     aria
-    barrier
     bat
-    brave
     direnv
-    firefox
     git-machete
     htop
-    jetbrains.phpstorm
     keepass
     lsd
     nixpkgs-fmt
     pass
     php82
     pigz
-    sayonara
     screenfetch
     sshpass
-    telegram-desktop
     tmux
     vim
     wine64
