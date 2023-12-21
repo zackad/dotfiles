@@ -39,6 +39,7 @@
     firefox
     gnumeric
     jetbrains.phpstorm
+    lutris
     plexamp
     sayonara
     telegram-desktop
@@ -60,7 +61,7 @@
     sshpass
     tmux
     vim
-    wine64
+    wine
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
