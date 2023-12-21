@@ -186,6 +186,7 @@
   environment.systemPackages = with pkgs; [
     cifs-utils
     tailscale
+    lightlocker
     xarchiver
     xfce.thunar-archive-plugin
     xfce.xfce4-pulseaudio-plugin
