@@ -98,6 +98,8 @@
 
   # Load nvidia driver for Xorg
   services.xserver.videoDrivers = ["nvidia"];
+  boot.initrd.kernelModules = ["nvidia"];
+  boot.blacklistedKernelModules = ["nouveau"];
 
   hardware.nvidia = {
     # Modesetting is required.
