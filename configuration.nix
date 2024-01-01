@@ -193,7 +193,6 @@
     xfce.thunar-archive-plugin
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-volumed-pulse
-    xfce.xfce4-whiskermenu-plugin
     xfce.xfce4-weather-plugin
     zip
   #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
