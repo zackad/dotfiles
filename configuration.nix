@@ -161,8 +161,8 @@
   programs.zsh.enable = true;
 
   # Uncomment following line to enable steam
-  # programs.steam.enable = true;
-  # programs.steam.remotePlay.openFirewall = true;
+  programs.steam.enable = true;
+  programs.steam.remotePlay.openFirewall = true;
 
   # services.gnome.gnome-keyring.enable = true;
 
