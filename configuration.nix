@@ -14,6 +14,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Cleaup /tmp directory on boot
+  boot.tmp.cleanOnBoot = true;
+
   # Appimage interpreter
   boot.binfmt.registrations.appimage = {
     wrapInterpreterInShell = false;
