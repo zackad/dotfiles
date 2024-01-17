@@ -55,11 +55,11 @@
     imagemagick
     keepass
     lsd
+    neofetch
     nixpkgs-fmt
     pass
     php83
     pigz
-    screenfetch
     sshpass
     tmux
     unzip
