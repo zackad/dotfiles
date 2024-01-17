@@ -22,7 +22,6 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.aria
-    pkgs.bat
     pkgs.direnv
     pkgs.ffmpeg
     pkgs.git-machete
@@ -37,6 +36,13 @@
     pkgs.openssh
     pkgs.sshpass
   ];
+
+  programs.bat = {
+    enable = true;
+    config = {
+      style = "plain";
+    };
+  };
 
   programs.git = {
     enable = true;
