@@ -10,7 +10,7 @@
   nixpkgs.overlays = [
     (final: prev: {
       sayonara = prev.sayonara.overrideAttrs (old: {
-	version = "1.8.0-beta1";
+        version = "1.8.0-beta1";
         src = prev.fetchFromGitLab {
           owner = "luciocarreras";
           repo = "sayonara-player";
