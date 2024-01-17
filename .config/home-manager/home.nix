@@ -56,7 +56,7 @@
     lsd
     nixpkgs-fmt
     pass
-    php82
+    php83
     pigz
     screenfetch
     sshpass
