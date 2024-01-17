@@ -52,6 +52,7 @@
     direnv
     git-machete
     htop
+    imagemagick
     keepass
     lsd
     nixpkgs-fmt
@@ -61,6 +62,7 @@
     screenfetch
     sshpass
     tmux
+    unzip
     vim
     wine
     (callPackage ./phpstorm-url-handler/default.nix { })
