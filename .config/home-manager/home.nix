@@ -30,9 +30,9 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.pass
-    pkgs.php82
-    pkgs.pinentry-curses
+    pkgs.php83
     pkgs.pigz
+    pkgs.pinentry-curses
     pkgs.openssh
     pkgs.sshpass
   ];
