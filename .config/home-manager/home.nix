@@ -55,6 +55,7 @@
     imagemagick
     keepass
     lsd
+    maestral
     neofetch
     nixpkgs-fmt
     pass
