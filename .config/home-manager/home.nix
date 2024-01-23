@@ -66,6 +66,7 @@
     unzip
     vim
     wine
+    (callPackage ./cbr2cbz/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
