@@ -25,6 +25,7 @@
     pkgs.direnv
     pkgs.ffmpeg
     pkgs.git-machete
+    pkgs.ghostscript
     pkgs.htop
     pkgs.hugo
     pkgs.imagemagick
@@ -88,6 +89,7 @@
     settings = {
       layout = "grid";
       sorting.dir-grouping = "first";
+      blocks = ["permission" "user" "size" "name"];
     };
   };
 }
