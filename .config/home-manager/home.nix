@@ -27,7 +27,6 @@
     pkgs.git-machete
     pkgs.ghostscript
     pkgs.htop
-    pkgs.hugo
     pkgs.imagemagick
     pkgs.jq
     pkgs.pass
