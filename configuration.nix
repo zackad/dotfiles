@@ -179,6 +179,8 @@
   };
 
   virtualisation.docker = {
+    enable = true;
+    enableNvidia = true;
     rootless.enable = true;
     rootless.setSocketVariable = true;
   };
