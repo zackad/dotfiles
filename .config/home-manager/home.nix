@@ -67,6 +67,7 @@
     vim
     wineWowPackages.stable
     (callPackage ./cbr2cbz/default.nix { })
+    (callPackage ./phpstorm-cli-wrapper/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
