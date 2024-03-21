@@ -24,8 +24,8 @@
     pkgs.aria
     pkgs.direnv
     pkgs.ffmpeg
-    pkgs.git-machete
     pkgs.ghostscript
+    pkgs.git-machete
     pkgs.htop
     pkgs.imagemagick
     pkgs.jq
