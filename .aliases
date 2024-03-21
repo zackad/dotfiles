@@ -1,5 +1,5 @@
 # git alias to manage dotfiles
-alias dot='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
+alias got='git --git-dir=$HOME/.dot/ --work-tree=$HOME'
 
 # Symfony console app
 alias console='bin/console'
