@@ -10,12 +10,12 @@
   nixpkgs.overlays = [
     (final: prev: {
       sayonara = prev.sayonara.overrideAttrs (old: {
-        version = "1.8.0-beta1";
+        version = "1.9.0-stable1";
         src = prev.fetchFromGitLab {
           owner = "luciocarreras";
           repo = "sayonara-player";
-          rev = "1.8.0-beta1";
-          sha256 = "f8r8thiWyJ371TPBh1sWrJsewSTdnSXR5djOc1rY9dQ=";
+          rev = "1.9.0-stable1";
+          sha256 = "SQMJWxwJoSWopuwC1o9T/SOQRtnBV3PzuMVpBCEdgw4=";
         };
       });
     })
