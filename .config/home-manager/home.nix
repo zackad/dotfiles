@@ -70,12 +70,11 @@
       tag.gpgSign = true;
       tag.sort = "-taggerdate";
     };
-    delta = {
+    difftastic = {
       enable = true;
-      options = {
-        line-numbers = true;
-        hunk-header-style = "omit";
-      };
+      display = "inline";
+      background = "dark";
+      color = "always";
     };
   };
 
