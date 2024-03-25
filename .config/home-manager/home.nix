@@ -22,7 +22,6 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.aria
-    pkgs.direnv
     pkgs.ffmpeg
     pkgs.ghostscript
     pkgs.git-machete
@@ -42,6 +41,11 @@
     config = {
       style = "plain";
     };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 
   programs.git = {
