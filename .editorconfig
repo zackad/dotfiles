@@ -8,6 +8,9 @@ indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[*.snap]
+ij_formatter_enabled = false
+
 [*.{html,js,jsx,css,scss,twig,nix}]
 indent_size = 2
 
