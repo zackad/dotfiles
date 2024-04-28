@@ -92,11 +92,16 @@
       q = "log --all --decorate --oneline --graph";
     };
     extraConfig = {
+      commit.verbose = true;
       core.excludesFile = "~/.gitignore";
-      format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
+      core.pager = "less -FX";
+      diff.algorithm = "histogram";
+      format.pretty =
+        "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
       init.defaultbranch = "master";
       log.date = "format:%Y-%m-%d %H:%M:%S";
       merge.ff = "no";
+      merge.conflictstyle = "zdiff3";
       tag.gpgSign = true;
       tag.sort = "version:refname";
     };
