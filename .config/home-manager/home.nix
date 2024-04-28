@@ -73,9 +73,7 @@
 
   programs.bat = {
     enable = true;
-    config = {
-      style = "plain";
-    };
+    config = { style = "plain"; };
   };
 
   programs.git = {
@@ -148,7 +146,6 @@
       downloader-args = "aria2c:'-j 16 -s 16 -x 16 -k 20M'";
       format = "bestvideo[height<=1080]+bestaudio/best[height<=1080]";
     };
-    extraConfig = ''
-    '';
+    extraConfig = "";
   };
 }
