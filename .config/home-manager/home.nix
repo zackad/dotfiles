@@ -40,32 +40,42 @@
     firefox
     gnumeric
     jetbrains.phpstorm
+    qcachegrind
     lutris
+    osu-lazer-bin
     plexamp
+    polybar
     sayonara
     telegram-desktop
 
     # CLI Applications
     ansible
     ansible-lint
-    aria
+    aria # CLI download manager
+    btop # htop on steroid
     direnv
     git-machete
+    graphviz
     htop
     imagemagick
+    jq
     keepass
     lsd
-    maestral
+    maestral # Dropbox client
     neofetch
-    nixpkgs-fmt
-    pass
+    nil # Nix Language Server
+    nix-direnv
+    nixfmt-classic # Nix code formatter
+    pass # Unix password manager
     php83
-    pigz
-    sshpass
-    tmux
+    pigz # Parallel implementation of gzip
+    sshpass # SSH password authetication support for ansible
+    tmux # Terminal multiplexer
     unzip
-    vim
+    vim # Code editor
     wineWowPackages.stable
+
+    # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
     (callPackage ./phpstorm-cli-wrapper/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
