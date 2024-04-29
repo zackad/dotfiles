@@ -65,7 +65,6 @@
     nil # Nix Language Server
     nixfmt-classic # Nix code formatter
     pass # Unix password manager
-    php83
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
     tmux # Terminal multiplexer
