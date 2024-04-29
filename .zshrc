@@ -50,8 +50,5 @@ compinit
 # Initializing script and setup
 ulimit -S -n 8192
 
-# Load symfony-autocomplete
-eval "$(symfony-autocomplete)"
-
 # direnv hook
 eval "$(direnv hook zsh)"
