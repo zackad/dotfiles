@@ -53,7 +53,6 @@
     ansible-lint
     aria # CLI download manager
     btop # htop on steroid
-    direnv
     git-machete
     graphviz
     htop
@@ -64,7 +63,6 @@
     maestral # Dropbox client
     neofetch
     nil # Nix Language Server
-    nix-direnv
     nixfmt-classic # Nix code formatter
     pass # Unix password manager
     php83
@@ -84,6 +82,11 @@
   programs.bat = {
     enable = true;
     config = { style = "plain"; };
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
   };
 
   programs.git = {
