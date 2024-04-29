@@ -22,6 +22,7 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.aria
+    pkgs.dust
     pkgs.ffmpeg
     pkgs.ghostscript
     pkgs.git-machete
