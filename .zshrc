@@ -69,5 +69,8 @@ fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
 autoload -Uz compinit
 compinit
 
+# Symfony console command autocomplete
+eval "$(symfony-autocomplete)"
+
 # Hook for direnv
 eval "$(direnv hook zsh)"
