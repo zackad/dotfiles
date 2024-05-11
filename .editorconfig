@@ -14,7 +14,7 @@ ij_formatter_enabled = false
 [*.{html,js,jsx,css,scss,twig,nix}]
 indent_size = 2
 
-[Makefile]
+[Makefile,Caddyfile,Caddyfile.*]
 indent_style = tab
 
 [*.txt]
