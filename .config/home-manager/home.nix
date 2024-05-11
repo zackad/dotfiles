@@ -35,6 +35,7 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Desktop Applications
+    anydesk
     barrier
     brave
     firefox
