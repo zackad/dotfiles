@@ -73,6 +73,7 @@
     unzip
     vim # Code editor
     wineWowPackages.stable
+    zoxide
 
     # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
