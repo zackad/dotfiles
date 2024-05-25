@@ -73,3 +73,5 @@ eval "$(symfony-autocomplete)"
 
 # Hook for direnv
 eval "$(direnv hook zsh)"
+
+eval "$(zoxide init zsh)"
