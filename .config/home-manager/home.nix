@@ -37,7 +37,6 @@
     # Desktop Applications
     anydesk
     barrier
-    brave
     firefox
     gnumeric
     jetbrains.phpstorm
