@@ -38,6 +38,11 @@
     pkgs.sshpass
   ];
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+    GPG_TTY = "$TTY";
+    PAGER = "less -FRX";
+  };
   programs.bat = {
     enable = true;
     config = {
