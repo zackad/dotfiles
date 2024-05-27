@@ -29,6 +29,7 @@
     pkgs.htop
     pkgs.imagemagick
     pkgs.jq
+    pkgs.nixpkgs-fmt
     pkgs.pass
     pkgs.php83
     pkgs.pigz
@@ -76,10 +77,14 @@
       tag.sort = "-taggerdate";
     };
     difftastic = {
-      enable = true;
+      enable = false;
       display = "inline";
       background = "dark";
       color = "always";
+    };
+    diff-so-fancy = {
+      enable = true;
+      changeHunkIndicators = false;
     };
   };
 
@@ -95,7 +100,7 @@
     settings = {
       layout = "grid";
       sorting.dir-grouping = "first";
-      blocks = ["permission" "user" "size" "name"];
+      blocks = [ "permission" "user" "size" "name" ];
     };
   };
 }
