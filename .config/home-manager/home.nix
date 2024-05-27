@@ -43,6 +43,14 @@
     GPG_TTY = "$TTY";
     PAGER = "less -FRX";
   };
+
+  home.shellAliases = {
+    ls = "lsd";
+    console = "bin/console";
+    gzip = "pigz";
+    cat = "bat";
+  };
+
   programs.bat = {
     enable = true;
     config = {
