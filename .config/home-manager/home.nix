@@ -80,6 +80,18 @@
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
+  home.sessionVariables = {
+    EDITOR = "vim";
+    PAGER = "less -FRX";
+  };
+
+  home.shellAliases = {
+    ls = "lsd";
+    console = "bin/console";
+    gzip = "pigz";
+    cat = "bat";
+  };
+
   programs.bat = {
     enable = true;
     config = { style = "plain"; };
@@ -135,8 +147,21 @@
     };
   };
 
-  services.gpg-agent.enable = true;
-  services.gpg-agent.pinentryPackage = pkgs.pinentry-curses;
+  services.gpg-agent = {
+    enable = true;
+    # Workaround to fix integration with powerlevel10k instant-prompt
+    enableZshIntegration = false;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
+
+  programs.lsd = {
+    enable = true;
+    settings = {
+      layout = "grid";
+      sorting.dir-grouping = "first";
+      blocks = [ "permission" "user" "size" "name" ];
+    };
+  };
 
   programs.neomutt = {
     enable = true;
@@ -166,5 +191,50 @@
       format = "bestvideo[height<=1080]+bestaudio/best[height<=1080]";
     };
     extraConfig = "";
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    oh-my-zsh = {
+      enable = true;
+      extraConfig = ''
+        # Uncomment the following line to use case-sensitive completion.
+        CASE_SENSITIVE="true"
+      '';
+    };
+    envExtra = ''
+      # Symfony console autocomplete
+      PATH="$PATH:$HOME/.config/composer/vendor/bin"
+      export PATH
+    '';
+    initExtraFirst = ''
+      export GPG_TTY=$TTY
+
+      if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+      fi
+
+      fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+    '';
+    initExtra = ''
+      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+      fi
+
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+      eval "$(symfony-autocomplete)"
+    '';
+    plugins = [{
+      name = "powerlevel10k";
+      src = pkgs.zsh-powerlevel10k;
+      file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    }];
   };
 }
