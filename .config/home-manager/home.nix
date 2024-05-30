@@ -51,7 +51,6 @@
     # CLI Applications
     ansible
     ansible-lint
-    aria # CLI download manager
     btop # htop on steroid
     git-machete
     graphviz
@@ -90,6 +89,16 @@
     console = "bin/console";
     gzip = "pigz";
     cat = "bat";
+  };
+
+  programs.aria2 = {
+    enable = true;
+    settings = {
+      split = 16;
+      min-split-size = "2M";
+      max-concurrent-downloads = 16;
+      max-concurrent-per-server = 16;
+    };
   };
 
   programs.bat = {
