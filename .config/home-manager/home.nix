@@ -58,7 +58,6 @@
     imagemagick
     jq
     keepass
-    lsd
     maestral # Dropbox client
     neofetch
     nil # Nix Language Server
@@ -71,7 +70,6 @@
     unzip
     vim # Code editor
     wineWowPackages.stable
-    zoxide
 
     # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
