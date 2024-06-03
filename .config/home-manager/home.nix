@@ -56,6 +56,7 @@
     graphviz
     htop
     imagemagick
+    isync
     jq
     keepass
     maestral # Dropbox client
