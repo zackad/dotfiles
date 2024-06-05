@@ -61,6 +61,7 @@
     keepass
     maestral # Dropbox client
     neofetch
+    notmuch
     nil # Nix Language Server
     nixfmt-classic # Nix code formatter
     pass # Unix password manager
