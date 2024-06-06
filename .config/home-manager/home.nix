@@ -90,14 +90,10 @@
       tag.sort = "-taggerdate";
     };
     difftastic = {
-      enable = false;
+      enable = true;
       display = "inline";
       background = "dark";
       color = "always";
-    };
-    diff-so-fancy = {
-      enable = true;
-      changeHunkIndicators = false;
     };
   };
 
