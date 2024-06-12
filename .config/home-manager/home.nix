@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -282,6 +282,12 @@
         inner = 0;
         outer = 0;
       };
+      keybindings =
+        let modifier = config.xsession.windowManager.i3.config.modifier;
+        in lib.mkOptionDefault {
+          "Mod1+space" = "exec rofi -show combi";
+          "XF86Calculator" = "exec rofi -show calc";
+        };
     };
   };
 }
