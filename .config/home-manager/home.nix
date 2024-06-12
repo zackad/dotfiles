@@ -278,6 +278,7 @@
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
+      window.border = 0;
       gaps = {
         inner = 0;
         outer = 0;
