@@ -35,6 +35,7 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Desktop Applications
+    alacritty
     anydesk
     barrier
     firefox
@@ -245,5 +246,42 @@
       src = pkgs.zsh-powerlevel10k;
       file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
     }];
+  };
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
+    };
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
+  };
+
+  # Wayland, X, etc. support for session vars
+  # systemd.user.sessionVariables = config.home-manager.users.zackad.home.sessionVariables;
+
+  qt = {
+    enable = true;
+    platformTheme.name = "adwaita";
+    style.name = "adwaita-dark";
+  };
+
+  xsession.windowManager.i3 = {
+    enable = true;
+    package = pkgs.i3-gaps;
+    config = {
+      modifier = "Mod4";
+      terminal = "alacritty";
+      gaps = {
+        inner = 0;
+        outer = 0;
+      };
+    };
   };
 }
