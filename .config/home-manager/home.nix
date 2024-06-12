@@ -37,6 +37,7 @@
     # Desktop Applications
     alacritty
     anydesk
+    arandr
     barrier
     firefox
     gnumeric
@@ -278,7 +279,7 @@
     config = {
       modifier = "Mod4";
       terminal = "alacritty";
-      window.border = 0;
+      window.border = 1;
       gaps = {
         inner = 0;
         outer = 0;
@@ -289,6 +290,10 @@
           "Mod1+space" = "exec rofi -show combi";
           "XF86Calculator" = "exec rofi -show calc";
         };
+      startup = [
+        { command = "~/.screenlayout/fixed-monitor.sh"; }
+        { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
+      ];
     };
   };
 }
