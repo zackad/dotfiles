@@ -92,9 +92,19 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver = {
+    # i3 window manager
+    desktopManager.xterm.enable = false;
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [ dmenu i3status ];
+    };
+
+    # Enable the XFCE Desktop Environment.
+    # displayManager.lightdm.enable = true;
+    # desktopManager.xfce.enable = true;
+  };
+  services.displayManager.defaultSession = "none+i3";
 
   # Configure keymap in X11
   services.xserver = {
@@ -227,6 +237,17 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
+  # Thunar file manager standalone mode
+  # Ref: https://nixos.wiki/wiki/Thunar
+  programs.thunar.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
+  programs.xfconf.enable = true;
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
 
   # List services that you want to enable:
 
