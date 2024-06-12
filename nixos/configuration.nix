@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Kernel version
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
@@ -26,8 +26,8 @@
     interpreter = "${pkgs.appimage-run}/bin/appimage-run";
     recognitionType = "magic";
     offset = 0;
-    mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
-    magicOrExtension = ''\x7fELF....AI\x02'';
+    mask = "\\xff\\xff\\xff\\xff\\x00\\x00\\x00\\x00\\xff\\xff\\xff";
+    magicOrExtension = "\\x7fELF....AI\\x02";
   };
 
   # Enable ntfs support at boot
@@ -49,9 +49,9 @@
     description = "Automatic connection to tailscale";
 
     # make sure that tailscale is running before trying to connect to tailscale
-    after = ["network-pre.target" "tailscale.service"];
-    wants = ["network-pre.target" "tailscale.service"];
-    wantedBy = ["multi-user.target"];
+    after = [ "network-pre.target" "tailscale.service" ];
+    wants = [ "network-pre.target" "tailscale.service" ];
+    wantedBy = [ "multi-user.target" ];
 
     serviceConfig.Type = "oneshot";
 
@@ -103,9 +103,9 @@
   };
 
   # Load nvidia driver for Xorg
-  services.xserver.videoDrivers = ["nvidia"];
-  boot.initrd.kernelModules = ["nvidia"];
-  boot.blacklistedKernelModules = ["nouveau"];
+  services.xserver.videoDrivers = [ "nvidia" ];
+  boot.initrd.kernelModules = [ "nvidia" ];
+  boot.blacklistedKernelModules = [ "nouveau" ];
 
   hardware.nvidia = {
     # Modesetting is required.
@@ -203,15 +203,15 @@
     xfce.xfce4-volumed-pulse
     xfce.xfce4-weather-plugin
     zip
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   # Mount samba share
   fileSystems."/Volumes/samba" = {
     device = "//192.168.88.2/main";
     fsType = "cifs";
-    options = ["credentials=/etc/nixos/smb-secrets,uid=1000,gid=100"];
+    options = [ "credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/data" = {
@@ -246,7 +246,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-  nix.settings.allowed-users = ["@wheel" "@builders" "zackad"];
-  nix.settings.trusted-users = ["root" "zackad"];
+  nix.settings.allowed-users = [ "@wheel" "@builders" "zackad" ];
+  nix.settings.trusted-users = [ "root" "zackad" ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
