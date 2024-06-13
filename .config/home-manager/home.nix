@@ -328,6 +328,51 @@
         { command = "~/.screenlayout/fixed-monitor.sh"; }
         { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
       ];
+      workspaceOutputAssign = let
+        primary = "DP-2";
+        secondary = "DP-1";
+      in [
+        {
+          workspace = "1";
+          output = primary;
+        }
+        {
+          workspace = "2";
+          output = primary;
+        }
+        {
+          workspace = "3";
+          output = primary;
+        }
+        {
+          workspace = "4";
+          output = primary;
+        }
+        {
+          workspace = "5";
+          output = primary;
+        }
+        {
+          workspace = "6";
+          output = secondary;
+        }
+        {
+          workspace = "7";
+          output = secondary;
+        }
+        {
+          workspace = "8";
+          output = secondary;
+        }
+        {
+          workspace = "9";
+          output = secondary;
+        }
+        {
+          workspace = "10";
+          output = secondary;
+        }
+      ];
     };
   };
 }
