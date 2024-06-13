@@ -284,6 +284,11 @@
     enable = true;
     package = pkgs.i3-gaps;
     config = {
+      fonts = {
+        names = [ "San Francisco Display" ];
+        style = "Regular";
+        size = 9.0;
+      };
       modifier = "Mod4";
       terminal = "alacritty";
       window.border = 1;
