@@ -69,6 +69,7 @@
     nixfmt-classic # Nix code formatter
     pass # Unix password manager
     php83
+    playerctl
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
     tmux # Terminal multiplexer
@@ -309,6 +310,19 @@
           # move workspace to different monitor
           "${modifier}+Ctrl+greater" = "move workspace to output right";
           "${modifier}+Ctrl+less" = "move workspace to output left";
+
+          # Pulse Audio Control
+          "XF86AudioRaiseVolume" =
+            "exec --no-startup-id pactl set-sink-volume 1 +5%";
+          "XF86AudioLowerVolume" =
+            "exec --no-startup-id pactl set-sink-volume 1 -5%";
+          "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute 1 toggle";
+
+          # Media player controls
+          "XF86AudioStop" = "exec playerctl stop";
+          "XF86AudioPlay" = "exec playerctl play-pause";
+          "XF86AudioNext" = "exec playerctl next";
+          "XF86AudioPrev" = "exec playerctl previous";
         };
       startup = [
         { command = "~/.screenlayout/fixed-monitor.sh"; }
