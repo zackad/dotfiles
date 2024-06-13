@@ -299,8 +299,12 @@
       keybindings =
         let modifier = config.xsession.windowManager.i3.config.modifier;
         in lib.mkOptionDefault {
-          "Mod1+space" = "exec rofi -show combi";
-          "XF86Calculator" = "exec rofi -show calc";
+          # rofi keybindings
+          "Mod1+space" = "exec --no-startup-id rofi -show combi";
+          "XF86Calculator" = "exec --no-startup-id rofi -show calc";
+
+          # screenshot utility
+          "Print" = "exec --no-startup-id xfce4-screenshooter -f";
         };
       startup = [
         { command = "~/.screenlayout/fixed-monitor.sh"; }
