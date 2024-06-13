@@ -263,6 +263,12 @@
       name = "Adwaita-dark";
       package = pkgs.gnome.gnome-themes-extra;
     };
+    iconTheme = { name = "Os-Catalina-Night"; };
+    cursorTheme = { name = "macOS-BigSur"; };
+    font = {
+      name = "San Francisco Display Regular";
+      size = 9.0;
+    };
   };
 
   # Wayland, X, etc. support for session vars
