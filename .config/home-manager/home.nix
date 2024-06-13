@@ -305,6 +305,10 @@
 
           # screenshot utility
           "Print" = "exec --no-startup-id xfce4-screenshooter -f";
+
+          # move workspace to different monitor
+          "${modifier}+Ctrl+greater" = "move workspace to output right";
+          "${modifier}+Ctrl+less" = "move workspace to output left";
         };
       startup = [
         { command = "~/.screenlayout/fixed-monitor.sh"; }
