@@ -195,8 +195,11 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     cifs-utils
-    tailscale
+    dmenu
+    i3
+    i3status
     lightlocker
+    tailscale
     xarchiver
     xfce.thunar-archive-plugin
     xfce.xfce4-pulseaudio-plugin
