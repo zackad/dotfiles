@@ -373,6 +373,29 @@
           output = secondary;
         }
       ];
+      bars = [
+        {
+          extraConfig = "output primary";
+          fonts = {
+            names = [ "IBM Plex Mono" ];
+            style = "Regular";
+            size = 10.0;
+          };
+          position = "top";
+          statusCommand = "${pkgs.i3status}/bin/i3status";
+          trayOutput = "primary";
+        }
+        {
+          extraConfig = "output nonprimary";
+          fonts = {
+            names = [ "IBM Plex Mono" ];
+            style = "Regular";
+            size = 8.0;
+          };
+          position = "top";
+          statusCommand = "${pkgs.i3status}/bin/i3status";
+        }
+      ];
     };
   };
 }
