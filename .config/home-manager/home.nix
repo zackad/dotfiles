@@ -325,7 +325,8 @@
           "XF86AudioPrev" = "exec playerctl previous";
         };
       startup = [
-        { command = "~/.screenlayout/fixed-monitor.sh"; }
+        # No need for monitor layout workaround
+        # { command = "~/.screenlayout/fixed-monitor.sh"; }
         { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
       ];
       workspaceOutputAssign = let
