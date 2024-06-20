@@ -47,6 +47,7 @@
     qcachegrind
     sayonara
     telegram-desktop
+    ungoogled-chromium
 
     # CLI Applications
     ansible
