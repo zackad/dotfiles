@@ -35,7 +35,6 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Desktop Applications
-    alacritty
     anydesk
     barrier
     firefox
