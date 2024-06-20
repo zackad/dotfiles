@@ -37,7 +37,6 @@
     # Desktop Applications
     alacritty
     anydesk
-    arandr
     barrier
     firefox
     gnumeric
@@ -45,11 +44,9 @@
     lutris
     osu-lazer-bin
     plexamp
-    polybar
     qcachegrind
     sayonara
     telegram-desktop
-    xfce.xfce4-screenshooter
 
     # CLI Applications
     ansible
