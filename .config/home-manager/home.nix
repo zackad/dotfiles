@@ -90,6 +90,7 @@
     console = "bin/console";
     gzip = "pigz";
     cat = "bat";
+    yy = "ya"; # yazi shell alias for integration with zsh
   };
 
   programs.aria2 = {
@@ -190,6 +191,11 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
+  };
+
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   programs.yt-dlp = {
