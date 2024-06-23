@@ -52,6 +52,7 @@
     ansible
     ansible-lint
     btop # htop on steroid
+    dust # better `du` alternative
     git-machete
     graphviz
     htop
