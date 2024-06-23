@@ -310,6 +310,7 @@
 
           # screenshot utility
           "Print" = "exec --no-startup-id xfce4-screenshooter -f";
+          "${modifier}+u" = "exec --no-startup-id xfce4-session-logout";
 
           # move workspace to different monitor
           "${modifier}+Ctrl+greater" = "move workspace to output right";
