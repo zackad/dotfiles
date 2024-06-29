@@ -70,7 +70,6 @@
     playerctl
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
-    tmux # Terminal multiplexer
     ueberzugpp # Image preview for yazi on xfce terminal
     unzip
     vim # Code editor
