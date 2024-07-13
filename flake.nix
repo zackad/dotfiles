@@ -19,7 +19,7 @@
       nixosConfigurations = {
         NixOS = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system; };
-          modules = [ ./nixos/configuration.nix ];
+          modules = [ ./configuration.nix ];
         };
       };
     };
