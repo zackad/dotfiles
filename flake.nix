@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
   };
 
   outputs = { self, nixpkgs }:
@@ -15,7 +14,8 @@
         config = { allowUnfree = true; };
       };
 
-    in {
+    in
+    {
       nixosConfigurations = {
         NixOS = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit system; };
