@@ -64,7 +64,7 @@
     neofetch
     notmuch
     nil # Nix Language Server
-    nixfmt-classic # Nix code formatter
+    nixpkgs-fmt # Nix code formatter
     pass # Unix password manager
     php83
     playerctl
