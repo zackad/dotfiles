@@ -198,7 +198,8 @@
   fileSystems."/Volumes/samba" = {
     device = "//192.168.88.2/main";
     fsType = "cifs";
-    options = [ "credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
+    # TODO: save credentials using secret manager
+    options = [ "credentials=/etc/nixos/smb-secrets" "uid=1000" "gid=100" ];
   };
 
   fileSystems."/Volumes/data" = {
