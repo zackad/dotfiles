@@ -9,20 +9,19 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
+  outputs =
+    { nixpkgs, home-manager, ... }:
+    {
 
-    defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+      defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
 
-    homeConfigurations = {
-      "zackad" = home-manager.lib.homeManagerConfiguration {
-        # Note: I am sure this could be done better with flake-utils or something
-        pkgs = import nixpkgs { system = "x86_64-darwin"; };
+      homeConfigurations = {
+        "zackad" = home-manager.lib.homeManagerConfiguration {
+          # Note: I am sure this could be done better with flake-utils or something
+          pkgs = import nixpkgs { system = "x86_64-darwin"; };
 
-        modules = [ ./.config/home-manager/home.nix ]; # Defined later
+          modules = [ ./.config/home-manager/home.nix ]; # Defined later
+        };
       };
     };
-
-  };
 }
-
-

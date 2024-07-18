@@ -109,7 +109,12 @@
     settings = {
       layout = "grid";
       sorting.dir-grouping = "first";
-      blocks = [ "permission" "user" "size" "name" ];
+      blocks = [
+        "permission"
+        "user"
+        "size"
+        "name"
+      ];
     };
   };
 
