@@ -29,7 +29,7 @@
     pkgs.htop
     pkgs.imagemagick
     pkgs.jq
-    pkgs.nixpkgs-fmt
+    pkgs.nixfmt-rfc-style
     pkgs.pass
     pkgs.php83
     pkgs.pigz
