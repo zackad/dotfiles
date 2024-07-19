@@ -10,12 +10,12 @@
   nixpkgs.overlays = [
     (final: prev: {
       sayonara = prev.sayonara.overrideAttrs (old: {
-        version = "1.9.0-stable1";
+        version = "1.10.0-stable1";
         src = prev.fetchFromGitLab {
           owner = "luciocarreras";
           repo = "sayonara-player";
-          rev = "1.9.0-stable1";
-          sha256 = "SQMJWxwJoSWopuwC1o9T/SOQRtnBV3PzuMVpBCEdgw4=";
+          rev = "1.10.0-stable1";
+          hash = "sha256-ZcuWe1dsLJS4/nLXSSKB7wzPU9COFyE4vPSwZIo0bgI=";
         };
       });
     })
@@ -266,7 +266,7 @@
     enable = true;
     theme = {
       name = "Adwaita-dark";
-      package = pkgs.gnome.gnome-themes-extra;
+      package = pkgs.gnome-themes-extra;
     };
     iconTheme = { name = "Os-Catalina-Night"; };
     cursorTheme = { name = "macOS-BigSur"; };
@@ -334,51 +334,53 @@
         # { command = "~/.screenlayout/fixed-monitor.sh"; }
         { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
       ];
-      workspaceOutputAssign = let
-        primary = "DP-2";
-        secondary = "DP-1";
-      in [
-        {
-          workspace = "1";
-          output = primary;
-        }
-        {
-          workspace = "2";
-          output = primary;
-        }
-        {
-          workspace = "3";
-          output = primary;
-        }
-        {
-          workspace = "4";
-          output = primary;
-        }
-        {
-          workspace = "5";
-          output = primary;
-        }
-        {
-          workspace = "6";
-          output = secondary;
-        }
-        {
-          workspace = "7";
-          output = secondary;
-        }
-        {
-          workspace = "8";
-          output = secondary;
-        }
-        {
-          workspace = "9";
-          output = secondary;
-        }
-        {
-          workspace = "10";
-          output = secondary;
-        }
-      ];
+      workspaceOutputAssign =
+        let
+          primary = "DP-2";
+          secondary = "DP-1";
+        in
+        [
+          {
+            workspace = "1";
+            output = primary;
+          }
+          {
+            workspace = "2";
+            output = primary;
+          }
+          {
+            workspace = "3";
+            output = primary;
+          }
+          {
+            workspace = "4";
+            output = primary;
+          }
+          {
+            workspace = "5";
+            output = primary;
+          }
+          {
+            workspace = "6";
+            output = secondary;
+          }
+          {
+            workspace = "7";
+            output = secondary;
+          }
+          {
+            workspace = "8";
+            output = secondary;
+          }
+          {
+            workspace = "9";
+            output = secondary;
+          }
+          {
+            workspace = "10";
+            output = secondary;
+          }
+        ];
       bars = [
         {
           extraConfig = "output primary";
