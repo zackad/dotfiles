@@ -88,7 +88,6 @@
   };
 
   home.shellAliases = {
-    ls = "lsd";
     console = "bin/console";
     gzip = "pigz";
     cat = "bat";
@@ -113,6 +112,11 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    icons = true;
   };
 
   programs.git = {
@@ -165,15 +169,6 @@
     # Workaround to fix integration with powerlevel10k instant-prompt
     enableZshIntegration = false;
     pinentryPackage = pkgs.pinentry-curses;
-  };
-
-  programs.lsd = {
-    enable = true;
-    settings = {
-      layout = "grid";
-      sorting.dir-grouping = "first";
-      blocks = [ "permission" "user" "size" "name" ];
-    };
   };
 
   programs.neomutt = {
