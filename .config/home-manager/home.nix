@@ -39,6 +39,7 @@
     barrier
     firefox
     gnumeric
+    gthumb
     jetbrains.phpstorm
     lutris
     osu-lazer-bin
