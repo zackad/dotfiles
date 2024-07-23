@@ -9,16 +9,18 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, ... }: {
-    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
-    homeConfigurations = {
-      "zackad" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
+  outputs =
+    { nixpkgs, home-manager, ... }:
+    {
+      defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+      homeConfigurations = {
+        "zackad" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "x86_64-linux";
+            config.allowUnfree = true;
+          };
+          modules = [ ./.config/home-manager/home.nix ];
         };
-        modules = [ ./.config/home-manager/home.nix ];
       };
     };
-  };
 }

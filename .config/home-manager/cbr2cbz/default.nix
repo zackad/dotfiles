@@ -1,8 +1,9 @@
-{ stdenvNoCC
-, lib
-, unrar-free
-, zip
-, makeWrapper
+{
+  stdenvNoCC,
+  lib,
+  unrar-free,
+  zip,
+  makeWrapper,
 }:
 
 stdenvNoCC.mkDerivation rec {
@@ -10,7 +11,10 @@ stdenvNoCC.mkDerivation rec {
   version = "1.0";
   src = ./.;
 
-  buildInputs = [ unrar-free zip ];
+  buildInputs = [
+    unrar-free
+    zip
+  ];
   nativeBuildInputs = [ makeWrapper ];
 
   installPhase = ''
@@ -18,6 +22,11 @@ stdenvNoCC.mkDerivation rec {
     cp $src/script.sh $out/bin/cbr2cbz
     chmod +x $out/bin/cbr2cbz
     wrapProgram $out/bin/cbr2cbz \
-      --prefix PATH : ${lib.makeBinPath [ unrar-free zip ]}
+      --prefix PATH : ${
+        lib.makeBinPath [
+          unrar-free
+          zip
+        ]
+      }
   '';
 }

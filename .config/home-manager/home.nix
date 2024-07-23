@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -104,7 +109,9 @@
 
   programs.bat = {
     enable = true;
-    config = { style = "plain"; };
+    config = {
+      style = "plain";
+    };
   };
 
   programs.direnv = {
@@ -137,8 +144,7 @@
       core.excludesFile = "~/.gitignore";
       core.pager = "less -FX";
       diff.algorithm = "histogram";
-      format.pretty =
-        "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
+      format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
       init.defaultbranch = "master";
       log.date = "format:%Y-%m-%d %H:%M:%S";
       merge.ff = "no";
@@ -242,17 +248,21 @@
 
       eval "$(symfony-autocomplete)"
     '';
-    plugins = [{
-      name = "powerlevel10k";
-      src = pkgs.zsh-powerlevel10k;
-      file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    }];
+    plugins = [
+      {
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+      }
+    ];
   };
 
   dconf = {
     enable = true;
     settings = {
-      "org/gnome/desktop/interface" = { color-scheme = "prefer-dark"; };
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
     };
   };
 
@@ -262,8 +272,12 @@
       name = "Adwaita-dark";
       package = pkgs.gnome-themes-extra;
     };
-    iconTheme = { name = "Os-Catalina-Night"; };
-    cursorTheme = { name = "macOS-BigSur"; };
+    iconTheme = {
+      name = "Os-Catalina-Night";
+    };
+    cursorTheme = {
+      name = "macOS-BigSur";
+    };
     font = {
       name = "San Francisco Display Regular";
       size = 9.0;
@@ -296,8 +310,10 @@
         outer = 0;
       };
       keybindings =
-        let modifier = config.xsession.windowManager.i3.config.modifier;
-        in lib.mkOptionDefault {
+        let
+          modifier = config.xsession.windowManager.i3.config.modifier;
+        in
+        lib.mkOptionDefault {
           # rofi keybindings
           "Mod1+space" = "exec --no-startup-id rofi -show combi";
           "XF86Calculator" = "exec --no-startup-id rofi -show calc";
@@ -311,10 +327,8 @@
           "${modifier}+Ctrl+less" = "move workspace to output left";
 
           # Pulse Audio Control
-          "XF86AudioRaiseVolume" =
-            "exec --no-startup-id pactl set-sink-volume 1 +5%";
-          "XF86AudioLowerVolume" =
-            "exec --no-startup-id pactl set-sink-volume 1 -5%";
+          "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume 1 +5%";
+          "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume 1 -5%";
           "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute 1 toggle";
 
           # Media player controls

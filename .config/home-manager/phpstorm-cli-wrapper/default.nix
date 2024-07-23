@@ -1,4 +1,8 @@
-{ stdenvNoCC, lib, writeShellScript }:
+{
+  stdenvNoCC,
+  lib,
+  writeShellScript,
+}:
 
 stdenvNoCC.mkDerivation rec {
   pname = "phpstorm-cli-wrapper";
