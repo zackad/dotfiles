@@ -90,7 +90,6 @@
     console = "bin/console";
     gzip = "pigz";
     cat = "bat";
-    yy = "ya"; # yazi shell alias for integration with zsh
   };
 
   programs.aria2 = {
