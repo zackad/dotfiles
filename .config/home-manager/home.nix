@@ -64,8 +64,7 @@
     maestral # Dropbox client
     neofetch
     notmuch
-    nil # Nix Language Server
-    nixpkgs-fmt # Nix code formatter
+    nixfmt-rfc-style # Nix code formatter
     pass # Unix password manager
     php83
     playerctl
