@@ -186,6 +186,7 @@
     extraConfig = {
       modi = "combi";
       combi-modi = "window,drun";
+      show-icons = true;
     };
   };
 
