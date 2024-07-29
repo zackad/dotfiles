@@ -19,7 +19,7 @@
             system = "x86_64-linux";
             config.allowUnfree = true;
           };
-          modules = [ ./.config/home-manager/home.nix ];
+          modules = [ ./home.nix ];
         };
       };
     };
