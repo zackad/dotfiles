@@ -14,7 +14,7 @@
     {
       defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
       homeConfigurations = {
-        "zackad" = home-manager.lib.homeManagerConfiguration {
+        "deck" = home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs {
             system = "x86_64-linux";
             config.allowUnfree = true;

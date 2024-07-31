@@ -8,23 +8,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "zackad";
-  home.homeDirectory = "/home/zackad";
-
-  # Overlay for nixpkgs with custom/updated build
-  nixpkgs.overlays = [
-    (final: prev: {
-      sayonara = prev.sayonara.overrideAttrs (old: {
-        version = "1.10.0-stable1";
-        src = prev.fetchFromGitLab {
-          owner = "luciocarreras";
-          repo = "sayonara-player";
-          rev = "1.10.0-stable1";
-          hash = "sha256-ZcuWe1dsLJS4/nLXSSKB7wzPU9COFyE4vPSwZIo0bgI=";
-        };
-      });
-    })
-  ];
+  home.username = "deck";
+  home.homeDirectory = "/home/deck";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -39,50 +24,19 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
-    # Desktop Applications
-    anydesk
-    barrier
-    firefox
-    gnumeric
-    gthumb
-    jetbrains.phpstorm
-    lutris
-    osu-lazer-bin
-    plexamp
-    qcachegrind
-    sayonara
-    telegram-desktop
-    ungoogled-chromium
-
     # CLI Applications
-    ansible
-    ansible-lint
-    btop # htop on steroid
-    dust # better `du` alternative
     git-machete
-    graphviz
-    htop
     imagemagick
-    isync
     jq
-    keepass
-    maestral # Dropbox client
-    neofetch
-    notmuch
     nixfmt-rfc-style # Nix code formatter
     pass # Unix password manager
     php83
-    playerctl
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
-    ueberzugpp # Image preview for yazi on xfce terminal
     unzip
-    vim # Code editor
-    wineWowPackages.stable
 
     # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
-    (callPackage ./phpstorm-cli-wrapper/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
@@ -175,26 +129,6 @@
     pinentryPackage = pkgs.pinentry-curses;
   };
 
-  programs.neomutt = {
-    enable = true;
-    sidebar.enable = true;
-  };
-
-  programs.rofi = {
-    enable = true;
-    plugins = [ pkgs.rofi-calc ];
-    extraConfig = {
-      modi = "combi";
-      combi-modi = "window,drun";
-      show-icons = true;
-    };
-  };
-
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscodium;
-  };
-
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
@@ -256,163 +190,5 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
-  };
-
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
-  };
-
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Adwaita-dark";
-      package = pkgs.gnome-themes-extra;
-    };
-    iconTheme = {
-      name = "Os-Catalina-Night";
-    };
-    cursorTheme = {
-      name = "macOS-BigSur";
-    };
-    font = {
-      name = "San Francisco Display Regular";
-      size = 9.0;
-    };
-  };
-
-  # Wayland, X, etc. support for session vars
-  # systemd.user.sessionVariables = config.home-manager.users.zackad.home.sessionVariables;
-
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
-  };
-
-  xsession.windowManager.i3 = {
-    enable = true;
-    package = pkgs.i3-gaps;
-    config = {
-      fonts = {
-        names = [ "San Francisco Display" ];
-        style = "Regular";
-        size = 9.0;
-      };
-      modifier = "Mod4";
-      terminal = "xfce4-terminal";
-      window.border = 1;
-      gaps = {
-        inner = 0;
-        outer = 0;
-      };
-      keybindings =
-        let
-          modifier = config.xsession.windowManager.i3.config.modifier;
-        in
-        lib.mkOptionDefault {
-          # rofi keybindings
-          "Mod1+space" = "exec --no-startup-id rofi -show combi";
-          "XF86Calculator" = "exec --no-startup-id rofi -show calc";
-
-          # screenshot utility
-          "Print" = "exec --no-startup-id xfce4-screenshooter -f";
-          "${modifier}+u" = "exec --no-startup-id xfce4-session-logout";
-
-          # move workspace to different monitor
-          "${modifier}+Ctrl+greater" = "move workspace to output right";
-          "${modifier}+Ctrl+less" = "move workspace to output left";
-
-          # Pulse Audio Control
-          "XF86AudioRaiseVolume" = "exec --no-startup-id pactl set-sink-volume 1 +5%";
-          "XF86AudioLowerVolume" = "exec --no-startup-id pactl set-sink-volume 1 -5%";
-          "XF86AudioMute" = "exec --no-startup-id pactl set-sink-mute 1 toggle";
-
-          # Media player controls
-          "XF86AudioStop" = "exec playerctl stop";
-          "XF86AudioPlay" = "exec playerctl play-pause";
-          "XF86AudioNext" = "exec playerctl next";
-          "XF86AudioPrev" = "exec playerctl previous";
-        };
-      startup = [
-        # No need for monitor layout workaround
-        # { command = "~/.screenlayout/fixed-monitor.sh"; }
-        { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
-      ];
-      workspaceOutputAssign =
-        let
-          primary = "DP-2";
-          secondary = "DP-1";
-        in
-        [
-          {
-            workspace = "1";
-            output = primary;
-          }
-          {
-            workspace = "2";
-            output = primary;
-          }
-          {
-            workspace = "3";
-            output = primary;
-          }
-          {
-            workspace = "4";
-            output = primary;
-          }
-          {
-            workspace = "5";
-            output = primary;
-          }
-          {
-            workspace = "6";
-            output = secondary;
-          }
-          {
-            workspace = "7";
-            output = secondary;
-          }
-          {
-            workspace = "8";
-            output = secondary;
-          }
-          {
-            workspace = "9";
-            output = secondary;
-          }
-          {
-            workspace = "10";
-            output = secondary;
-          }
-        ];
-      bars = [
-        {
-          extraConfig = "output primary";
-          fonts = {
-            names = [ "IBM Plex Mono" ];
-            style = "Regular";
-            size = 10.0;
-          };
-          position = "top";
-          statusCommand = "${pkgs.i3status}/bin/i3status";
-          trayOutput = "primary";
-        }
-        {
-          extraConfig = "output nonprimary";
-          fonts = {
-            names = [ "IBM Plex Mono" ];
-            style = "Regular";
-            size = 8.0;
-          };
-          position = "top";
-          statusCommand = "${pkgs.i3status}/bin/i3status";
-        }
-      ];
-    };
   };
 }
