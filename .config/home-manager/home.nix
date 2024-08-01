@@ -45,7 +45,6 @@
   };
 
   home.shellAliases = {
-    ls = "lsd";
     console = "bin/console";
     gzip = "pigz";
     cat = "bat";
@@ -61,6 +60,15 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
+  };
+
+  programs.eza = {
+    enable = true;
+    icons = true;
+    extraOptions = [
+      "--group-directories-first"
+      "--header"
+    ];
   };
 
   programs.git = {
@@ -101,20 +109,6 @@
     enable = true;
     settings = {
       keyid-format = "long";
-    };
-  };
-
-  programs.lsd = {
-    enable = true;
-    settings = {
-      layout = "grid";
-      sorting.dir-grouping = "first";
-      blocks = [
-        "permission"
-        "user"
-        "size"
-        "name"
-      ];
     };
   };
 
