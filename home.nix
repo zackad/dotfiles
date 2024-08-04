@@ -101,7 +101,6 @@
     extraConfig = {
       commit.verbose = true;
       core.excludesFile = "~/.gitignore";
-      core.pager = "less -FX";
       diff.algorithm = "histogram";
       format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
       init.defaultbranch = "master";
@@ -111,11 +110,8 @@
       tag.gpgSign = true;
       tag.sort = "version:refname";
     };
-    difftastic = {
+    diff-so-fancy = {
       enable = true;
-      display = "inline";
-      background = "dark";
-      color = "always";
     };
   };
 
