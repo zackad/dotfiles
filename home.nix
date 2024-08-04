@@ -25,6 +25,7 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # CLI Applications
+    dust
     git-machete
     imagemagick
     jq
