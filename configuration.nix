@@ -105,7 +105,7 @@
 
     # Enable the Nvidia settings menu,
     # accessible via `nvidia-settings`.
-    nvidiaSettings = true;
+    nvidiaSettings = false;
 
     # Whether to enable forcefully the full composition pipeline. This sometimes fixes 
     # screen tearing issues. This has been reported to reduce the performance of some OpenGL
