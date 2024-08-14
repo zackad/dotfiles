@@ -126,9 +126,6 @@
   services.blueman.enable = true;
 
   # Enable sound with pulseaudio.
-  sound.enable = true;
-  sound.mediaKeys.enable = true;
-  sound.mediaKeys.volumeStep = "5%";
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
