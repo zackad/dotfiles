@@ -160,7 +160,11 @@
   users.users.zackad = {
     isNormalUser = true;
     description = "zackad";
-    extraGroups = [ "audio" "networkmanager" "wheel" ];
+    extraGroups = [
+      "audio"
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
     packages = with pkgs; [ ];
   };
@@ -199,13 +203,21 @@
     device = "//192.168.88.2/main";
     fsType = "cifs";
     # TODO: save credentials using secret manager
-    options = [ "credentials=/etc/nixos/smb-secrets" "uid=1000" "gid=100" ];
+    options = [
+      "credentials=/etc/nixos/smb-secrets"
+      "uid=1000"
+      "gid=100"
+    ];
   };
 
   fileSystems."/Volumes/data" = {
     device = "/dev/disk/by-uuid/14AE1D30AE1D0C3C";
     fsType = "ntfs";
-    options = [ "rw" "uid=1000" "gid=100" ];
+    options = [
+      "rw"
+      "uid=1000"
+      "gid=100"
+    ];
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -234,7 +246,17 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-  nix.settings.allowed-users = [ "@wheel" "@builders" "zackad" ];
-  nix.settings.trusted-users = [ "root" "zackad" ];
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.allowed-users = [
+    "@wheel"
+    "@builders"
+    "zackad"
+  ];
+  nix.settings.trusted-users = [
+    "root"
+    "zackad"
+  ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
