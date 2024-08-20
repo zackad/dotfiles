@@ -57,6 +57,7 @@
     # CLI Applications
     ansible
     ansible-lint
+    asciinema
     btop # htop on steroid
     dust # better `du` alternative
     git-machete
