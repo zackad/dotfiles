@@ -47,7 +47,6 @@
     gthumb
     jetbrains.phpstorm
     lutris
-    osu-lazer-bin
     plexamp
     qcachegrind
     sayonara
