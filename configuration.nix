@@ -212,6 +212,11 @@
     ];
   };
 
+  fileSystems."/Volumes/sata-ssd" = {
+    device = "/dev/disk/by-uuid/3f3d53dd-5d61-4932-b226-48f838ce8807";
+    fsType = "ext4";
+  };
+
   fileSystems."/Volumes/data" = {
     device = "/dev/disk/by-uuid/14AE1D30AE1D0C3C";
     fsType = "ntfs";
