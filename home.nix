@@ -322,6 +322,8 @@
           # sensible terminal shortcut
           "Ctrl+Mod1+t" = "exec i3-sensible-terminal";
 
+          "${modifier}+s" = "bar mode toggle";
+
           # rofi keybindings
           "Mod1+space" = "exec --no-startup-id rofi -show combi";
           "XF86Calculator" = "exec --no-startup-id rofi -show calc";
