@@ -41,7 +41,6 @@
   home.packages = with pkgs; [
     # Desktop Applications
     anydesk
-    barrier
     firefox
     gnumeric
     gthumb
@@ -51,7 +50,6 @@
     qcachegrind
     sayonara
     telegram-desktop
-    ungoogled-chromium
 
     # CLI Applications
     ansible
