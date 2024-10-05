@@ -212,6 +212,17 @@
     ];
   };
 
+  fileSystems."/Volumes/backup" = {
+    device = "//192.168.88.2/backup";
+    fsType = "cifs";
+    # TODO: save credentials using secret manager
+    options = [
+      "credentials=/etc/nixos/smb-secrets"
+      "uid=1000"
+      "gid=100"
+    ];
+  };
+
   fileSystems."/Volumes/sata-ssd" = {
     device = "/dev/disk/by-uuid/3f3d53dd-5d61-4932-b226-48f838ce8807";
     fsType = "ext4";
