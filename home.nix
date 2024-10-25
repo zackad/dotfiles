@@ -21,6 +21,9 @@
   # changes in each release.
   home.stateVersion = "22.11";
 
+  # Disable systemd reload
+  home.activation.reloadSystemd = lib.mkForce "";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
