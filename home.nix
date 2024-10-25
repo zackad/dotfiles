@@ -169,6 +169,11 @@
       '';
     };
     envExtra = ''
+      # make sure that nix profile is loaded
+      if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
+        . $HOME/.nix-profile/etc/profile.d/nix.sh
+      fi
+
       # Symfony console autocomplete
       PATH="$PATH:$HOME/.config/composer/vendor/bin"
       export PATH
