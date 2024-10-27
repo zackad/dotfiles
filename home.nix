@@ -357,6 +357,16 @@
         # { command = "~/.screenlayout/fixed-monitor.sh"; }
         { command = "${pkgs.feh}/bin/feh --bg-scale ~/Pictures/ayano.png"; }
       ];
+      assigns = {
+        "1" = [
+          { class = "jetbrains-phpstorm"; }
+          { class = "VSCodium"; }
+        ];
+        "7" = [ { class = "firefox-dev-profile"; } ];
+        "8" = [ { class = "TelegramDesktop"; } ];
+        "9" = [ { class = "Lutris"; } ];
+        "10" = [ { class = "steam"; } ];
+      };
       workspaceOutputAssign =
         let
           primary = "DP-2";
