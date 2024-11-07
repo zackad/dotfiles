@@ -53,6 +53,7 @@
     qcachegrind
     sayonara
     telegram-desktop
+    zed-editor
 
     # CLI Applications
     ansible
@@ -361,6 +362,7 @@
         "1" = [
           { class = "jetbrains-phpstorm"; }
           { class = "VSCodium"; }
+          { class = "dev.zed.Zed"; }
         ];
         "7" = [ { class = "firefox-dev-profile"; } ];
         "8" = [ { class = "TelegramDesktop"; } ];
