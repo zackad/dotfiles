@@ -251,6 +251,14 @@
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
+  # Enable syncthing service
+  services.syncthing = {
+    enable = true;
+    user = "zackad";
+    dataDir = "/home/zackad/Samba/SavedGames";
+    configDir = "/home/zackad/Samba/SavedGames/.config/syncthing";
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
