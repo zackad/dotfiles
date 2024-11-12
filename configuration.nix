@@ -258,6 +258,10 @@
     dataDir = "/home/zackad/Samba/SavedGames";
     configDir = "/home/zackad/Samba/SavedGames/.config/syncthing";
   };
+  systemd.services.syncthing = {
+    after = [ "Volumes-samba.mount" ];
+    requires = [ "Volumes-samba.mount" ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
