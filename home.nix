@@ -11,21 +11,6 @@
   home.username = "zackad";
   home.homeDirectory = "/home/zackad";
 
-  # Overlay for nixpkgs with custom/updated build
-  nixpkgs.overlays = [
-    (final: prev: {
-      sayonara = prev.sayonara.overrideAttrs (old: {
-        version = "1.10.0-stable1";
-        src = prev.fetchFromGitLab {
-          owner = "luciocarreras";
-          repo = "sayonara-player";
-          rev = "1.10.0-stable1";
-          hash = "sha256-ZcuWe1dsLJS4/nLXSSKB7wzPU9COFyE4vPSwZIo0bgI=";
-        };
-      });
-    })
-  ];
-
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
