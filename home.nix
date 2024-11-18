@@ -54,6 +54,7 @@
     isync
     jq
     keepass
+    linuxConsoleTools # fftest, gamepad rumble tester
     maestral # Dropbox client
     neofetch
     notmuch
