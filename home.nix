@@ -37,6 +37,7 @@
     php83
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
+    syncthing
     unzip
 
     # Custom packages
