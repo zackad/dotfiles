@@ -114,8 +114,9 @@
       tag.gpgSign = true;
       tag.sort = "version:refname";
     };
-    diff-so-fancy = {
+    difftastic = {
       enable = true;
+      display = "inline";
     };
   };
 
