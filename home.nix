@@ -104,6 +104,7 @@
     };
     extraConfig = {
       commit.verbose = true;
+      core.editor = "vim";
       core.excludesFile = "~/.gitignore";
       diff.algorithm = "histogram";
       format.pretty = "format:%C(yellow)%ad %Cblue%h %Cgreen%<(7)%aN:%Cred%d %Creset%s";
@@ -133,6 +134,19 @@
     # Workaround to fix integration with powerlevel10k instant-prompt
     enableZshIntegration = false;
     pinentryPackage = pkgs.pinentry-curses;
+  };
+
+  programs.vim = {
+    enable = true;
+    settings = {
+      number = true;
+      relativenumber = true;
+    };
+    extraConfig = ''
+      set smartindent
+      set showcmd
+      au FileType gitcommit setlocal tw=72
+    '';
   };
 
   programs.yazi = {
