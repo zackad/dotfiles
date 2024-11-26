@@ -351,6 +351,7 @@
           { class = "VSCodium"; }
           { class = "dev.zed.Zed"; }
         ];
+        "3" = [ { class = "fmd.exe"; } ];
         "7" = [ { class = "firefox-dev-profile"; } ];
         "8" = [ { class = "TelegramDesktop"; } ];
         "9" = [ { class = "Lutris"; } ];
