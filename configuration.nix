@@ -69,7 +69,8 @@
   services.xserver.enable = true;
 
   # Enable the XFCE Desktop Environment.
-  services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.theme = "chili";
   services.xserver.desktopManager.xfce.enable = true;
 
   # Configure keymap in X11
@@ -189,6 +190,7 @@
     i3
     i3status
     lightlocker
+    sddm-chili-theme
     tailscale
     xarchiver
     xfce.thunar-archive-plugin
