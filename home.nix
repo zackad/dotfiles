@@ -304,6 +304,8 @@
       terminal = "xfce4-terminal";
       window.border = 1;
       gaps = {
+        smartBorders = "on";
+        smartGaps = true;
         inner = 0;
         outer = 0;
       };
