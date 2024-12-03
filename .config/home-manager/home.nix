@@ -71,6 +71,11 @@
     ];
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   programs.git = {
     enable = true;
     userName = "zackad";
