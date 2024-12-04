@@ -20,7 +20,7 @@
           # Note: I am sure this could be done better with flake-utils or something
           pkgs = import nixpkgs { system = "x86_64-darwin"; };
 
-          modules = [ ./.config/home-manager/home.nix ]; # Defined later
+          modules = [ ./home.nix ]; # Defined later
         };
       };
     };
