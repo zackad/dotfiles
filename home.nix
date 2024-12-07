@@ -369,6 +369,7 @@
         "9" = [ { class = "Lutris"; } ];
         "10" = [ { class = "steam"; } ];
       };
+      workspaceAutoBackAndForth = true;
       workspaceOutputAssign =
         let
           primary = "DP-2";
