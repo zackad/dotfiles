@@ -79,8 +79,8 @@
   programs.git = {
     enable = true;
     userName = "zackad";
-    userEmail = "zackad.dev@gmail.com";
-    signing.key = "5E11F0B6C1EF4843";
+    userEmail = "zackad@zackad.dev";
+    signing.key = "C2B91511AE73C825";
     aliases = {
       cm = "checkout master";
       l = "log --date=short";
