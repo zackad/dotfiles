@@ -2,7 +2,7 @@
 
 ```shell
 # clone repository
-git clone git@github.com:zackad/dotfiles --branch linux-home dotdiles
+git clone git@github.com:zackad/dotfiles --branch linux-home dotfiles
 
 # navigate to cloned repository
 cd dotfiles
