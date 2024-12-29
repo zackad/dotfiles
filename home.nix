@@ -34,10 +34,13 @@
     gthumb
     jetbrains.phpstorm
     lutris
+    picard
     plexamp
     qcachegrind
     sayonara
+    shutter
     telegram-desktop
+    wezterm
     zed-editor
 
     # CLI Applications
