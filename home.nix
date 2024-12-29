@@ -78,6 +78,7 @@
   home.sessionVariables = {
     EDITOR = "vim";
     PAGER = "less -FRX";
+    RSYNC_OLD_ARGS = "1"; # workaround for escape introduced by rsync v3.2.4
   };
 
   home.shellAliases = {
