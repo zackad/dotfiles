@@ -128,8 +128,8 @@
   services.blueman.enable = true;
 
   # Enable sound with pulseaudio.
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
+  services.pulseaudio.enable = true;
+  services.pulseaudio.support32Bit = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = false;
