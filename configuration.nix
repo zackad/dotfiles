@@ -97,9 +97,9 @@
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of 
-    # supported GPUs is at: 
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Support is limited to the Turing and later architectures. Full list of
+    # supported GPUs is at:
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
     # Only available from driver 515.43.04+
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
@@ -108,7 +108,7 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = false;
 
-    # Whether to enable forcefully the full composition pipeline. This sometimes fixes 
+    # Whether to enable forcefully the full composition pipeline. This sometimes fixes
     # screen tearing issues. This has been reported to reduce the performance of some OpenGL
     # applications and may produce issues in WebGL. It also drastically increases the time
     # the driver needs to clock down after load.
