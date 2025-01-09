@@ -192,6 +192,42 @@
     };
   };
 
+  programs.tmux = {
+    enable = true;
+    terminal = "xterm-256color";
+    mouse = true;
+    extraConfig = ''
+      # Fix Home/End button
+      bind-key -n Home send Escape "OH"
+      bind-key -n End send Escape "OF"
+
+      # toggle status bar
+      set-option -g status off
+      bind-key -n M-s set-option -g status
+
+      # switch panes using Alt-arrow without prefix
+      bind-key -n M-Left select-pane -L
+      bind-key -n M-Right select-pane -R
+      bind-key -n M-Up select-pane -U
+      bind-key -n M-Down select-pane -D
+
+      # split pane vertical/horizontal
+      bind-key -n M-e split-pane -h -c "#{pane_current_path}"
+      bind-key -n M-o split-pane -v -c "#{pane_current_path}"
+      unbind '"'
+      unbind %
+
+      # kill current pane
+      bind-key -n M-w killp
+
+      # swap pane
+      bind-key -n S-Up swap-pane -s '{up-of}'
+      bind-key -n S-Down swap-pane -s '{down-of}'
+      bind-key -n S-Left swap-pane -s '{left-of}'
+      bind-key -n S-Right swap-pane -s '{right-of}'
+    '';
+  };
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
