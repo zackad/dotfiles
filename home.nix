@@ -185,7 +185,7 @@
 
   programs.rofi = {
     enable = true;
-    plugins = [ pkgs.rofi-calc ];
+    plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
     extraConfig = {
       modi = "combi";
       combi-modi = "window,drun";
@@ -372,6 +372,7 @@
 
           # rofi keybindings
           "Mod1+space" = "exec --no-startup-id rofi -show combi";
+          "${modifier}+space" = "exec --no-startup-id rofi -modi emoji -show emoji";
           "XF86Calculator" = "exec --no-startup-id rofi -show calc";
 
           # screenshot utility
