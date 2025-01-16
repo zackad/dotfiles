@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     # Desktop Applications
     anydesk
+    calibre
     firefox
     gnumeric
     gthumb
