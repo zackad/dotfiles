@@ -319,7 +319,7 @@
     enable = true;
     theme = {
       name = "Nordic-darker";
-      package = pkgs.gnome-themes-extra;
+      package = pkgs.nordic;
     };
     iconTheme = {
       name = "Os-Catalina-Night";
