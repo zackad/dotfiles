@@ -318,7 +318,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
+      name = "Nordic-darker";
       package = pkgs.gnome-themes-extra;
     };
     iconTheme = {
@@ -329,7 +329,7 @@
     };
     font = {
       name = "San Francisco Display Regular";
-      size = 9.0;
+      size = 11.0;
     };
   };
 
@@ -339,7 +339,7 @@
   qt = {
     enable = true;
     platformTheme.name = "gtk";
-    style.name = "adwaita-dark";
+    style.name = "Nordic-darker";
   };
 
   xsession.windowManager.i3 = {
