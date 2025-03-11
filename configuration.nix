@@ -190,8 +190,6 @@
     i3
     i3status
     lightlocker
-    qemu
-    quickemu
     sddm-chili-theme
     tailscale
     xarchiver
