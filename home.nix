@@ -29,6 +29,7 @@
     pkgs.htop
     pkgs.imagemagick
     pkgs.jq
+    pkgs.jwt-cli
     pkgs.nixfmt-rfc-style
     pkgs.pass
     pkgs.php83
