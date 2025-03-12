@@ -293,6 +293,7 @@
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       eval "$(symfony-autocomplete)"
+      unalias yy
     '';
     plugins = [
       {
