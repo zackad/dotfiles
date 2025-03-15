@@ -71,6 +71,8 @@
   # Enable the XFCE Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.theme = "chili";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "zackad";
   services.xserver.desktopManager.xfce.enable = true;
 
   # Configure keymap in X11
