@@ -42,6 +42,7 @@
 
     # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
+    (callPackage ./phpstorm-cli-wrapper/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
 
@@ -199,7 +200,7 @@
       fi
 
       # Symfony console autocomplete
-      PATH="$PATH:$HOME/.config/composer/vendor/bin"
+      PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/.local/bin"
       export PATH
     '';
     initExtraFirst = ''
