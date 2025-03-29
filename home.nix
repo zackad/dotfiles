@@ -74,6 +74,7 @@
 
     # Custom packages
     (callPackage ./cbr2cbz/default.nix { })
+    (callPackage ./cbresize/default.nix { })
     (callPackage ./phpstorm-cli-wrapper/default.nix { })
     (callPackage ./phpstorm-url-handler/default.nix { })
   ];
