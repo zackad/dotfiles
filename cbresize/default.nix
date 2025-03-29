@@ -3,13 +3,14 @@
   lib,
   writeShellScript,
   imagemagick,
+  parallel,
   unzip,
   zip,
 }:
 
 stdenvNoCC.mkDerivation rec {
   pname = "cbresize";
-  version = "0.1.0";
+  version = "0.2.0";
   src = ./.;
 
   # Use writeScript to create the script
@@ -30,7 +31,7 @@ stdenvNoCC.mkDerivation rec {
     unzip -j -d $tmpdir "$input"
 
     # resize images with imagemagick
-    mogrify -resize x1200 -quality 100 "$tmpdir/*"
+    ${parallel}/bin/parallel mogrify -resize x1600 -quality 100 ::: $tmpdir/*
 
     # package images into comicbook
     zip "$result" -j -r $tmpdir
