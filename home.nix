@@ -31,6 +31,7 @@
     pkgs.jq
     pkgs.jwt-cli
     pkgs.nixfmt-rfc-style
+    pkgs.moreutils
     pkgs.pass
     pkgs.php83
     pkgs.pigz
