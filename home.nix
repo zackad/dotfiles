@@ -231,11 +231,6 @@
     '';
   };
 
-  programs.vscode = {
-    enable = true;
-    package = pkgs.vscodium;
-  };
-
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
