@@ -184,7 +184,10 @@
 
   programs.rofi = {
     enable = true;
-    plugins = [ pkgs.rofi-calc pkgs.rofi-emoji ];
+    plugins = [
+      pkgs.rofi-calc
+      pkgs.rofi-emoji
+    ];
     extraConfig = {
       modi = "combi";
       combi-modi = "window,drun";
