@@ -264,34 +264,38 @@
       extraConfig = ''
         # Uncomment the following line to use case-sensitive completion.
         CASE_SENSITIVE="true"
-
-        plugins=(git yarn)
       '';
+      plugins = [
+        "git"
+        "yarn"
+      ];
     };
     envExtra = ''
       # Symfony console autocomplete
       PATH="$PATH:$HOME/.config/composer/vendor/bin"
       export PATH
     '';
-    initExtraFirst = ''
-      export GPG_TTY=$TTY
 
-      if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-      fi
+    initContent = lib.mkMerge [
+      # Enable powerlevel10k instant prompt
+      (lib.mkBefore ''
+        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+        fi
+      '')
 
-      fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
-    '';
-    initExtra = ''
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
-
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-      eval "$(symfony-autocomplete)"
-      unalias yy
-    '';
+      (''
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+        eval "$(symfony-autocomplete)"
+        unalias yy
+      '')
+    ];
+    history = {
+      findNoDups = true;
+      ignoreAllDups = true;
+      ignoreDups = true;
+      saveNoDups = true;
+    };
     plugins = [
       {
         name = "powerlevel10k";
