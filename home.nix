@@ -49,6 +49,7 @@
     ansible-lint
     asciinema
     btop # htop on steroid
+    cbconvert # comicbook converter
     dust # better `du` alternative
     git-machete
     graphviz
