@@ -175,7 +175,7 @@
     enable = true;
     # Workaround to fix integration with powerlevel10k instant-prompt
     enableZshIntegration = false;
-    pinentryPackage = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-curses;
   };
 
   programs.neomutt = {
