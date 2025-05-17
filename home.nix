@@ -357,7 +357,7 @@
         size = 9.0;
       };
       modifier = "Mod4";
-      terminal = "xfce4-terminal";
+      terminal = "wezterm";
       window.border = 1;
       gaps = {
         smartBorders = "on";
