@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -154,23 +159,22 @@
       PATH="$PATH:$HOME/.composer/vendor/bin"
       export PATH
     '';
-    initExtraFirst = ''
-      if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-      fi
 
-      fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
-    '';
-    initExtra = ''
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
+    initContent = lib.mkMerge [
+      # Enable powerlevel10k instant prompt
+      (lib.mkBefore ''
+        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+        fi
+      '')
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      (''
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+        eval "$(symfony-autocomplete)"
+        unalias yy
+      '')
+    ];
 
-      eval "$(symfony-autocomplete)"
-      unalias yy
-    '';
     plugins = [
       {
         name = "powerlevel10k";
