@@ -140,7 +140,7 @@
     enable = true;
     # Workaround to fix integration with powerlevel10k instant-prompt
     enableZshIntegration = false;
-    pinentryPackage = pkgs.pinentry-curses;
+    pinentry.package = pkgs.pinentry-curses;
   };
 
   programs.vim = {
@@ -203,24 +203,27 @@
       PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/.local/bin"
       export PATH
     '';
-    initExtraFirst = ''
-      export GPG_TTY=$TTY
+    initContent = lib.mkMerge [
+      (lib.mkBefore ''
+        export GPG_TTY=$TTY
 
-      if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-        source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-      fi
+        if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+          source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
+        fi
 
-      fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
-    '';
-    initExtra = ''
-      if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-        . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-      fi
+        fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+      '')
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+      (''
+        if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+          . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+        fi
 
-      eval "$(symfony-autocomplete)"
-    '';
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+        eval "$(symfony-autocomplete)"
+      '')
+    ];
     plugins = [
       {
         name = "powerlevel10k";
