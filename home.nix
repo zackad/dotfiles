@@ -34,7 +34,7 @@
     jq
     nixfmt-rfc-style # Nix code formatter
     pass # Unix password manager
-    php83
+    php
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
     syncthing
