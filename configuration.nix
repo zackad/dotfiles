@@ -75,9 +75,6 @@
   services.displayManager.autoLogin.user = "zackad";
   services.xserver.desktopManager.xfce.enable = true;
 
-  # Enable hyprland
-  programs.hyprland.enable = true;
-
   # Configure keymap in X11
   services.xserver = {
     xkb.layout = "us";
@@ -194,7 +191,6 @@
     dmenu
     i3
     i3status
-    kitty # required for the default Hyprland config
     lightlocker
     sddm-chili-theme
     tailscale
