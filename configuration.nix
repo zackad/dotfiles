@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -80,6 +85,8 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "zackad";
   services.xserver.desktopManager.xfce.enable = true;
+
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -192,23 +199,30 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    cifs-utils
-    dmenu
-    i3
-    i3status
-    lightlocker
-    sddm-chili-theme
-    tailscale
-    xarchiver
-    xfce.thunar-archive-plugin
-    xfce.xfce4-pulseaudio-plugin
-    xfce.xfce4-volumed-pulse
-    xfce.xfce4-weather-plugin
-    zip
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+      cifs-utils
+      dmenu
+      i3
+      i3status
+      lightlocker
+      sddm-chili-theme
+      tailscale
+      xarchiver
+      xfce.thunar-archive-plugin
+      xfce.xfce4-pulseaudio-plugin
+      xfce.xfce4-volumed-pulse
+      xfce.xfce4-weather-plugin
+      zip
+      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      #  wget
+    ]
+    ++ lib.optionals config.programs.hyprland.enable [
+      rofi-wayland
+      wofi
+      waybar
+    ];
 
   # Mount samba share
   fileSystems."/Volumes/samba" = {
