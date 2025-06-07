@@ -34,6 +34,12 @@
   # boot.supportedFilesystems = [ "ntfs" ];
 
   networking.hostName = "NixOS"; # Define your hostname.
+
+  # Wake on LAN
+  networking.interfaces.enp9s0.wakeOnLan = {
+    enable = true;
+    policy = [ "magic" ];
+  };
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
