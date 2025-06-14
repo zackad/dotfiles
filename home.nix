@@ -42,7 +42,6 @@
     shutter
     telegram-desktop
     wezterm
-    zed-editor
 
     # CLI Applications
     ansible
@@ -246,6 +245,32 @@
       format = "bestvideo[height<=1080]+bestaudio/best[height<=1080]";
     };
     extraConfig = "";
+  };
+
+  programs.zed-editor = {
+    enable = true;
+    userSettings = {
+      node = {
+        path = lib.getExe pkgs.nodejs;
+        npm_path = lib.getExe' pkgs.nodejs "npm";
+      };
+      theme = "Ayu Dark";
+      telemetry = {
+        metrics = false;
+      };
+      ui_font_size = 16;
+      buffer_font_size = 14;
+      toolbar = {
+        breadcrumbs = false;
+        quick_actions = false;
+      };
+      buffer_font_features = {
+        calt = false;
+      };
+      ui_font_features = {
+        calt = false;
+      };
+    };
   };
 
   programs.zoxide = {
