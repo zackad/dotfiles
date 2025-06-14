@@ -28,7 +28,6 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Desktop Applications
-    anydesk
     calibre
     firefox
     gnumeric
@@ -37,7 +36,6 @@
     lutris
     picard
     plexamp
-    qcachegrind
     sayonara
     shutter
     telegram-desktop
