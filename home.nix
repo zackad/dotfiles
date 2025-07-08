@@ -30,6 +30,7 @@
     # Desktop Applications
     brave
     calibre
+    finamp
     firefox
     gnumeric
     gthumb
