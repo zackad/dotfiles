@@ -58,6 +58,7 @@
     keepass
     linuxConsoleTools # fftest, gamepad rumble tester
     maestral # Dropbox client
+    mpv
     neofetch
     notmuch
     nixfmt-rfc-style # Nix code formatter
