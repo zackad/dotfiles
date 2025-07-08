@@ -32,7 +32,6 @@
     firefox
     gnumeric
     gthumb
-    jetbrains.phpstorm
     lutris
     picard
     plexamp
@@ -65,6 +64,7 @@
     playerctl
     pigz # Parallel implementation of gzip
     sshpass # SSH password authetication support for ansible
+    steam-run
     ueberzugpp # Image preview for yazi on xfce terminal
     unzip
     vim # Code editor
