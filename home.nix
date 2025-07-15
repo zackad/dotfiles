@@ -38,7 +38,7 @@
     pkgs.nixfmt-rfc-style
     pkgs.moreutils
     pkgs.pass
-    pkgs.php83
+    pkgs.php84
     pkgs.pigz
     pkgs.pinentry-curses
     pkgs.openssh
