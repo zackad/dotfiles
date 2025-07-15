@@ -27,6 +27,7 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.aria
+    pkgs.docker-client
     pkgs.dust
     pkgs.ffmpeg
     pkgs.ghostscript
