@@ -44,6 +44,7 @@
     pkgs.pinentry-curses
     pkgs.openssh
     pkgs.sshpass
+    (pkgs.callPackage ./packages/pstorm.nix { })
   ];
 
   home.sessionVariables = {
