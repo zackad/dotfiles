@@ -157,7 +157,7 @@
       export LS_COLORS
 
       # Symfony console autocomplete
-      PATH="$PATH:$HOME/.composer/vendor/bin"
+      PATH="$PATH:$HOME/.config/composer/vendor/bin"
       export PATH
     '';
 
