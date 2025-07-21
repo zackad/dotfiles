@@ -1,7 +1,8 @@
 {
-  description = "Home Manager for MacOS";
+  description = "Home Manager configuration of zackad on macos aarch64";
 
   inputs = {
+    # Specify the source of Home Manager and Nixpkgs.
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -11,17 +12,20 @@
 
   outputs =
     { nixpkgs, home-manager, ... }:
+    let
+      system = "aarch64-darwin";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in
     {
+      homeConfigurations."zackad" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-      defaultPackage.x86_64-darwin = home-manager.defaultPackage.x86_64-darwin;
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [ ./home.nix ];
 
-      homeConfigurations = {
-        "zackad" = home-manager.lib.homeManagerConfiguration {
-          # Note: I am sure this could be done better with flake-utils or something
-          pkgs = import nixpkgs { system = "x86_64-darwin"; };
-
-          modules = [ ./home.nix ]; # Defined later
-        };
+        # Optionally use extraSpecialArgs
+        # to pass through arguments to home.nix
       };
     };
 }
