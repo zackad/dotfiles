@@ -174,6 +174,10 @@
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
         eval "$(symfony-autocomplete)"
         unalias yy
+
+        fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+        autoload -Uz compinit
+        compinit
       '')
 
       (''
