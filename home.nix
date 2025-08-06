@@ -170,10 +170,24 @@
         fi
       '')
 
-      (''
+      (lib.mkAfter ''
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
         eval "$(symfony-autocomplete)"
         unalias yy
+      '')
+
+      (''
+        # Prepend nix profile
+        # Nix
+        if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+          . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+        fi
+
+        # home-manager session
+        if [ -e $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
+          . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+        fi
+        # End Nix
       '')
     ];
 
