@@ -42,6 +42,7 @@
     pkgs.php84
     pkgs.pigz
     pkgs.pinentry-curses
+    pkgs.pwgen
     pkgs.openssh
     pkgs.sshpass
     (pkgs.callPackage ./packages/pstorm.nix { })
