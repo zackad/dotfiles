@@ -34,6 +34,7 @@
     firefox
     gnumeric
     gthumb
+    lmstudio
     lutris
     picard
     plexamp
@@ -438,7 +439,10 @@
           { class = "VSCodium"; }
           { class = "dev.zed.Zed"; }
         ];
-        "3" = [ { class = "fmd.exe"; } ];
+        "3" = [
+          { class = "fmd.exe"; }
+          { class = "LM Studio"; }
+        ];
         "7" = [ { class = "firefox-dev-profile"; } ];
         "8" = [ { class = "TelegramDesktop"; } ];
         "9" = [ { class = "Lutris"; } ];
