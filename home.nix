@@ -301,6 +301,8 @@
       # Symfony console autocomplete
       PATH="$PATH:$HOME/.config/composer/vendor/bin"
       export PATH
+
+      export GPG_TTY=$(tty)
     '';
 
     initContent = lib.mkMerge [
