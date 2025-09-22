@@ -219,7 +219,7 @@
       #  wget
     ]
     ++ lib.optionals config.programs.hyprland.enable [
-      rofi-wayland
+      rofi
       wofi
       waybar
     ];
