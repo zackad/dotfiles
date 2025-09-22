@@ -280,7 +280,7 @@
     enable = true;
     user = "zackad";
     dataDir = "/home/zackad/Samba/SavedGames";
-    configDir = "/home/zackad/Samba/SavedGames/.config/syncthing";
+    configDir = "/home/zackad/.config/syncthing";
   };
   systemd.services.syncthing = {
     after = [ "Volumes-samba.mount" ];
