@@ -81,7 +81,6 @@
 
   # Enable the XFCE Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.theme = "chili";
   services.xserver.desktopManager.xfce.enable = true;
 
   programs.hyprland.enable = true;
