@@ -45,6 +45,7 @@
     # CLI Applications
     ansible
     ansible-lint
+    apple-cursor
     asciinema
     btop # htop on steroid
     # cbconvert # comicbook converter
@@ -358,7 +359,7 @@
       name = "Os-Catalina-Night";
     };
     cursorTheme = {
-      name = "macOS-BigSur";
+      name = "macOS";
     };
     font = {
       name = "San Francisco Display Regular";
@@ -373,6 +374,11 @@
     enable = true;
     platformTheme.name = "gtk";
     style.name = "Nordic-darker";
+  };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+    extraConfig = builtins.readFile ./hyprland.conf;
   };
 
   xsession.windowManager.i3 = {
