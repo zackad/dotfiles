@@ -28,7 +28,6 @@
   programs.home-manager.enable = true;
   home.packages = with pkgs; [
     # Desktop Applications
-    brave
     calibre
     finamp
     firefox
