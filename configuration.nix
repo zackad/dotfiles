@@ -219,6 +219,7 @@
       rofi
       wofi
       waybar
+      wl-clipboard
     ];
 
   # Mount samba share
