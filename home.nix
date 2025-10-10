@@ -158,9 +158,9 @@
     };
     difftastic = {
       enable = true;
-      display = "inline";
-      background = "dark";
-      color = "always";
+      options.display = "inline";
+      options.background = "dark";
+      options.color = "always";
     };
   };
 
