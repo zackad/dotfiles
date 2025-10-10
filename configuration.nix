@@ -217,7 +217,6 @@
     ]
     ++ lib.optionals config.programs.hyprland.enable [
       rofi
-      wofi
       waybar
       wl-clipboard
     ];
