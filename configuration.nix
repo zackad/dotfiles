@@ -233,6 +233,17 @@
     ];
   };
 
+  fileSystems."/Volumes/stash" = {
+    device = "//192.168.88.2/stash";
+    fsType = "cifs";
+    # TODO: save credentials using secret manager
+    options = [
+      "credentials=/etc/nixos/smb-secrets"
+      "uid=1000"
+      "gid=100"
+    ];
+  };
+
   fileSystems."/Volumes/backup" = {
     device = "//192.168.88.2/backup";
     fsType = "cifs";
