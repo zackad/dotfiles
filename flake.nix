@@ -3,10 +3,11 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable"; # IMPORTANT
   };
 
   outputs =
-    { self, nixpkgs }:
+    { self, nixpkgs, chaotic }:
     let
       system = "x86_64-linux";
 
@@ -24,7 +25,10 @@
           specialArgs = {
             inherit system;
           };
-          modules = [ ./configuration.nix ];
+          modules = [
+            ./configuration.nix
+            chaotic.nixosModules.default # IMPORTANT
+          ];
         };
       };
     };
