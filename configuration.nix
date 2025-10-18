@@ -226,33 +226,33 @@
     device = "//192.168.88.2/main";
     fsType = "cifs";
     # TODO: save credentials using secret manager
-    options = [
-      "credentials=/etc/nixos/smb-secrets"
-      "uid=1000"
-      "gid=100"
-    ];
+    options =
+      let
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      in
+      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/stash" = {
     device = "//192.168.88.2/stash";
     fsType = "cifs";
     # TODO: save credentials using secret manager
-    options = [
-      "credentials=/etc/nixos/smb-secrets"
-      "uid=1000"
-      "gid=100"
-    ];
+    options =
+      let
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      in
+      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/backup" = {
     device = "//192.168.88.2/backup";
     fsType = "cifs";
     # TODO: save credentials using secret manager
-    options = [
-      "credentials=/etc/nixos/smb-secrets"
-      "uid=1000"
-      "gid=100"
-    ];
+    options =
+      let
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      in
+      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/sata-ssd" = {
