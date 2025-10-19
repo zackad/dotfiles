@@ -46,6 +46,7 @@
     pkgs.openssh
     pkgs.sshpass
     (pkgs.callPackage ./packages/pstorm.nix { })
+    (pkgs.callPackage ./packages/zsh/zsh-completion.nix { })
   ];
 
   home.sessionVariables = {
