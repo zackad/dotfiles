@@ -16,7 +16,7 @@
   ];
 
   # Kernel version
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_cachyos;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -131,6 +131,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   hardware.nvidia-container-toolkit.enable = true;
+
+  # EXPERIMENTAL: Enable HDR support
+  chaotic.hdr.enable = true;
 
   # Enable CUPS to print documents.
   services.printing.enable = false;
