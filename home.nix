@@ -109,6 +109,15 @@
     };
   };
 
+  programs.difftastic = {
+    enable = true;
+    options = {
+      display = "inline";
+      background = "dark";
+      color = "always";
+    };
+  };
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -130,20 +139,10 @@
 
   programs.git = {
     enable = true;
-    userName = "zackad";
-    userEmail = "zackad@zackad.dev";
     signing.key = "C2B91511AE73C825";
-    aliases = {
-      cm = "checkout master";
-      ma = "machete add";
-      me = "machete edit";
-      md = "machete go down";
-      ms = "machete status";
-      mu = "machete update";
-      l = "log --date=short";
-      q = "log --all --decorate --oneline --graph";
-    };
-    extraConfig = {
+    settings = {
+      user.name = "zackad";
+      user.email = "zackad@zackad.dev";
       commit.verbose = true;
       core.excludesFile = "~/.gitignore";
       core.pager = "less -FX";
@@ -155,12 +154,16 @@
       merge.conflictstyle = "zdiff3";
       tag.gpgSign = true;
       tag.sort = "version:refname";
-    };
-    difftastic = {
-      enable = true;
-      options.display = "inline";
-      options.background = "dark";
-      options.color = "always";
+      aliases = {
+        cm = "checkout master";
+        ma = "machete add";
+        me = "machete edit";
+        md = "machete go down";
+        ms = "machete status";
+        mu = "machete update";
+        l = "log --date=short";
+        q = "log --all --decorate --oneline --graph";
+      };
     };
   };
 
