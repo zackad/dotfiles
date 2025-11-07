@@ -26,7 +26,7 @@
   home.packages = [
     pkgs.ansible
     pkgs.ansible-lint
-    pkgs.aria
+    pkgs.aria2
     pkgs.docker-client
     pkgs.dust
     pkgs.ffmpeg
@@ -69,6 +69,16 @@
     };
   };
 
+  programs.difftastic = {
+    enable = true;
+    git.enable = true;
+    options = {
+      display = "inline";
+      background = "dark";
+      color = "always";
+    };
+  };
+
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
@@ -90,19 +100,10 @@
 
   programs.git = {
     enable = true;
-    userName = "zackad";
-    userEmail = "zackad@zackad.dev";
     signing.key = "C2B91511AE73C825";
-    aliases = {
-      cm = "checkout master";
-      l = "log --date=short";
-      ma = "machete add";
-      md = "machete go down";
-      mu = "machete update";
-      ms = "machete status";
-      q = "log --all --decorate --oneline --graph";
-    };
-    extraConfig = {
+    settings = {
+      user.name = "zackad";
+      user.email = "zackad@zackad.dev";
       commit.verbose = true;
       core.excludesFile = "~/.gitignore";
       diff.algorithm = "histogram";
@@ -113,12 +114,15 @@
       merge.conflictstyle = "zdiff3";
       tag.gpgSign = true;
       tag.sort = "-taggerdate";
-    };
-    difftastic = {
-      enable = true;
-      options.display = "inline";
-      options.background = "dark";
-      options.color = "always";
+      aliases = {
+        cm = "checkout master";
+        l = "log --date=short";
+        ma = "machete add";
+        md = "machete go down";
+        mu = "machete update";
+        ms = "machete status";
+        q = "log --all --decorate --oneline --graph";
+      };
     };
   };
 
