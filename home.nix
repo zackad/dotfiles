@@ -31,6 +31,7 @@
     pkgs.dust
     pkgs.ffmpeg
     pkgs.ghostscript
+    pkgs.git-cliff
     pkgs.git-machete
     pkgs.htop
     pkgs.imagemagick
