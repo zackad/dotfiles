@@ -149,6 +149,19 @@
     pinentry.package = pkgs.pinentry-curses;
   };
 
+  programs.rofi = {
+    enable = true;
+    plugins = [
+      pkgs.rofi-calc
+      pkgs.rofi-emoji
+    ];
+    extraConfig = {
+      modi = "combi";
+      combi-modi = "window,drun";
+      show-icons = true;
+    };
+  };
+
   programs.vim = {
     enable = true;
     settings = {
