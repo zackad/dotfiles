@@ -41,6 +41,7 @@
     shutter
     telegram-desktop
     wezterm
+    winbox
 
     # CLI Applications
     ansible
@@ -50,6 +51,7 @@
     btop # htop on steroid
     # cbconvert # comicbook converter
     dust # better `du` alternative
+    fd # find replacement
     git-machete
     graphviz
     htop
@@ -67,6 +69,8 @@
     php83
     playerctl
     pigz # Parallel implementation of gzip
+    pwgen
+    ripgrep
     sshpass # SSH password authetication support for ansible
     steam-run
     ueberzugpp # Image preview for yazi on xfce terminal
