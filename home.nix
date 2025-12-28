@@ -305,6 +305,7 @@
     envExtra = ''
       # Symfony console autocomplete
       PATH="$PATH:$HOME/.config/composer/vendor/bin"
+      PATH="$PATH:$HOME/.local/bin"
       export PATH
 
       export GPG_TTY=$(tty)
