@@ -79,9 +79,9 @@
     wineWowPackages.stable
 
     # Custom packages
-    (callPackage ../cbr2cbz/default.nix { })
-    (callPackage ../phpstorm-cli-wrapper/default.nix { })
-    (callPackage ../phpstorm-url-handler/default.nix { })
+    (callPackage ../pkgs/cbr2cbz/default.nix { })
+    (callPackage ../pkgs/phpstorm-cli-wrapper/default.nix { })
+    (callPackage ../pkgs/phpstorm-url-handler/default.nix { })
   ];
 
   home.sessionVariables = {
