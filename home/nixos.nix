@@ -79,9 +79,9 @@
     wineWowPackages.stable
 
     # Custom packages
-    (callPackage ./cbr2cbz/default.nix { })
-    (callPackage ./phpstorm-cli-wrapper/default.nix { })
-    (callPackage ./phpstorm-url-handler/default.nix { })
+    (callPackage ../cbr2cbz/default.nix { })
+    (callPackage ../phpstorm-cli-wrapper/default.nix { })
+    (callPackage ../phpstorm-url-handler/default.nix { })
   ];
 
   home.sessionVariables = {
@@ -387,7 +387,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = builtins.readFile ./hyprland.conf;
+    extraConfig = builtins.readFile ../hyprland.conf;
   };
 
   xsession.windowManager.i3 = {
