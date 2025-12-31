@@ -3,6 +3,7 @@
   lib,
   writeShellScript,
   config,
+  steam-run,
 }:
 
 stdenvNoCC.mkDerivation rec {
@@ -12,7 +13,7 @@ stdenvNoCC.mkDerivation rec {
 
   # Use writeScript to create the script
   script = writeShellScript "pstorm" ''
-    phpstorm "$@" > /dev/null 2>&1 & disown
+    ${steam-run}/bin/steam-run $HOME/Applications/PhpStorm/bin/phpstorm "$@" > /dev/null 2>&1 & disown
   '';
 
   # The script is already executable, so we don't need to set permissions
