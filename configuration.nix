@@ -283,18 +283,6 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # Enable syncthing service
-  services.syncthing = {
-    enable = true;
-    user = "zackad";
-    dataDir = "/home/zackad/Samba/SavedGames";
-    configDir = "/home/zackad/.config/syncthing";
-  };
-  systemd.services.syncthing = {
-    after = [ "Volumes-samba.mount" ];
-    requires = [ "Volumes-samba.mount" ];
-  };
-
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
