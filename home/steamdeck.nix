@@ -165,7 +165,7 @@
     ];
     extraConfig = {
       modi = "combi";
-      combi-modi = "window,drun";
+      combi-modi = "window,drun,emoji";
       show-icons = true;
     };
   };
