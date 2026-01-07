@@ -79,8 +79,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable display manager with hyprland
+  # Enable the XFCE Desktop Environment.
   services.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.xfce.enable = true;
+
   programs.hyprland.enable = true;
 
   # Configure keymap in X11
@@ -198,11 +200,17 @@
     with pkgs;
     [
       cifs-utils
+      dmenu
+      i3
+      i3status
       lightlocker
+      sddm-chili-theme
       tailscale
       xarchiver
-      xfce.thunar
       xfce.thunar-archive-plugin
+      xfce.xfce4-pulseaudio-plugin
+      xfce.xfce4-volumed-pulse
+      xfce.xfce4-weather-plugin
       zip
       #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       #  wget
