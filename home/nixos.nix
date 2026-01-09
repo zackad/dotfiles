@@ -54,6 +54,7 @@
     fd # find replacement
     git-machete
     graphviz
+    hyprshot
     htop
     imagemagick
     isync
