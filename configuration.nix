@@ -205,6 +205,8 @@
       i3status
       lightlocker
       sddm-chili-theme
+      sops
+      ssh-to-age
       tailscale
       xarchiver
       xfce.thunar-archive-plugin
