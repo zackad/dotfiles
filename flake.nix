@@ -29,6 +29,15 @@
           };
           modules = [ ./home/steamdeck.nix ];
         };
+
+        "macos" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs {
+            system = "aarch64-darwin";
+            config.allowUnfree = true;
+          };
+          modules = [ ./home/macos.nix ];
+        };
+
       };
     };
 }
