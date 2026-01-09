@@ -13,6 +13,7 @@
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
+    ./secret-smb.nix
   ];
 
   # Kernel version
@@ -232,7 +233,7 @@
       let
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
       in
-      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/stash" = {
@@ -243,7 +244,7 @@
       let
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
       in
-      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/backup" = {
@@ -254,7 +255,7 @@
       let
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
       in
-      [ "${automount_opts},credentials=/etc/nixos/smb-secrets,uid=1000,gid=100" ];
+      [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
   };
 
   fileSystems."/Volumes/sata-ssd" = {
