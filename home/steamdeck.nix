@@ -29,7 +29,6 @@
   home.packages = with pkgs; [
     # CLI Applications
     ansible
-    busybox
     cotp
     dust
     git-machete
