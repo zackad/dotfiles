@@ -37,7 +37,7 @@
     lutris
     picard
     plexamp
-    sayonara
+    # sayonara --broken build
     shutter
     telegram-desktop
     wezterm
@@ -65,7 +65,7 @@
     mpv
     neofetch
     notmuch
-    nixfmt-rfc-style # Nix code formatter
+    nixfmt # Nix code formatter
     pass # Unix password manager
     php83
     playerctl
