@@ -61,7 +61,7 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
-  time.hardwareClockInLocalTime = true;
+  time.hardwareClockInLocalTime = false;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
