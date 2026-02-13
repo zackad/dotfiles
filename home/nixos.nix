@@ -80,6 +80,7 @@
 
     # Custom packages
     (callPackage ../pkgs/cbr2cbz/default.nix { })
+    (callPackage ../pkgs/media-control/default.nix { })
     (callPackage ../pkgs/phpstorm-cli-wrapper/for-nixos.nix { })
     (callPackage ../pkgs/phpstorm-url-handler/default.nix { })
   ];
