@@ -39,6 +39,7 @@
     pkgs.jwt-cli
     pkgs.nixfmt-rfc-style
     pkgs.moreutils
+    pkgs.mintotp
     pkgs.pass
     pkgs.php84
     pkgs.pigz
