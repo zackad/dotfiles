@@ -62,6 +62,7 @@
     keepass
     linuxConsoleTools # fftest, gamepad rumble tester
     maestral # Dropbox client
+    mintotp
     mpv
     neofetch
     notmuch
@@ -328,6 +329,18 @@
         [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
         eval "$(symfony-autocomplete)"
         unalias yy
+      '')
+
+      # Wrapper for mintotp with password-store integration
+      (''
+        otp() {
+          if [ -z "$1" ]; then
+            echo "Usage: otp <path/to/secret>"
+            return 1
+          fi
+          pass "$1" | ${pkgs.mintotp}/bin/mintotp
+        }
+        compdef _pass otp
       '')
     ];
     history = {
