@@ -71,6 +71,7 @@
     php83
     playerctl
     pigz # Parallel implementation of gzip
+    podman
     pwgen
     ripgrep
     sshpass # SSH password authetication support for ansible
