@@ -119,6 +119,7 @@
         # Layouts
         "alt-slash" = "layout tiles horizontal vertical";
         "alt-comma" = "layout accordion horizontal vertical";
+        "alt-f" = "fullscreen";
 
         # Focus
         "alt-h" = "focus left";
