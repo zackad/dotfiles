@@ -88,7 +88,10 @@
 
       # Callbacks
       on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
-      on-mode-changed = [ ];
+      on-focus-changed = [
+        "exec-and-forget [ $(${pkgs.aerospace}/bin/aerospace list-windows --workspace focused | wc -l) -eq 1 ] && ${pkgs.jankyborders}/bin/borders width=0.0 || ${pkgs.jankyborders}/bin/borders width=5.0"
+        "move-mouse window-lazy-center"  # Mouse lazily follows any focus (window or workspace)
+      ];
 
       automatically-unhide-macos-hidden-apps = false;
 
