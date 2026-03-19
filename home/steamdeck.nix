@@ -35,7 +35,7 @@
     imagemagick
     jq
     keepass # password manager to be used by JetBrains IDE
-    nixfmt-rfc-style # Nix code formatter
+    nixfmt # Nix code formatter
     nodejs
     pass # Unix password manager
     php
@@ -43,7 +43,6 @@
     pigz # Parallel implementation of gzip
     pwgen
     sshpass # SSH password authetication support for ansible
-    syncthing
     tailscale
     unzip
     wineWowPackages.base
