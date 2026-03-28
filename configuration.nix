@@ -215,21 +215,9 @@
     ];
 
   # Mount samba share
-  fileSystems."/Volumes/samba" = {
-    device = "//192.168.88.2/main";
-    fsType = "cifs";
-    # TODO: save credentials using secret manager
-    options =
-      let
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-      in
-      [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
-  };
-
   fileSystems."/Volumes/stash" = {
     device = "//192.168.88.2/stash";
     fsType = "cifs";
-    # TODO: save credentials using secret manager
     options =
       let
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
@@ -240,7 +228,6 @@
   fileSystems."/Volumes/backup" = {
     device = "//192.168.88.2/backup";
     fsType = "cifs";
-    # TODO: save credentials using secret manager
     options =
       let
         automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
