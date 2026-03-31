@@ -90,7 +90,29 @@
       on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
       on-focus-changed = [
         "exec-and-forget [ $(${pkgs.aerospace}/bin/aerospace list-windows --workspace focused | wc -l) -eq 1 ] && ${pkgs.jankyborders}/bin/borders width=0.0 || ${pkgs.jankyborders}/bin/borders width=5.0"
-        "move-mouse window-lazy-center"  # Mouse lazily follows any focus (window or workspace)
+        "move-mouse window-lazy-center" # Mouse lazily follows any focus (window or workspace)
+      ];
+      on-window-detected = [
+        {
+          "if".app-id = "com.jetbrains.PhpStorm";
+          run = "move-node-to-workspace 1";
+        }
+
+        {
+          "if".app-id = "com.googlecode.iterm2";
+          run = "move-node-to-workspace 6";
+        }
+
+        # Firefox window
+        {
+          "if".app-id = "org.mozilla.firefox";
+          "if".window-title-regex-substring = "Developer — Mozilla Firefox";
+          run = "move-node-to-workspace 7";
+        }
+        {
+          "if".app-id = "org.mozilla.firefox";
+          run = "move-node-to-workspace 2";
+        }
       ];
 
       automatically-unhide-macos-hidden-apps = false;
