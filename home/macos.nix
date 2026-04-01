@@ -100,6 +100,11 @@
           run = "move-node-to-workspace 6";
         }
 
+        {
+          "if".app-id = "com.apple.MobileSMS";
+          run = "move-node-to-workspace 8";
+        }
+
         # Firefox window
         {
           "if".app-id = "org.mozilla.firefox";
