@@ -73,9 +73,7 @@
       config-version = 2;
 
       # Startup commands
-      after-startup-command = [
-        "exec-and-forget ${pkgs.jankyborders}/bin/borders active_color=0xff00ffff inactive_color=0x00000000 width=5.0 hidpi=on"
-      ];
+      after-startup-command = [ ];
 
       # Normalizations
       enable-normalization-flatten-containers = true;
@@ -89,7 +87,6 @@
       # Callbacks
       on-focused-monitor-changed = [ "move-mouse monitor-lazy-center" ];
       on-focus-changed = [
-        "exec-and-forget [ $(${pkgs.aerospace}/bin/aerospace list-windows --workspace focused | wc -l) -eq 1 ] && ${pkgs.jankyborders}/bin/borders width=0.0 || ${pkgs.jankyborders}/bin/borders width=5.0"
         "move-mouse window-lazy-center" # Mouse lazily follows any focus (window or workspace)
       ];
       on-window-detected = [
