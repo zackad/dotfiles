@@ -96,6 +96,16 @@
         }
 
         {
+          "if".app-id = "dev.zed.Zed";
+          run = "move-node-to-workspace 1";
+        }
+
+        {
+          "if".app-id = "md.obsidian";
+          run = "move-node-to-workspace 5";
+        }
+
+        {
           "if".app-id = "com.googlecode.iterm2";
           run = "move-node-to-workspace 6";
         }
