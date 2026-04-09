@@ -115,6 +115,11 @@
           run = "move-node-to-workspace 8";
         }
 
+        {
+          "if".app-id = "tv.plex.plexamp";
+          run = "move-node-to-workspace 9";
+        }
+
         # Firefox window
         {
           "if".app-id = "org.mozilla.firefox";
