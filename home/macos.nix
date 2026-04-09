@@ -40,6 +40,7 @@
     pkgs.nixfmt-rfc-style
     pkgs.moreutils
     pkgs.mintotp
+    pkgs.opencode
     pkgs.pass
     pkgs.php84
     pkgs.pigz
@@ -98,6 +99,11 @@
         {
           "if".app-id = "dev.zed.Zed";
           run = "move-node-to-workspace 1";
+        }
+
+        {
+          "if".app-id = "com.apple.finder";
+          run = "move-node-to-workspace 3";
         }
 
         {
