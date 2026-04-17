@@ -37,7 +37,7 @@
     pkgs.imagemagick
     pkgs.jq
     pkgs.jwt-cli
-    pkgs.nixfmt-rfc-style
+    pkgs.nixfmt
     pkgs.moreutils
     pkgs.mintotp
     pkgs.opencode
@@ -290,6 +290,7 @@
   programs.git = {
     enable = true;
     signing.key = "C2B91511AE73C825";
+    signing.format = "openpgp";
     settings = {
       user.name = "zackad";
       user.email = "zackad@zackad.dev";
@@ -325,6 +326,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    shellWrapperName = "yy";
   };
 
   programs.zoxide = {
