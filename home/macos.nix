@@ -27,7 +27,6 @@
     pkgs.ansible
     pkgs.ansible-lint
     pkgs.aria2
-    pkgs.docker-client
     pkgs.dust
     pkgs.ffmpeg
     pkgs.ghostscript
@@ -45,6 +44,7 @@
     pkgs.php84
     pkgs.pigz
     pkgs.pinentry-curses
+    pkgs.podman
     pkgs.pwgen
     pkgs.openssh
     pkgs.sshpass
