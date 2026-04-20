@@ -51,6 +51,7 @@
     btop # htop on steroid
     # cbconvert # comicbook converter
     dust # better `du` alternative
+    fastfetch
     fd # find replacement
     git-machete
     graphviz
@@ -64,7 +65,6 @@
     maestral # Dropbox client
     mintotp
     mpv
-    neofetch
     notmuch
     nixfmt # Nix code formatter
     pass # Unix password manager
@@ -78,7 +78,7 @@
     ueberzugpp # Image preview for yazi on xfce terminal
     unzip
     vim # Code editor
-    wineWowPackages.stable
+    wineWow64Packages.stable
 
     # Custom packages
     (callPackage ../pkgs/cbr2cbz/default.nix { })
@@ -148,6 +148,7 @@
   programs.git = {
     enable = true;
     signing.key = "C2B91511AE73C825";
+    signing.format = "openpgp";
     settings = {
       user.name = "zackad";
       user.email = "zackad@zackad.dev";
@@ -247,6 +248,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    shellWrapperName = "yy";
   };
 
   programs.yt-dlp = {
@@ -375,6 +377,7 @@
 
   gtk = {
     enable = true;
+    gtk4.theme = config.gtk.theme;
     theme = {
       name = "Nordic-darker";
       package = pkgs.nordic;
