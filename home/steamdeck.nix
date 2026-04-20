@@ -45,7 +45,7 @@
     sshpass # SSH password authetication support for ansible
     tailscale
     unzip
-    wineWowPackages.base
+    wineWow64Packages.base
 
     # Custom packages
     (callPackage ../pkgs/cbr2cbz/default.nix { })
@@ -114,6 +114,7 @@
   programs.git = {
     enable = true;
     signing.key = "C2B91511AE73C825";
+    signing.format = "openpgp";
     settings = {
       user.name = "zackad";
       user.email = "zackad@zackad.dev";
@@ -185,6 +186,7 @@
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    shellWrapperName = "yy";
   };
 
   programs.yt-dlp = {
