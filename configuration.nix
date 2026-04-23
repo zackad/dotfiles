@@ -176,12 +176,6 @@
     packages = with pkgs; [ ];
   };
 
-  virtualisation.docker = {
-    enable = true;
-    rootless.enable = true;
-    rootless.setSocketVariable = true;
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
