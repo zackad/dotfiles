@@ -70,10 +70,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the XFCE Desktop Environment.
+  # Enable Hyprland Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
-
   programs.hyprland.enable = true;
 
   # Configure keymap in X11
@@ -181,32 +179,24 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages =
-    with pkgs;
-    [
-      cifs-utils
-      dmenu
-      i3
-      i3status
-      lightlocker
-      sddm-chili-theme
-      sops
-      ssh-to-age
-      tailscale
-      xarchiver
-      thunar-archive-plugin
-      xfce4-pulseaudio-plugin
-      xfce4-volumed-pulse
-      xfce4-weather-plugin
-      zip
-      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      #  wget
-    ]
-    ++ lib.optionals config.programs.hyprland.enable [
-      rofi
-      waybar
-      wl-clipboard
-    ];
+  environment.systemPackages = with pkgs; [
+    cifs-utils
+    lightlocker
+    sops
+    ssh-to-age
+    tailscale
+    xarchiver
+    thunar-archive-plugin
+    xfce4-pulseaudio-plugin
+    xfce4-volumed-pulse
+    xfce4-weather-plugin
+    zip
+
+    # Hyprland specific dependencies
+    rofi
+    waybar
+    wl-clipboard
+  ];
 
   # Mount samba share
   fileSystems."/Volumes/stash" = {
