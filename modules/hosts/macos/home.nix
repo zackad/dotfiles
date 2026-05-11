@@ -17,7 +17,7 @@
   # This is your home.nix, your module where you configure home-manager
   # It's imported both in standalone configuration above, and in your nixos configuration
   flake.homeModules.zackadModule =
-    { pkgs, lib, ... }:
+    { config, pkgs, lib, ... }:
     {
       # This value determines the Home Manager release that your
       # configuration is compatible with. This helps avoid breakage
@@ -57,7 +57,7 @@
         pkgs.openssh
         pkgs.sshpass
         # (pkgs.callPackage ../pkgs/phpstorm-cli-wrapper/default.nix { })
-        # (pkgs.callPackage ../pkgs/zsh/zsh-completion.nix { })
+        self.packages.${pkgs.stdenv.hostPlatform.system}.my-custom-zsh-completions
       ];
 
       home.sessionVariables = {
