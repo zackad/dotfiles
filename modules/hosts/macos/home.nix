@@ -17,7 +17,12 @@
   # This is your home.nix, your module where you configure home-manager
   # It's imported both in standalone configuration above, and in your nixos configuration
   flake.homeModules.zackadModule =
-    { config, pkgs, lib, ... }:
+    {
+      config,
+      pkgs,
+      lib,
+      ...
+    }:
     {
       # This value determines the Home Manager release that your
       # configuration is compatible with. This helps avoid breakage
