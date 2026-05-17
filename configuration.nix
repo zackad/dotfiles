@@ -191,11 +191,6 @@
     xfce4-volumed-pulse
     xfce4-weather-plugin
     zip
-
-    # Hyprland specific dependencies
-    rofi
-    waybar
-    wl-clipboard
   ];
 
   # Mount samba share
