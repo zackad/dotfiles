@@ -52,8 +52,8 @@
 
         # Custom packages
         # (callPackage ../pkgs/cbr2cbz/default.nix { })
-        # (callPackage ../pkgs/phpstorm-cli-wrapper/default.nix { })
-        # (callPackage ../pkgs/phpstorm-url-handler/default.nix { })
+        self.packages.${pkgs.stdenv.hostPlatform.system}.phpstorm-cli-wrapper
+        self.packages.${pkgs.stdenv.hostPlatform.system}.phpstorm-url-handler
       ];
 
       home.sessionVariables = {
