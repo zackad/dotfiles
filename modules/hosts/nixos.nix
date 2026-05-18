@@ -48,6 +48,7 @@
         # sayonara --broken build
         shutter
         telegram-desktop
+        thunar
         wezterm
         winbox
 
