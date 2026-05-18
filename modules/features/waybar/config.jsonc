@@ -1,0 +1,41 @@
+// -*- mode: jsonc -*-
+[
+  {
+    "name": "bar-main",
+    "output": "DP-1",
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 24, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": [
+      "mpd",
+      "idle_inhibitor",
+      "pulseaudio",
+      "network",
+      // "power-profiles-daemon",
+      "cpu",
+      "memory",
+      // "temperature",
+      "backlight",
+      "keyboard-state",
+      "sway/language",
+      "battery",
+      "battery#bat2",
+      "clock",
+      "tray",
+    ],
+    "include": ["~/.config/waybar/modules.jsonc"],
+  },
+  {
+    "name": "bar-secondary",
+    "output": "DP-2",
+    "include": ["~/.config/waybar/modules.jsonc"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "clock"],
+  },
+]
