@@ -55,6 +55,10 @@ let
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             eval "$(symfony-autocomplete)"
             unalias yy
+
+            fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
+            autoload -Uz compinit
+            compinit
           '')
 
           # Wrapper for mintotp with password-store integration
@@ -67,6 +71,20 @@ let
               pass "$1" | ${pkgs.mintotp}/bin/mintotp
             }
             compdef _pass otp
+          '')
+
+          (''
+            # Prepend nix profile
+            # Nix
+            if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+              . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+            fi
+
+            # home-manager session
+            if [ -e $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh ]; then
+              . $HOME/.nix-profile/etc/profile.d/hm-session-vars.sh
+            fi
+            # End Nix
           '')
         ];
         history = {
@@ -92,4 +110,5 @@ let
 in
 {
   flake.homeModules.nixosModule = zshModule;
+  flake.homeModules.zackadModule = zshModule;
 }
