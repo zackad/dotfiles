@@ -35,8 +35,6 @@ let
           ];
         };
         envExtra = ''
-          # Symfony console autocomplete
-          PATH="$PATH:$HOME/.config/composer/vendor/bin"
           PATH="$PATH:$HOME/.local/bin"
           export PATH
 
@@ -53,7 +51,6 @@ let
 
           (''
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-            eval "$(symfony-autocomplete)"
             unalias yy
 
             fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
