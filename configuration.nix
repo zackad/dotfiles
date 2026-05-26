@@ -14,7 +14,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./secret-smb.nix
-    ./modules/niri.nix
   ];
 
   # Kernel version
