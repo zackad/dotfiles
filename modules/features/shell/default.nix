@@ -111,4 +111,5 @@ in
 {
   flake.homeModules.nixosModule = zshModule;
   flake.homeModules.zackadModule = zshModule;
+  flake.homeModules.deckModule = zshModule;
 }
