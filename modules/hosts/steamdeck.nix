@@ -212,62 +212,6 @@
         ];
       };
 
-      programs.zsh = {
-        enable = true;
-        autosuggestion.enable = true;
-        oh-my-zsh = {
-          enable = true;
-          extraConfig = ''
-            # Uncomment the following line to use case-sensitive completion.
-            CASE_SENSITIVE="true"
-
-            plugins=(git yarn)
-          '';
-        };
-        envExtra = ''
-          # make sure that nix profile is loaded
-          if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then
-            . $HOME/.nix-profile/etc/profile.d/nix.sh
-          fi
-
-          # Symfony console autocomplete
-          PATH="$PATH:$HOME/.config/composer/vendor/bin:$HOME/.local/bin"
-          export PATH
-        '';
-        initContent = lib.mkMerge [
-          (lib.mkBefore ''
-            export GPG_TTY=$TTY
-
-            if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
-              source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
-            fi
-
-            fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
-          '')
-
-          (''
-            if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-              . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-            fi
-
-            [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-            eval "$(symfony-autocomplete)"
-          '')
-        ];
-        plugins = [
-          {
-            name = "powerlevel10k";
-            src = pkgs.zsh-powerlevel10k;
-            file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-          }
-          {
-            name = "fzf-tab";
-            src = pkgs.zsh-fzf-tab;
-            file = "share/fzf-tab/fzf-tab.plugin.zsh";
-          }
-        ];
-      };
     };
 
 }

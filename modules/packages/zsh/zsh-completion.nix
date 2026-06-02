@@ -18,6 +18,7 @@
         # for completion functions (which usually start with an underscore, e.g., _myprogram).
         installPhase = ''
           install -Dm644 _symfony-console $out/share/zsh/site-functions/_symfony-console
+          install -Dm644 _symfony-console-autocomplete $out/share/zsh/site-functions/_symfony-console-autocomplete
         '';
 
         # Ensure the completion script is executable if it contains shell code,
