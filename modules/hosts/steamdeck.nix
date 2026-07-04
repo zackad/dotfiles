@@ -49,6 +49,7 @@
         tailscale
         unzip
         wineWow64Packages.base
+        wl-clipboard # required for to copy pass output into clipboard
 
         # Custom packages
         # (callPackage ../pkgs/cbr2cbz/default.nix { })
