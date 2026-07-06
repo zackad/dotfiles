@@ -16,6 +16,7 @@ let
 
       home.shellAliases = {
         console = "bin/console";
+        gdm = "git diff $(git merge-base --fork-point master)";
         gzip = "pigz";
         cat = "bat";
       };
