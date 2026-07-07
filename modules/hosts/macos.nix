@@ -52,12 +52,10 @@
         pkgs.nixfmt
         pkgs.moreutils
         pkgs.mintotp
-        pkgs.opencode
         pkgs.pass
         pkgs.php84
         pkgs.pigz
         pkgs.pinentry-curses
-        pkgs.podman
         pkgs.pwgen
         pkgs.openssh
         pkgs.sshpass
