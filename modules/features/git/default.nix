@@ -37,6 +37,7 @@ let
           log.date = "format:%Y-%m-%d %H:%M:%S";
           merge.ff = "no";
           merge.conflictstyle = "zdiff3";
+          rerere.enabled = true;
           tag.gpgSign = true;
           tag.sort = "-taggerdate";
           aliases = {
