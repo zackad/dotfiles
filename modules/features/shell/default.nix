@@ -57,6 +57,8 @@ let
             [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
             unalias yy
 
+            source ~/.nix-profile/share/zsh/site-functions/_symfony-autocomplete
+
             fpath=($HOME/.nix-profile/share/zsh/site-functions $fpath)
             autoload -Uz compinit
             compinit

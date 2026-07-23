@@ -1,3 +1,7 @@
+# autoload using fpath doesn't work. i have no idea how to fix it.
+# manually source it instead using
+# `source ~/.nix-profile/share/zsh/site-functions/_symfony-autocomplete`
+
 _symfony()
 {
     local state com cur commands options
