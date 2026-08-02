@@ -267,7 +267,7 @@
         gtk4.theme = config.gtk.theme;
         theme = {
           name = "Nordic-darker";
-          package = pkgs.nordic;
+          package = null;
         };
         iconTheme = {
           name = "Os-Catalina-Night";
@@ -286,7 +286,7 @@
 
       qt = {
         enable = true;
-        platformTheme.name = "gtk";
+        platformTheme.name = "gtk4";
         style.name = "Nordic-darker";
       };
 
