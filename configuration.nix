@@ -219,13 +219,8 @@
   };
 
   fileSystems."/Volumes/data" = {
-    device = "/dev/disk/by-uuid/14AE1D30AE1D0C3C";
-    fsType = "ntfs";
-    options = [
-      "rw"
-      "uid=1000"
-      "gid=100"
-    ];
+    device = "/dev/disk/by-uuid/10b68492-52bf-4ee4-b120-c19667f0103e";
+    fsType = "ext4";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
