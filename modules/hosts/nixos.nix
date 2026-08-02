@@ -82,6 +82,7 @@
         pigz # Parallel implementation of gzip
         podman
         pwgen
+        qpdf
         ripgrep
         sshpass # SSH password authetication support for ansible
         ueberzugpp # Image preview for yazi on xfce terminal
