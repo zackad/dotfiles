@@ -261,7 +261,7 @@ hl.device({
 })
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
-local mainMod_SHIFT = "SUPER + SHIFT" -- Sets "Windows" key as main modifier
+local mainMod_SHIFT = "SUPER + SHIFT" -- Sets "Windows+Shift" key as modifier
 
 hl.bind(mainMod .. " + M", hl.dsp.exit())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
@@ -269,7 +269,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 
-hl.bind("ALT_L + SPACE", hl.dsp.exec_cmd(menu))
+hl.bind("ALT + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd("rofi -modi emoji -show emoji"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod_SHIFT .. " + Q", hl.dsp.window.close())
