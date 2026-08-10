@@ -203,16 +203,6 @@
       [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
   };
 
-  fileSystems."/Volumes/backup" = {
-    device = "//192.168.88.2/backup";
-    fsType = "cifs";
-    options =
-      let
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-      in
-      [ "${automount_opts},credentials=${config.sops.secrets."smb_cred".path},uid=1000,gid=100" ];
-  };
-
   fileSystems."/Volumes/sata-ssd" = {
     device = "/dev/disk/by-uuid/3f3d53dd-5d61-4932-b226-48f838ce8807";
     fsType = "ext4";
