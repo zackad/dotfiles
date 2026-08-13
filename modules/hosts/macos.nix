@@ -253,32 +253,6 @@
         };
       };
 
-      programs.bat = {
-        enable = true;
-        config = {
-          style = "plain";
-        };
-      };
-
-      programs.direnv = {
-        enable = true;
-        nix-direnv.enable = true;
-      };
-
-      programs.eza = {
-        enable = true;
-        icons = "auto";
-        extraOptions = [
-          "--group-directories-first"
-          "--header"
-        ];
-      };
-
-      programs.fzf = {
-        enable = true;
-        enableZshIntegration = true;
-      };
-
       programs.gpg = {
         enable = true;
         settings = {
@@ -290,15 +264,6 @@
         enable = true;
         enableZshIntegration = true;
         shellWrapperName = "yy";
-      };
-
-      programs.zoxide = {
-        enable = true;
-        enableZshIntegration = true;
-        options = [
-          "--cmd"
-          "cd"
-        ];
       };
 
     };

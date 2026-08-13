@@ -57,32 +57,6 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.phpstorm-url-handler
       ];
 
-      programs.bat = {
-        enable = true;
-        config = {
-          style = "plain";
-        };
-      };
-
-      programs.direnv = {
-        enable = true;
-        nix-direnv.enable = true;
-      };
-
-      programs.eza = {
-        enable = true;
-        icons = "auto";
-        extraOptions = [
-          "--header"
-          "--group-directories-first"
-        ];
-      };
-
-      programs.fzf = {
-        enable = true;
-        enableZshIntegration = true;
-      };
-
       programs.gpg = {
         enable = true;
         settings = {
@@ -128,15 +102,6 @@
         enable = true;
         enableZshIntegration = true;
         shellWrapperName = "yy";
-      };
-
-      programs.zoxide = {
-        enable = true;
-        enableZshIntegration = true;
-        options = [
-          "--cmd"
-          "cd"
-        ];
       };
 
     };

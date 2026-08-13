@@ -21,6 +21,41 @@ let
         cat = "bat";
       };
 
+      programs.bat = {
+        enable = true;
+        config = {
+          style = "plain";
+        };
+      };
+
+      programs.direnv = {
+        enable = true;
+        nix-direnv.enable = true;
+      };
+
+      programs.eza = {
+        enable = true;
+        icons = "auto";
+        extraOptions = [
+          "--header"
+          "--group-directories-first"
+        ];
+      };
+
+      programs.fzf = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+
+      programs.zoxide = {
+        enable = true;
+        enableZshIntegration = true;
+        options = [
+          "--cmd"
+          "cd"
+        ];
+      };
+
       programs.zsh = {
         enable = true;
         autosuggestion.enable = true;
