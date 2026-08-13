@@ -62,19 +62,6 @@
         self.packages.${pkgs.stdenv.hostPlatform.system}.my-custom-zsh-completions
       ];
 
-      home.sessionVariables = {
-        EDITOR = "vim";
-        GPG_TTY = "$TTY";
-        PAGER = "less -FRX";
-        RSYNC_OLD_ARGS = "1"; # workaround for escape introduced by rsync v3.2.4
-      };
-
-      home.shellAliases = {
-        console = "bin/console";
-        gzip = "pigz";
-        cat = "bat";
-      };
-
       programs.aerospace = {
         enable = true;
         launchd.enable = true;
