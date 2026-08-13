@@ -39,7 +39,6 @@
       home.packages = [
         pkgs.ansible
         pkgs.ansible-lint
-        pkgs.aria2
         pkgs.dust
         pkgs.ffmpeg
         pkgs.ghostscript
