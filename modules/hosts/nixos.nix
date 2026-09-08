@@ -41,7 +41,6 @@
         firefox
         gnumeric
         gthumb
-        lmstudio
         lutris
         picard
         plexamp
