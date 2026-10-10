@@ -36,20 +36,16 @@
       programs.home-manager.enable = true;
       home.packages = with pkgs; [
         # Desktop Applications
-        calibre
-        finamp
         firefox
         gnumeric
         gthumb
         lutris
         picard
         plexamp
-        # sayonara --broken build
         shutter
         telegram-desktop
         thunar
         wezterm
-        winbox
 
         # CLI Applications
         ansible
@@ -62,14 +58,12 @@
         fastfetch
         fd # find replacement
         git-machete
-        graphviz
         hyprshot
         htop
         imagemagick
         isync
         jq
         keepass
-        linuxConsoleTools # fftest, gamepad rumble tester
         maestral # Dropbox client
         mintotp
         mpv
