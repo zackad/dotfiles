@@ -122,7 +122,7 @@
           pkgs.rofi-calc
           pkgs.rofi-emoji
         ];
-        extraConfig = {
+        settings = {
           modi = "combi";
           combi-modi = "window,drun";
           show-icons = true;
