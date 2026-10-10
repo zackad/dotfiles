@@ -84,7 +84,6 @@
         qpdf
         ripgrep
         sshpass # SSH password authetication support for ansible
-        ueberzugpp # Image preview for yazi on xfce terminal
         unzip
         vim # Code editor
         wineWow64Packages.stable
