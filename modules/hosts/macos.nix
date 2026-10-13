@@ -131,6 +131,12 @@
               run = "move-node-to-workspace 9";
             }
 
+            {
+
+              "if".app-id = "com.unicornsonlsd.finamp-ios";
+              run = "move-node-to-workspace 9";
+            }
+
             # Firefox window
             {
               "if".app-id = "org.mozilla.firefox";
