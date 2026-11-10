@@ -18,6 +18,18 @@
     };
   };
 
+  flake.nixosConfigurations = {
+    NixOS = inputs.nixpkgs.lib.nixosSystem {
+      specialArgs = {
+        system = "x86_64-linux";
+      };
+      modules = [
+        ../../nixos/configuration.nix
+        inputs.sops-nix.nixosModules.sops
+      ];
+    };
+  };
+
   flake.homeModules.nixosModule =
     {
       config,

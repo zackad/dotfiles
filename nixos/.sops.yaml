@@ -1,0 +1,12 @@
+keys:
+  - &nixos_host age16r4wpr08zn89du8jr4vh0vd4lhnrjlcv2h3h5lur352htk4v534qcy2eud
+  - &zackad_nixos age12ywxq60c25njvs80ff7wdfpcjpq9jsvvex7kljf3fr9nzjw33c2sxu8d0f
+  - &zackad_macbook age1whf8y7q5jjkfv57gcmyfg2t7026cvqgx2udgte8chkgurrrks4dqlqxq4a
+creation_rules:
+  - path_regex: secrets/*
+    key_groups:
+      - pgp:
+        age:
+          - *nixos_host
+          - *zackad_nixos
+          - *zackad_macbook
