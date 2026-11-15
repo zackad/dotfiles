@@ -119,6 +119,11 @@
             }
 
             {
+              "if".app-id = "com.mitchellh.ghostty";
+              run = "move-node-to-workspace 6";
+            }
+
+            {
               "if".app-id = "com.apple.MobileSMS";
               run = "move-node-to-workspace 8";
             }
